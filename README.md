@@ -1,11 +1,11 @@
-# Onefront
+# OneLink
 
 - All your content.
 - One link.
 - Send your audience everywhere. All your social links, and more.
 
 
-![logo](logo.jpg)
+![logo](logo.jpg | width=200)
 
 
 
