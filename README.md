@@ -5,7 +5,7 @@
 - Send your audience everywhere. All your social links, and more.
 
 
-![logo](logo.png)
+![logo](logo.jpg)
 
 
 
