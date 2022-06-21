@@ -8,6 +8,10 @@ import { BodyComponent } from './componetes/body/body.component';
 import { HeaderComponent } from './componetes/header/header.component';
 import { FooterComponent } from './componetes/footer/footer.component';
 import { NavComponent } from './componetes/nav/nav.component';
+import { PhomeComponent } from './PaginaPrincipal/phome/phome.component';
+import { PbodyComponent } from './PaginaPrincipal/pbody/pbody.component';
+import { PfooterComponent } from './PaginaPrincipal/pfooter/pfooter.component';
+import { PnavComponent } from './PaginaPrincipal/pnav/pnav.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { NavComponent } from './componetes/nav/nav.component';
     BodyComponent,
     HeaderComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    PhomeComponent,
+    PbodyComponent,
+    PfooterComponent,
+    PnavComponent
   ],
   imports: [
     BrowserModule,
