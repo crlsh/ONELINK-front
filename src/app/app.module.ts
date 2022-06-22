@@ -12,6 +12,9 @@ import { PhomeComponent } from './PaginaPrincipal/phome/phome.component';
 import { PbodyComponent } from './PaginaPrincipal/pbody/pbody.component';
 import { PfooterComponent } from './PaginaPrincipal/pfooter/pfooter.component';
 import { PnavComponent } from './PaginaPrincipal/pnav/pnav.component';
+import { ContactoComponent } from './componetes/contacto/contacto.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,11 +27,15 @@ import { PnavComponent } from './PaginaPrincipal/pnav/pnav.component';
     PhomeComponent,
     PbodyComponent,
     PfooterComponent,
-    PnavComponent
+    PnavComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
