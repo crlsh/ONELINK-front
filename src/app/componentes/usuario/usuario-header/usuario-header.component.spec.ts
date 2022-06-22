@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PnavComponent } from './pnav.component';
+import { UsuarioHeaderComponent } from './usuario-header.component';
 
-describe('PnavComponent', () => {
-  let component: PnavComponent;
-  let fixture: ComponentFixture<PnavComponent>;
+describe('UsuarioHeaderComponent', () => {
+  let component: UsuarioHeaderComponent;
+  let fixture: ComponentFixture<UsuarioHeaderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PnavComponent ]
+      declarations: [ UsuarioHeaderComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PnavComponent);
+    fixture = TestBed.createComponent(UsuarioHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

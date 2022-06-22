@@ -3,34 +3,37 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './componetes/home/home.component';
-import { BodyComponent } from './componetes/body/body.component';
-import { HeaderComponent } from './componetes/header/header.component';
-import { FooterComponent } from './componetes/footer/footer.component';
-import { NavComponent } from './componetes/nav/nav.component';
-import { PhomeComponent } from './PaginaPrincipal/phome/phome.component';
-import { PbodyComponent } from './PaginaPrincipal/pbody/pbody.component';
-import { PfooterComponent } from './PaginaPrincipal/pfooter/pfooter.component';
-import { PnavComponent } from './PaginaPrincipal/pnav/pnav.component';
-import { ContactoComponent } from './componetes/contacto/contacto.component';
+import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ErrorPageComponent } from './error-page/error-page.component';
+import { ErrorPageComponent } from './componentes/error-page/error-page.component';
+import { UsuarioBodyComponent } from './componentes/usuario/usuario-body/usuario-body.component';
+import { UsuarioHeaderComponent } from './componentes/usuario/usuario-header/usuario-header.component';
+import { UsuarioNavComponent } from './componentes/usuario/usuario-nav/usuario-nav.component';
+import { UsuarioFooterComponent } from './componentes/usuario/usuario-footer/usuario-footer.component';
+import { UsuarioHomeComponent } from './componentes/usuario/usuario-home/usuario-home.component';
+import { HomeComponent } from './componentes/pagina-principal/home/home.component';
+import { FooterComponent } from './componentes/pagina-principal/footer/footer.component';
+import { BodyComponent } from './componentes/pagina-principal/body/body.component';
+import { NavComponent } from './componentes/pagina-principal/nav/nav.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    BodyComponent,
-    HeaderComponent,
-    FooterComponent,
-    NavComponent,
-    PhomeComponent,
-    PbodyComponent,
-    PfooterComponent,
-    PnavComponent,
+    AppComponent,   
     ContactoComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    UsuarioBodyComponent,
+    UsuarioHeaderComponent,
+    UsuarioNavComponent,
+    UsuarioFooterComponent,
+    UsuarioHomeComponent,
+    HomeComponent,
+    FooterComponent,
+    BodyComponent,
+    NavComponent
+
+
+
   ],
   imports: [
     BrowserModule,

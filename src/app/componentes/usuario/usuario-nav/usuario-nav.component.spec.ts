@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PfooterComponent } from './pfooter.component';
+import { UsuarioNavComponent } from './usuario-nav.component';
 
-describe('PfooterComponent', () => {
-  let component: PfooterComponent;
-  let fixture: ComponentFixture<PfooterComponent>;
+describe('UsuarioNavComponent', () => {
+  let component: UsuarioNavComponent;
+  let fixture: ComponentFixture<UsuarioNavComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PfooterComponent ]
+      declarations: [ UsuarioNavComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PfooterComponent);
+    fixture = TestBed.createComponent(UsuarioNavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

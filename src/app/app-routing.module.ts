@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './componetes/home/home.component';
-import { ErrorPageComponent } from './error-page/error-page.component';
-import { PhomeComponent } from './PaginaPrincipal/phome/phome.component';
+
+import { ErrorPageComponent } from './componentes/error-page/error-page.component';
+import { HomeComponent } from './componentes/pagina-principal/home/home.component';
+import { UsuarioHomeComponent } from './componentes/usuario/usuario-home/usuario-home.component';
+
 
 
 const routes: Routes = [
- {path: 'usuario', component:HomeComponent},
- {path: '', component:PhomeComponent},
+ {path: 'usuario', component:UsuarioHomeComponent},
+ {path: '', component:HomeComponent},
  {path: '**', component:ErrorPageComponent},
 
  ];
