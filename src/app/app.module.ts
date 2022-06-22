@@ -15,6 +15,7 @@ import { PnavComponent } from './PaginaPrincipal/pnav/pnav.component';
 import { ContactoComponent } from './componetes/contacto/contacto.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     PbodyComponent,
     PfooterComponent,
     PnavComponent,
-    ContactoComponent
+    ContactoComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
