@@ -8,7 +8,7 @@ import { UsuarioHomeComponent } from './componentes/usuario/usuario-home/usuario
 
 
 const routes: Routes = [
- {path: 'usuario', component:UsuarioHomeComponent},
+ {path: ':user', component:UsuarioHomeComponent},
  {path: '', component:HomeComponent},
  {path: '**', component:ErrorPageComponent},
 
