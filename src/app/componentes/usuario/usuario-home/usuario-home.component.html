@@ -1,4 +1,4 @@
-<div class="container-fluid ">
+<div *ngIf="!loading" class="container-fluid ">
     <app-usuario-nav></app-usuario-nav>
     <app-usuario-header></app-usuario-header>
     <app-usuario-body></app-usuario-body>
@@ -7,5 +7,17 @@
     
     
     <app-usuario-footer></app-usuario-footer>
+</div>
+
+
+<div *ngIf="loading" class=" d-flex justify-content-center" id="espera">
+    <div class="loadingio-eclipse">
+        <div class="ldio-rpinwye8j0b">
+            <div>
+            </div>
+        </div>
     </div>
+</div>
+
+    
     

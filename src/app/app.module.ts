@@ -40,7 +40,7 @@ import { NavComponent } from './componentes/pagina-principal/nav/nav.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule,
+    FormsModule,    
   ],
   providers: [],
   bootstrap: [AppComponent]
