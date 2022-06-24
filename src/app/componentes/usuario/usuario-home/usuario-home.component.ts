@@ -45,7 +45,7 @@ export class UsuarioHomeComponent implements OnInit {
   comprobarDatos(){
     if(Object.entries(this.persona).length === 0){
       console.log("vacio");
-      this.router.navigate(['']);
+      this.router.navigate(['error']);
     }else{
       console.log("tiene datos");
       this.loading = false
