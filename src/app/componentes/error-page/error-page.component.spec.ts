@@ -11,7 +11,9 @@ describe('ErrorPageComponent', () => {
       declarations: [ ErrorPageComponent ]
     })
     .compileComponents();
-
+  });
+  
+beforeEach(() => {
     fixture = TestBed.createComponent(ErrorPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
