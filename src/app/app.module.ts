@@ -16,6 +16,7 @@ import { HomeComponent } from './componentes/pagina-principal/home/home.componen
 import { FooterComponent } from './componentes/pagina-principal/footer/footer.component';
 import { BodyComponent } from './componentes/pagina-principal/body/body.component';
 import { NavComponent } from './componentes/pagina-principal/nav/nav.component';
+import { LoginComponent } from './componentes/login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NavComponent } from './componentes/pagina-principal/nav/nav.component';
     HomeComponent,
     FooterComponent,
     BodyComponent,
-    NavComponent
+    NavComponent,
+    LoginComponent
 
 
 
