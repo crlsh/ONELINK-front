@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '@auth0/auth0-angular';
+import { CallbackComponent } from './componentes/callback/callback.component';
 
 import { ErrorPageComponent } from './componentes/error-page/error-page.component';
 import { LoginComponent } from './componentes/login/login.component';
@@ -13,6 +15,7 @@ const routes: Routes = [
  {path: '', component:HomeComponent},
  {path: 'login', component:LoginComponent},
  {path: 'error', component:ErrorPageComponent},
+ {path: 'callback', component:CallbackComponent, canActivate: [AuthGuard]},
  {path: ':user', component:UsuarioHomeComponent},
  {path: '**', component:ErrorPageComponent},
  ];

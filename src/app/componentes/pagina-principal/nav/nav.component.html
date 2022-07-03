@@ -14,13 +14,15 @@
             <a class="nav-link" href="#">Nosotros</a>
         
     </div>  
-    <div class="align-self-center me-4">
-        <button class="btn btn-info me-2 rounded-pill ">
+    <div class="d-flex align-self-center me-4">
+       <!--  <button class="btn btn-info me-2 rounded-pill ">
            Iniciar Sesión 
         </button>
         <button class="btn btn-warning rounded-pill" >
             Registrarse
-        </button>
+        </button> -->
+        <app-btn-authentication></app-btn-authentication>
+        <app-btn-signup *ngIf="(auth.isAuthenticated$ | async) === false"></app-btn-signup>
         
     </div>
 

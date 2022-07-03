@@ -1,0 +1,10 @@
+{
+    "domain": "dev-w7feczar.us.auth0.com",
+    "clientId": "1Sb8oQKWsajXO4IEFd6VxcJmL8QI46IG",
+    "audience": "http://API-PruebaV2.0",
+    "serverUrl": "http://localhost:8080",
+    "apiUri": "http://localhost:8080",
+    "appUri": "http://localhost:4200",
+    "errorPath": "/error"
+  }
+  

@@ -17,6 +17,17 @@ import { FooterComponent } from './componentes/pagina-principal/footer/footer.co
 import { BodyComponent } from './componentes/pagina-principal/body/body.component';
 import { NavComponent } from './componentes/pagina-principal/nav/nav.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment as env } from '../environments/environment';
+import { BtnLoginComponent } from './componentes/botones/btn-login/btn-login.component';
+import { BtnLogoutComponent } from './componentes/botones/btn-logout/btn-logout.component';
+import { BtnSignupComponent } from './componentes/botones/btn-signup/btn-signup.component';
+import { BtnEditComponent } from './componentes/botones/btn-edit/btn-edit.component';
+import { BtnAuthenticationComponent } from './componentes/botones/btn-authentication/btn-authentication.component';
+import { CargaComponent } from './componentes/carga/carga.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthHttpInterceptor } from '@auth0/auth0-angular';
+import { CallbackComponent } from './componentes/callback/callback.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +43,14 @@ import { LoginComponent } from './componentes/login/login.component';
     FooterComponent,
     BodyComponent,
     NavComponent,
-    LoginComponent
+    LoginComponent,
+    BtnLoginComponent,
+    BtnLogoutComponent,
+    BtnSignupComponent,
+    BtnEditComponent,
+    BtnAuthenticationComponent,
+    CargaComponent,
+    CallbackComponent
 
 
 
@@ -43,8 +61,23 @@ import { LoginComponent } from './componentes/login/login.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,    
+    AuthModule.forRoot({
+      ...env.auth,
+      domain: 'dev-w7feczar.us.auth0.com',
+      clientId: '1Sb8oQKWsajXO4IEFd6VxcJmL8QI46IG',
+      cacheLocation:'localstorage',
+      httpInterceptor: {
+        allowedList: [`${env.dev.serverUrl}/api/private`],
+      },
+    }),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthHttpInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

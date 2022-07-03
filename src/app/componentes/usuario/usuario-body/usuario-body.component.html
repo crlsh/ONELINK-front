@@ -3,7 +3,15 @@
     <p>links BOTON KE MUESTRE EL ICONO DE ESE LINK</p>
     <div class="d-grid gap-2 col-6 mx-auto">
         <button class="btn btn-primary" type="button">onelink </button>
-        </div>
+    </div>
+    <div *ngFor="let red of redes" class="d-grid gap-2 col-6 mx-auto">
+        <button class=" d-flex btn btn-primary my-2" type="button">
+            <div class=" mx-auto ">{{red.nombre}} </div>
+           
+            <app-btn-edit *ngIf="auth.isAuthenticated$ | async"> </app-btn-edit>     
+            
+        </button>
+    </div>    
     <p>links </p>
     <p>links </p>
     </div>
