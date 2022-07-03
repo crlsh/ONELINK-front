@@ -10,8 +10,8 @@ import { Redes } from 'src/app/servicios/interfaces/redes';
 })
 export class UsuarioBodyComponent implements OnInit {
 
-  @Input() idpersonas: number;
-  redes: Redes;
+  @Input() idpersonas!: any;
+  redes!: Redes [];
 
   constructor( private datosDb : DatosServiceService, public auth: AuthService) { }
 

@@ -10,7 +10,7 @@ import { Persona } from 'src/app/servicios/interfaces/persona';
 })
 export class UsuarioHomeComponent implements OnInit {
 
-  persona!: Persona;
+  persona!: Persona[];
   user!: string|null;
   loading: boolean;
 
