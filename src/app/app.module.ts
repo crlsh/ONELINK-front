@@ -16,7 +16,7 @@ import { HomeComponent } from './componentes/pagina-principal/home/home.componen
 import { FooterComponent } from './componentes/pagina-principal/footer/footer.component';
 import { BodyComponent } from './componentes/pagina-principal/body/body.component';
 import { NavComponent } from './componentes/pagina-principal/nav/nav.component';
-import { LoginComponent } from './componentes/login/login.component';
+
 import { AuthModule } from '@auth0/auth0-angular';
 import { environment as env } from '../environments/environment';
 import { BtnLoginComponent } from './componentes/botones/btn-login/btn-login.component';
@@ -27,7 +27,7 @@ import { BtnAuthenticationComponent } from './componentes/botones/btn-authentica
 import { CargaComponent } from './componentes/carga/carga.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthHttpInterceptor } from '@auth0/auth0-angular';
-import { CallbackComponent } from './componentes/callback/callback.component';
+
 import { UserAdminComponent } from './componentes/user-admin/user-admin.component';
 
 @NgModule({
@@ -44,14 +44,14 @@ import { UserAdminComponent } from './componentes/user-admin/user-admin.componen
     FooterComponent,
     BodyComponent,
     NavComponent,
-    LoginComponent,
+    
     BtnLoginComponent,
     BtnLogoutComponent,
     BtnSignupComponent,
     BtnEditComponent,
     BtnAuthenticationComponent,
     CargaComponent,
-    CallbackComponent,
+    
     UserAdminComponent
 
 
