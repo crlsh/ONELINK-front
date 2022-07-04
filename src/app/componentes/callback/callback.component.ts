@@ -18,7 +18,7 @@ export class CallbackComponent implements OnInit {
     .subscribe((profile) => {
       this.profileJson = profile
       console.log(this.profileJson.nickname); 
-      this.paginaUsuario();     
+      //this.paginaUsuario();     
       
     });    
     

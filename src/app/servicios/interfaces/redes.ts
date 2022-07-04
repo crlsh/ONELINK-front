@@ -1,7 +1,7 @@
 export interface Redes {
 
     idredes?: number;
-    nombre: string;
+    nombre_red: string;
     link: string;
     icono: string;
     personasIdpersonas: number;

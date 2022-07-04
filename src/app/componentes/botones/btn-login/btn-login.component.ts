@@ -15,7 +15,7 @@ export class BtnLoginComponent implements OnInit {
 
   loginWithRedirect(): void {
     this.auth.loginWithRedirect({
-      appState: { target: '/callback' }
+      appState: { target: '/admin' }
     });
   }
 

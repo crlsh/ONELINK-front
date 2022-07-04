@@ -15,12 +15,7 @@
         
     </div>  
     <div class="d-flex align-self-center me-4">
-       <!--  <button class="btn btn-info me-2 rounded-pill ">
-           Iniciar Sesión 
-        </button>
-        <button class="btn btn-warning rounded-pill" >
-            Registrarse
-        </button> -->
+     
         <app-btn-authentication></app-btn-authentication>
         <app-btn-signup *ngIf="(auth.isAuthenticated$ | async) === false"></app-btn-signup>
         

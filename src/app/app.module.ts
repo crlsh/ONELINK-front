@@ -28,6 +28,7 @@ import { CargaComponent } from './componentes/carga/carga.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthHttpInterceptor } from '@auth0/auth0-angular';
 import { CallbackComponent } from './componentes/callback/callback.component';
+import { UserAdminComponent } from './componentes/user-admin/user-admin.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { CallbackComponent } from './componentes/callback/callback.component';
     BtnEditComponent,
     BtnAuthenticationComponent,
     CargaComponent,
-    CallbackComponent
+    CallbackComponent,
+    UserAdminComponent
 
 
 
