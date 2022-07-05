@@ -1,6 +1,6 @@
 export interface Redes {
 
-    idredes?: number;
+    idredes: number;
     nombre_red: string;
     link: string;
     icono: string;

@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <h4 class="modal-title">Editar Red</h4>    
+        <button type="button" class="rounded-circle btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">    
+    </button>
+</div>
+
+<div class="modal-body">
+    
+    <form [formGroup]="formRed" (ngSubmit)="enviarDatos()">
+      <div class="input-group flex-nowrap mt-2">
+        <span class="input-group-text">Titulo: </span>
+        <input type="text" class="form-control" placeholder= "Titulo" formControlName="nombre_red">
+      </div>
+      
+      <div class="input-group flex-nowrap mt-2">
+        <span class="input-group-text">Url: </span>
+        <input type="text" class="form-control" placeholder="Url" formControlName="link" >
+      </div>
+   
+  <div class="modal-footer d-flex justify-content-end mt-2">
+
+        <button type="submit" class="btn btn-dark"  >Guardar</button>
+    
+   </div>
+
+  </form>    
+</div>

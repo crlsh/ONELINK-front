@@ -38,13 +38,29 @@ export class DatosServiceService {
   
   }
 
+  getById(componente:string, id:number): Observable<any>{
+    return this.http.get(`${this.url}/${componente}/${id}`).pipe(        
+      tap(data => console.log(data)),
+      catchError(this.handleError<[]>('verid', []))
+ 
+      );
+  }
+
   search(componente:string, filtro:any): Observable<any>{
     return this.http.get(`${this.url}/${componente}/search?filtro=${filtro}`).pipe(        
       tap(data => console.log(data)),
-      catchError(this.handleError<[]>('verTodos', []))
+      catchError(this.handleError<[]>('buscar', []))
  
       );
 
+  }
+
+  update(dato:any, componente: string, id:number): Observable<any> {
+    const url = `${this.url}/${componente}/update/`+id;
+    return this.http.put(url, dato).pipe(
+        tap(_ => console.log(`xp id=${dato}`)),
+        catchError(this.handleError<any>('editar'))
+    );
   }
  
 

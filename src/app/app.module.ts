@@ -30,6 +30,8 @@ import { AuthHttpInterceptor } from '@auth0/auth0-angular';
 
 import { UserAdminComponent } from './componentes/user-admin/user-admin.component';
 
+import { ModalRedesComponent } from './componentes/modales/modal-redes/modal-redes.component';
+
 @NgModule({
   declarations: [
     AppComponent,   
@@ -52,7 +54,8 @@ import { UserAdminComponent } from './componentes/user-admin/user-admin.componen
     BtnAuthenticationComponent,
     CargaComponent,
     
-    UserAdminComponent
+    UserAdminComponent,          
+    ModalRedesComponent
 
 
 
@@ -69,7 +72,7 @@ import { UserAdminComponent } from './componentes/user-admin/user-admin.componen
       clientId: '1Sb8oQKWsajXO4IEFd6VxcJmL8QI46IG',
       cacheLocation:'localstorage',
       httpInterceptor: {
-        allowedList: [`${env.dev.serverUrl}/api/private`],
+        allowedList: [`${env.dev.serverUrl}/api/redes/*`],
       },
     }),
   ],
@@ -80,6 +83,7 @@ import { UserAdminComponent } from './componentes/user-admin/user-admin.componen
       multi: true,
     },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ModalRedesComponent]
 })
 export class AppModule { }
