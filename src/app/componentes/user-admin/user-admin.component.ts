@@ -63,6 +63,9 @@ actualizarRedes(red:Redes, id:number){
 
 borrarRedes(id:number){
   console.log(id)
+  this.datosDb.delete("redes", id).subscribe((datos) => {
+    this.ngOnInit()
+  })
 }
 
 paginaUsuario(): void {
@@ -82,8 +85,17 @@ abrirModal(id:number){
   }, (reason) => {
   
   })
+}
 
-
+abrirModalVacio(){
+  const modalRef = this.modalService.open(ModalRedesComponent,  { centered: true });      //abre el modal y lo centra  
+  modalRef.componentInstance.redNueva = true;                                                         //le pasa el id del elemento a modificar
+  modalRef.componentInstance.personasIdpersonas = this.persona[0].idpersonas;    
+  modalRef.result.then((data) => {                                                            //cuando se cierra el modal actualiza la vista del componente  
+    this.ngOnInit();
+  }, (reason) => {
+  
+  })
 }
 
 

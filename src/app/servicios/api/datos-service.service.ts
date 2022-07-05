@@ -62,6 +62,22 @@ export class DatosServiceService {
         catchError(this.handleError<any>('editar'))
     );
   }
+
+  save(dato:any, componente: string): Observable<any> {
+    const url = `${this.url}/${componente}/save`;
+    return this.http.post(url, dato).pipe(
+        tap(_ => console.log(`xp id=${dato}`)),
+        catchError(this.handleError<any>('agregar'))
+    );
+  }
+
+  delete(componente: string, id:number): Observable<any> {
+    const url = `${this.url}/${componente}/delete/`+id;
+    return this.http.delete(url).pipe(
+      tap(_ => console.log(`xp id=${id}`)),
+      catchError(this.handleError<any>('borrar'))
+  );
+  }
  
 
 }

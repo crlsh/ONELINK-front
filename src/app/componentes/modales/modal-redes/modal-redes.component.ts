@@ -13,6 +13,7 @@ export class ModalRedesComponent implements OnInit {
 
   @Input()  redNueva!:boolean;
   @Input()  id!:number;
+  @Input()  personasIdpersonas!:number; 
 
   
   red!:Redes;
@@ -33,7 +34,9 @@ export class ModalRedesComponent implements OnInit {
    
 
   ngOnInit(): void {
-    this.buscarRedId(this.id);
+    if(this.redNueva === false){                          //si la educacion no es nueva, deriva al metodo para solicitar los datos
+      this.buscarRedId(this.id);
+    }     
   }
 
   buscarRedId(id:number){
@@ -58,6 +61,9 @@ export class ModalRedesComponent implements OnInit {
       
     if(this.redNueva === true){
       console.log("nada")
+      this.red = this.formRed.value  
+      
+      this.agregarRed();
     }else{
       this.armarModeloRed();
       this.actualizarRed();
@@ -79,5 +85,12 @@ export class ModalRedesComponent implements OnInit {
   });
   }
 
+  agregarRed(){
+    this.red.personasIdpersonas = this.personasIdpersonas;
+    console.log(this.red)
+    this.datosDb.save(this.red, "redes").subscribe(() => {
+      this.activeModal.close();     
+  });
+  }
 
 }
