@@ -33,7 +33,7 @@ export class UsuarioHomeComponent implements OnInit {
   } */
 
   buscarUsuario(){
-    this.datosDb.search("persona", this.user)
+    this.datosDb.searchBynickname("persona", this.user)
     .subscribe((datos) => {      
       this.persona = datos;
       console.log(this.persona);      

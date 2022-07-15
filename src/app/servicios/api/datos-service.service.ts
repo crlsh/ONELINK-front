@@ -78,6 +78,15 @@ export class DatosServiceService {
       catchError(this.handleError<any>('borrar'))
   );
   }
+
+  searchBynickname(componente:string, filtro:any): Observable<any>{
+    return this.http.get(`${this.url}/${componente}/searchBynickname?filtro=${filtro}`).pipe(        
+      tap(data => console.log(data)),
+      catchError(this.handleError<[]>('buscar por nickname', []))
+ 
+      );
+
+  }
  
 
 }
