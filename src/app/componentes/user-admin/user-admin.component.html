@@ -16,7 +16,7 @@
     
                 <a class="nav-link" href="#">Estilos</a>
     
-                <a class="nav-link" target="_blank" routerLink="/{{profileJson.nickname}}" >Mi Link</a>
+                <a class="nav-link" target="_blank" routerLink="/{{persona[0].nickname}}" >Mi Link</a>
             
         </div>  
         <div class="d-flex align-self-center me-4">
@@ -28,7 +28,7 @@
     
     </nav>
 
-    <h1 class="mt-5 text-center"> Hola {{persona[0].nombre}} {{persona[0].apellido}} </h1>
+    <h1 class="mt-5 text-center"> Hola {{persona[0].given_name}} {{persona[0].family_name}} </h1>
 
     <div class="container">
         <div class="d-flex justify-content-between">

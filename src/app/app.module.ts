@@ -72,7 +72,7 @@ import { ModalRedesComponent } from './componentes/modales/modal-redes/modal-red
       clientId: '1Sb8oQKWsajXO4IEFd6VxcJmL8QI46IG',
       cacheLocation:'localstorage',
       httpInterceptor: {
-        allowedList: [`${env.dev.serverUrl}/api/redes/save`, `${env.dev.serverUrl}/api/redes/update/{id}`,`${env.dev.serverUrl}/api/redes/delete/{id}`],        
+        allowedList: [`${env.dev.serverUrl}/api/redes/save`, `${env.dev.serverUrl}/api/redes/update/*`,`${env.dev.serverUrl}/api/redes/delete/*`],        
       },
     }),
   ],

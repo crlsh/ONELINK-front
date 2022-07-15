@@ -4,7 +4,6 @@ export interface Redes {
     nombre_red: string;
     link: string;
     icono: string;
-    personasIdpersonas: number;
-
+    personas_idpersonas: string;
 
 }

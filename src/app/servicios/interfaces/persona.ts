@@ -1,9 +1,8 @@
 export interface Persona {
-    idpersonas: number;
-    nombre: String;
-    apellido: String;
-    correo: String;
-    user: String;
-    pass: String;
-
+    idpersonas: String;
+    given_name: String;
+    family_name: String;
+    nickname: String;
+    picture: String;
+    
 }

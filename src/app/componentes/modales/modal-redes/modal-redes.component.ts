@@ -13,54 +13,40 @@ export class ModalRedesComponent implements OnInit {
 
   @Input()  redNueva!:boolean;
   @Input()  id!:number;
-  @Input()  personasIdpersonas!:number; 
-
+  @Input()  personasIdpersonas!:string; 
+  @Input()  red!:any
   
-  red!:Redes;
+  //red!:Redes;
   formRed: FormGroup;
 
   constructor(public activeModal: NgbActiveModal, private datosDb : DatosServiceService, private fb: FormBuilder) {
     this.redNueva = false;
     this.formRed = fb.group({
-      idredes: [''],
+     
       nombre_red: [''],
       link: [''],
-      icono: [''],
-      personasIdpersonas: [''],
         
    })
-
   }
    
-
   ngOnInit(): void {
     if(this.redNueva === false){                          //si la educacion no es nueva, deriva al metodo para solicitar los datos
-      this.buscarRedId(this.id);
+      this.armarFormulario();     
     }     
   }
 
-  buscarRedId(id:number){
-    this.datosDb.getById("redes", id).subscribe((datos)=> {
-      this.red=datos;
-      this.armarFormulario();
-    }
-    )
-  }
-
   armarFormulario(){
-    this.formRed.setValue({
-      idredes: this.id,
-      nombre_red: this.red.nombre_red,
-      link: this.red.link,
-      icono: this.red.icono,
-      personasIdpersonas: this.red.personasIdpersonas
+    //console.log(this.red)
+    this.formRed.setValue({     
+      nombre_red: this.red[0].nombre_red,
+      link: this.red[0].link,
     })  
   }
 
   enviarDatos(){
       
     if(this.redNueva === true){
-      console.log("nada")
+      //console.log("nada")
       this.red = this.formRed.value  
       
       this.agregarRed();
@@ -70,27 +56,24 @@ export class ModalRedesComponent implements OnInit {
     }
   }
 
-  armarModeloRed(){
-    
-    this.red.idredes = this.formRed.value.idredes;
-    this.red.nombre_red = this.formRed.value.nombre_red;
-    this.red.link = this.formRed.value.link;
-    this.red.icono = this.formRed.value.icono;
-    this.red.personasIdpersonas = this.formRed.value.personasIdpersonas;
+  armarModeloRed(){    
+    this.red[0].nombre_red = this.formRed.value.nombre_red;
+    this.red[0].link = this.formRed.value.link;
   }
 
   actualizarRed(){
-    this.datosDb.update(this.red, "redes", this.id).subscribe(() => {
+    this.datosDb.update(this.red[0], "redes", this.red[0].idredes).subscribe(() => {
       this.activeModal.close();     
   });
   }
 
   agregarRed(){
-    this.red.personasIdpersonas = this.personasIdpersonas;
-    console.log(this.red)
+    this.red.personas_idpersonas = this.personasIdpersonas;
+    this.red.icono = ""
+    //console.log(this.red)
     this.datosDb.save(this.red, "redes").subscribe(() => {
       this.activeModal.close();     
-  });
+  }); 
   }
 
 }

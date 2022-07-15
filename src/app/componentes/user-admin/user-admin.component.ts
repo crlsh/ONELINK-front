@@ -18,6 +18,7 @@ export class UserAdminComponent implements OnInit {
   public profileJson: any ;
   persona!: Persona[];
   redes!: Redes [];
+  red!: Redes[];
  
   constructor(public auth: AuthService, private router: Router, private datosDb : DatosServiceService, private modalService: NgbModal,) { 
   
@@ -27,8 +28,8 @@ export class UserAdminComponent implements OnInit {
     this.auth.user$
     .subscribe((profile) => {
       this.profileJson = profile
-      console.log(this.profileJson.nickname); 
-    this.buscarUsuario(this.profileJson.nickname); 
+      //console.log(this.profileJson.email); 
+    this.buscarUsuario(this.profileJson.email); 
 
   })
 }
@@ -37,19 +38,19 @@ buscarUsuario(user:string){
   this.datosDb.search("persona", user)
   .subscribe((datos) => {      
     this.persona = datos;
-    console.log(this.persona);      
+    //console.log(this.persona);      
     this.buscarRedes(this.persona[0].idpersonas);
   });
 
 }
 
 buscarRedes(id:any): void {
-  console.log(id)
+  //console.log(id)
   this.datosDb.search("redes", id)
   .subscribe((datos) => { 
-    console.log(datos)     
+    //console.log(datos)     
     this.redes = datos;
-    console.log(this.redes);    
+    //console.log(this.redes);    
     
   });
   
@@ -57,34 +58,42 @@ buscarRedes(id:any): void {
 
 actualizarRedes(red:Redes, id:number){
   this.datosDb.update(red, "redes", id).subscribe((datos) =>{
-    console.log(datos)
+    //console.log(datos)
   })
 }
 
 borrarRedes(id:number){
-  console.log(id)
+  //console.log(id)
   this.datosDb.delete("redes", id).subscribe((datos) => {
     this.ngOnInit()
   })
 }
 
 paginaUsuario(): void {
-  this.router.navigate([`${this.profileJson.nickname}`])
+  this.router.navigate([`${this.persona[0].nickname}`])
 } 
 
-public getInputValue(inputValue:string, inputValue2:string){
+/* public getInputValue(inputValue:string, inputValue2:string){
   console.log(inputValue + " " + inputValue2);
-}
+} */
 
 abrirModal(id:number){
+  this.buscarRedId(id);
+  //console.log(this.red)
   const modalRef = this.modalService.open(ModalRedesComponent,  { centered: true });      //abre el modal y lo centra  
-  modalRef.componentInstance.id = id;                                                         //le pasa el id del elemento a modificar
+  modalRef.componentInstance.red = this.red;                                                         //le pasa el id del elemento a modificar
 
   modalRef.result.then((data) => {                                                            //cuando se cierra el modal actualiza la vista del componente  
     this.ngOnInit();
   }, (reason) => {
   
   })
+}
+
+buscarRedId(id:number){
+  this.red = this.redes.filter(function(redes:any){
+    return redes.idredes === id
+})
 }
 
 abrirModalVacio(){
