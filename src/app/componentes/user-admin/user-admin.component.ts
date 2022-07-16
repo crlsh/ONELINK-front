@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 import { AuthService } from '@auth0/auth0-angular';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -62,12 +62,6 @@ actualizarRedes(red:Redes, id:number){
   })
 }
 
-borrarRedes(id:number){
-  //console.log(id)
-  this.datosDb.delete("redes", id).subscribe((datos) => {
-    this.ngOnInit()
-  })
-}
 
 paginaUsuario(): void {
   this.router.navigate([`${this.persona[0].nickname}`])
@@ -107,6 +101,35 @@ abrirModalVacio(){
   })
 }
 
+eliminarRed(id:number){
+    
+  Swal.fire({
+    title: '¿Desea borrar el contacto?',
+    text: "No se podrá revertir esta acción!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Borrar'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      this.borrarRedes(id); 
+      Swal.fire(
+        '¡Borrado!',
+      );
+     
+    }
+  })
+}
+
+
+
+borrarRedes(id:number){
+  //console.log(id)
+  this.datosDb.delete("redes", id).subscribe((datos) => {
+    this.ngOnInit()
+  })
+}
 
 
 }

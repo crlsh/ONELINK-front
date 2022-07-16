@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { DatosServiceService } from 'src/app/servicios/api/datos-service.service';
 import { Redes } from 'src/app/servicios/interfaces/redes';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-modal-redes',
@@ -49,22 +51,65 @@ export class ModalRedesComponent implements OnInit {
       //console.log("nada")
       this.red = this.formRed.value  
       
-      this.agregarRed();
+      this.crearRed();
     }else{
       this.armarModeloRed();
-      this.actualizarRed();
+      this.editarRed();
     }
   }
 
   armarModeloRed(){    
     this.red[0].nombre_red = this.formRed.value.nombre_red;
     this.red[0].link = this.formRed.value.link;
+  }  
+
+  editarRed() {
+  
+    Swal.fire({
+      title: '¿Desea guardar los cambios?',
+      showDenyButton: true,
+      //showCancelButton: true,
+      confirmButtonText: 'Guardar',
+      denyButtonText: `Cancelar`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        this.actualizarRed()
+        Swal.fire('¡Guardados!', '', 'success')
+      
+      
+        
+      } else if (result.isDenied) {
+        Swal.fire('No se guardaron los cambios', '', 'info')
+        this.activeModal.close(); 
+      }
+    })
+    
   }
 
   actualizarRed(){
     this.datosDb.update(this.red[0], "redes", this.red[0].idredes).subscribe(() => {
       this.activeModal.close();     
   });
+  }
+
+  crearRed() {
+    Swal.fire({
+      title: '¿Desea agregar el contacto?',
+      showDenyButton: true,
+      //showCancelButton: true,
+      confirmButtonText: 'Agregar',
+      denyButtonText: `Cancelar`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire('¡Agregado!', '', 'success');
+        this.agregarRed();
+      } else if (result.isDenied) {
+        Swal.fire('No se agregaó el contacto', '', 'info')
+        this.activeModal.close(); 
+      }
+    })
   }
 
   agregarRed(){
@@ -75,5 +120,4 @@ export class ModalRedesComponent implements OnInit {
       this.activeModal.close();     
   }); 
   }
-
 }
