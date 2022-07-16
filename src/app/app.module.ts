@@ -28,9 +28,10 @@ import { CargaComponent } from './componentes/carga/carga.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthHttpInterceptor } from '@auth0/auth0-angular';
 
-import { UserAdminComponent } from './componentes/user-admin/user-admin.component';
+import { UserAdminComponent } from './componentes/usuario-admin/user-admin/user-admin.component';
 
 import { ModalRedesComponent } from './componentes/modales/modal-redes/modal-redes.component';
+import { UserRedesComponent } from './componentes/usuario-admin/user-redes/user-redes.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,7 @@ import { ModalRedesComponent } from './componentes/modales/modal-redes/modal-red
     CargaComponent,
     
     UserAdminComponent,          
-    ModalRedesComponent
+    ModalRedesComponent, UserRedesComponent
 
 
 
@@ -70,7 +71,7 @@ import { ModalRedesComponent } from './componentes/modales/modal-redes/modal-red
       ...env.auth,
       domain: 'dev-w7feczar.us.auth0.com',
       clientId: '1Sb8oQKWsajXO4IEFd6VxcJmL8QI46IG',
-      cacheLocation:'localstorage',
+      //cacheLocation:'localstorage',
       httpInterceptor: {
         allowedList: [`${env.dev.serverUrl}/api/redes/save`, `${env.dev.serverUrl}/api/redes/update/*`,`${env.dev.serverUrl}/api/redes/delete/*`],        
       },

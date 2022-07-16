@@ -6,7 +6,7 @@ import { AuthGuard } from '@auth0/auth0-angular';
 import { ErrorPageComponent } from './componentes/error-page/error-page.component';
 
 import { HomeComponent } from './componentes/pagina-principal/home/home.component';
-import { UserAdminComponent } from './componentes/user-admin/user-admin.component';
+import { UserAdminComponent } from './componentes/usuario-admin/user-admin/user-admin.component';
 import { UsuarioHomeComponent } from './componentes/usuario/usuario-home/usuario-home.component';
 
 
