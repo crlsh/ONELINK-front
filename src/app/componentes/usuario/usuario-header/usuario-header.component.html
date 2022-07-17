@@ -1,21 +1,22 @@
 <pre>
- 
+
 
 </pre>
 <div style="text-align: center">
-   
 
 
 
-    <p>{{persona.given_name + ' ' + persona.family_name}} </p>
-   
-    <img [src]="persona.picture" alt="Image" />
+    <div style.background-image="url('{{persona.imagen_fondo}}')" style="color:white">
 
-    <p>imagen fondo : {{persona.imagen_fondo}} </p>
+        <p>{{persona.given_name + ' ' + persona.family_name}} </p>
 
-    <p> DESCRIPCION : {{persona.descripcion}}  <p>
+        <img [src]="persona.picture" alt="Image" />
 
-    
-</div>  
- 
-    
+        <p></p>
+
+        <p> {{persona.descripcion|| "Descripcion o comentario" }}
+        <p>
+
+
+    </div>
+</div>
