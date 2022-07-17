@@ -4,5 +4,7 @@ export interface Persona {
     family_name: string;
     nickname: string;
     picture: string;
+    descripcion: string;
+    imagen_fondo: string;
     
 }
