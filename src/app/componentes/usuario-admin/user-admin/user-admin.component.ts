@@ -30,7 +30,7 @@ export class UserAdminComponent implements OnInit {
       this.profileJson = profile
       //console.log(this.profileJson.email); 
     this.buscarUsuario(this.profileJson.email); //busca el usuario en la bd  
-
+    console.log (this.persona)
   })
 }
 
@@ -39,7 +39,7 @@ buscarUsuario(user:string){
   .subscribe((datos) => {      
     this.persona = datos;                               //guarda el usuario en persona. si no hay nada, persona queda vacio
     this.comprobarUsuario()                            
-    //console.log(this.persona);      
+    //console.log("user-admin " , this.persona);      
   
   });
 

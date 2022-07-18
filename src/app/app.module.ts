@@ -32,6 +32,7 @@ import { UserAdminComponent } from './componentes/usuario-admin/user-admin/user-
 
 import { ModalRedesComponent } from './componentes/modales/modal-redes/modal-redes.component';
 import { UserRedesComponent } from './componentes/usuario-admin/user-redes/user-redes.component';
+import { UserDatosComponent } from './componentes/usuario-admin/user-datos/user-datos.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,7 @@ import { UserRedesComponent } from './componentes/usuario-admin/user-redes/user-
     CargaComponent,
     
     UserAdminComponent,          
-    ModalRedesComponent, UserRedesComponent
+    ModalRedesComponent, UserRedesComponent, UserDatosComponent
 
 
 

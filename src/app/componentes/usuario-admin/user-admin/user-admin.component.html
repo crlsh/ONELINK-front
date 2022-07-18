@@ -29,7 +29,10 @@
     </nav>
 
     <h1 class="mt-5 text-center"> Hola {{persona[0].given_name}} {{persona[0].family_name}} </h1>
-   
+ 
+
+    
+   <app-user-datos [persona]=persona ></app-user-datos>
     <app-user-redes *ngIf="!usuarioNuevo" [redes]="redes" [idpersonas]="persona[0].idpersonas"></app-user-redes>
 
 </ng-template>
