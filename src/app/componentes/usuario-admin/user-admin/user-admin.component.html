@@ -32,7 +32,7 @@
  
 
     
-   <app-user-datos [persona]=persona ></app-user-datos>
+   <app-user-datos *ngIf="!usuarioNuevo" [persona]=persona ></app-user-datos>
     <app-user-redes *ngIf="!usuarioNuevo" [redes]="redes" [idpersonas]="persona[0].idpersonas"></app-user-redes>
 
 </ng-template>
