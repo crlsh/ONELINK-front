@@ -22,7 +22,7 @@ export class UsuarioBodyComponent implements OnInit {
       case 'Twitter': { return 'fa fa-twitter' }; break;
       case 'Pinterest': { return 'fa fa-pinterest' }; break;
       default: {
-        return 'fa fa-circle-user'
+        return 'fa fa-user'
         break;
       }
     }
