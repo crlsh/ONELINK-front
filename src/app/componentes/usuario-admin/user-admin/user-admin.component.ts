@@ -18,10 +18,12 @@ export class UserAdminComponent implements OnInit {
   public profileJson: any ;
   persona!: Persona[];
   redes!: Redes [];  
-  usuarioNuevo:boolean;
+  usuarioNuevo!:boolean;
+  //isLoading!:boolean
  
   constructor(public auth: AuthService, private router: Router, private datosDb : DatosServiceService) { 
-    this.usuarioNuevo = false
+    //this.usuarioNuevo = false
+    //this.isLoading = true
   }
 
   ngOnInit(): void {
@@ -30,7 +32,7 @@ export class UserAdminComponent implements OnInit {
       this.profileJson = profile
       //console.log(this.profileJson.email); 
     this.buscarUsuario(this.profileJson.email); //busca el usuario en la bd  
-    console.log (this.persona)
+    //console.log (this.persona)
   })
 }
 
@@ -46,12 +48,14 @@ buscarUsuario(user:string){
 }
 
 comprobarUsuario(){
-  if(this.persona.length === 0){
-    this.usuarioNuevo=true;
-    console.log(this.usuarioNuevo)
-    console.log("usuario nuevo")
-  }else{
+  if(this.persona.length === 0){    
+    console.log(this.profileJson)
+    this.router.navigate([`nuevo`])
+    /* console.log(this.usuarioNuevo)
+    console.log("usuario nuevo") */
+  }else{    
     console.log("usuario existente")
+    this.usuarioNuevo = false;
     console.log(this.usuarioNuevo)
     this.buscarRedes(this.persona[0].idpersonas);       //busca las redes de esa persona con el idpersonas
   }
@@ -64,7 +68,7 @@ buscarRedes(id:any): void {
     //console.log(datos)     
     this.redes = datos;                                 //guarda las redes del usuario en redes
     //console.log(this.redes);    
-    
+   // this.isLoading=false;
   });
   
 }

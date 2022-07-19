@@ -1,3 +1,7 @@
+<!-- <div class="container" *ngIf="isLoading else loaded">
+    <app-carga></app-carga>
+</div> -->
+
 <div class="container" *ngIf="auth.isLoading$ | async; else loaded">
     <app-carga></app-carga>
 </div>
@@ -28,11 +32,18 @@
     
     </nav>
 
-    <h1 class="mt-5 text-center"> Hola {{persona[0].given_name}} {{persona[0].family_name}} </h1>
- 
+   <!--  <app-user-nuevo *ngIf="usuarioNuevo"></app-user-nuevo> -->
 
-    
-   <app-user-datos *ngIf="!usuarioNuevo" [persona]=persona ></app-user-datos>
+    <app-user-datos *ngIf="!usuarioNuevo" [persona]=persona ></app-user-datos>
     <app-user-redes *ngIf="!usuarioNuevo" [redes]="redes" [idpersonas]="persona[0].idpersonas"></app-user-redes>
-
+    
+    <!-- <div *ngIf="!usuarioNuevo else usuarioExiste">
+        <app-user-datos  [persona]=persona ></app-user-datos>
+        <app-user-redes  [redes]="redes" [idpersonas]="persona[0].idpersonas"></app-user-redes>
+    </div> -->
+   
 </ng-template>
+
+<!-- <ng-template #usuarioExiste>
+    <app-user-nuevo></app-user-nuevo>
+</ng-template> -->

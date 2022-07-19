@@ -106,7 +106,7 @@ export class ModalRedesComponent implements OnInit {
         Swal.fire('¡Agregado!', '', 'success');
         this.agregarRed();
       } else if (result.isDenied) {
-        Swal.fire('No se agregaó el contacto', '', 'info')
+        Swal.fire('No se agregó el contacto', '', 'info')
         this.activeModal.close(); 
       }
     })
