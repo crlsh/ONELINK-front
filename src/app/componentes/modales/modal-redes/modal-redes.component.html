@@ -12,6 +12,22 @@
         <input type="text" class="form-control" placeholder= "Titulo" formControlName="nombre_red">
       </div>
       
+      <div class="d-grid">
+        <select
+          class="custom-select mb-3"
+          (change)="changeRed($event)"
+          formControlName="Red"
+        >
+          <option value="">Elegir red</option>
+          <option *ngFor="let red of Redes" [ngValue]="red">
+            {{ red }}
+          </option>
+        </select>
+        <!-- error block -->
+     
+
+
+
       <div class="input-group flex-nowrap mt-2">
         <span class="input-group-text">Url: </span>
         <input type="text" class="form-control" placeholder="Url" formControlName="link" >
@@ -23,5 +39,5 @@
     
    </div>
 
-  </form>    
+    
 </div>

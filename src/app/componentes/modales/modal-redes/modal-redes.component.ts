@@ -19,7 +19,19 @@ export class ModalRedesComponent implements OnInit {
   @Input()  red!:any
   
   //red!:Redes;
+  isSubmitted = false;
   formRed: FormGroup;
+  Redes: any = ['Facebook', 'Instagram', 'Linkedin', 'Otra'];
+
+  changeRed(e: any) {
+    this.red.nombre_red?.setValue(e.target.value, {
+      onlySelf: true,
+    });
+  }
+  // Access formcontrols getter
+  get redName() {
+    return this.formRed.get('nombre_red');
+  }
 
   constructor(public activeModal: NgbActiveModal, private datosDb : DatosServiceService, private fb: FormBuilder) {
     this.redNueva = false;
@@ -32,7 +44,7 @@ export class ModalRedesComponent implements OnInit {
   }
    
   ngOnInit(): void {
-    if(this.redNueva === false){                          //si la educacion no es nueva, deriva al metodo para solicitar los datos
+    if(this.redNueva === false){                          
       this.armarFormulario();     
     }     
   }

@@ -11,9 +11,27 @@ import { Redes } from 'src/app/servicios/interfaces/redes';
 export class UsuarioBodyComponent implements OnInit {
 
   @Input() idpersonas!: any;
-  redes!: Redes [];
+  redes!: Redes[];
 
-  constructor( private datosDb : DatosServiceService, public auth: AuthService) { }
+  selectIcon(nombre: String) {
+    switch (nombre) {
+      case 'Facebook': { return 'fa fa-facebook' }; break;
+      case 'Instagram': { return 'fa fa-instagram' }; break;
+      case 'Linkedin': { return 'fa fa-linkedin' }; break;
+      case 'Github': { return 'fa fa-github' }; break;
+      case 'Twitter': { return 'fa fa-twitter' }; break;
+      case 'Pinterest': { return 'fa fa-pinterest' }; break;
+      default: {
+        return 'fa fa-circle-user'
+        break;
+      }
+    }
+  }
+
+
+
+
+  constructor(private datosDb: DatosServiceService, public auth: AuthService) { }
 
   ngOnInit(): void {
     console.log(this.idpersonas);
@@ -22,13 +40,15 @@ export class UsuarioBodyComponent implements OnInit {
 
   buscarRedes(): void {
     this.datosDb.search("redes", this.idpersonas)
-    .subscribe((datos) => { 
-      console.log(datos)     
-      this.redes = datos;
-      console.log(this.redes);      
-      
-    });
-    
+      .subscribe((datos) => {
+        console.log(datos)
+        this.redes = datos;
+        console.log(this.redes);
+
+      });
+
+
+
   }
 
 }
