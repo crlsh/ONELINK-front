@@ -40,7 +40,7 @@ export class UserNicknameComponent implements OnInit {
       if (result.isConfirmed) {
         this.crearUsuario(nickname);
         Swal.fire('¡Agregado!', '', 'success');    
-        this.router.navigate(['admin'])    
+         
       } else if (result.isDenied) {
         Swal.fire('No se guardó el nickname', '', 'info')
         //this.activeModal.close(); 
@@ -52,7 +52,7 @@ export class UserNicknameComponent implements OnInit {
     //console.log(this.user)
     this.armarPersona(nickname)
     this.datosDb.save(this.persona, "persona").subscribe(() => {
-      console.log(this.persona)
+      this.router.navigate(['admin']);
   }); 
 
   }
