@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { DatosServiceService } from 'src/app/servicios/api/datos-service.service';
 import { Redes } from 'src/app/servicios/interfaces/redes';
@@ -29,7 +29,7 @@ export class ModalRedesComponent implements OnInit {
     });
   }
   // Access formcontrols getter
-  get redName() {
+  get nombre_red() {
     return this.formRed.get('nombre_red');
   }
 
@@ -37,7 +37,7 @@ export class ModalRedesComponent implements OnInit {
     this.redNueva = false;
     this.formRed = fb.group({
      
-      nombre_red: [''],
+      nombre_red: ['', [Validators.required]],
       link: [''],
         
    })
