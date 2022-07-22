@@ -82,7 +82,7 @@ import { ModalUserComponent } from './componentes/modales/modal-user/modal-user.
       clientId: '1Sb8oQKWsajXO4IEFd6VxcJmL8QI46IG',
       //cacheLocation:'localstorage',
       httpInterceptor: {
-        allowedList: [`${env.dev.serverUrl}/api/redes/save`, `${env.dev.serverUrl}/api/redes/update/*`,`${env.dev.serverUrl}/api/redes/delete/*`,`${env.dev.serverUrl}/api/persona/save`],        
+        allowedList: [`${env.dev.serverUrl}/api/redes/save`, `${env.dev.serverUrl}/api/redes/update/*`,`${env.dev.serverUrl}/api/redes/delete/*`,`${env.dev.serverUrl}/api/persona/save`, `${env.dev.serverUrl}/api/persona/update/*`],        
       },
     }),
   ],

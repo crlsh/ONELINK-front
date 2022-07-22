@@ -44,7 +44,7 @@ export class UserNicknameComponent implements OnInit {
             Swal.fire('¡Agregado!', '', 'success');    
             this.router.navigate(['admin'])     
           } else {
-            Swal.fire('Ese usuario ya existe, por favor ingresa otro', '', 'success');        
+            Swal.fire('Ese usuario ya existe, por favor ingresa otro', '', 'info');        
           }          
       });  
       } else if (result.isDenied) {

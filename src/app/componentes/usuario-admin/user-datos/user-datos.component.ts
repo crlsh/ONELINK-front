@@ -14,7 +14,7 @@ export class UserDatosComponent implements OnInit {
 
 
   @Input() persona!:Persona[];
-  @Input() idpersonas!:string;
+//  @Input() idpersonas!:string;
 
 
   
@@ -24,6 +24,7 @@ export class UserDatosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.persona)
   }
 
   abrirModal(id:number){
@@ -47,15 +48,15 @@ export class UserDatosComponent implements OnInit {
   
   abrirModalVacio(){
     const modalRef = this.modalService.open(ModalUserComponent,  { centered: true });      //abre el modal y lo centra  
-    modalRef.componentInstance.PerNueva = true;                                                         //le pasa el id del elemento a modificar
-    modalRef.componentInstance.personasIdpersonas = this.idpersonas;    
+    //modalRef.componentInstance.PerNueva = true;                                                       
+    modalRef.componentInstance.persona = this.persona;    
     modalRef.result.then((data) => {                                                            //cuando se cierra el modal actualiza la vista del componente  
       this.ngOnInit();
     }, (reason) => {
     
     })
   }
-  
+  /* 
   eliminarPer(id:number){
       
     Swal.fire({
@@ -76,6 +77,6 @@ export class UserDatosComponent implements OnInit {
       }
     })
   }
-  
+   */
   
 }

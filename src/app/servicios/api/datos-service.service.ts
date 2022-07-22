@@ -55,7 +55,7 @@ export class DatosServiceService {
 
   }
 
-  update(dato:any, componente: string, id:number): Observable<any> {
+  update(dato:any, componente: string, id:any): Observable<any> {
     const url = `${this.url}/${componente}/update/`+id;
     return this.http.put(url, dato).pipe(
         tap(_ => console.log(`xp id=${dato}`)),

@@ -13,17 +13,17 @@ import Swal from 'sweetalert2';
 })
 export class ModalUserComponent implements OnInit {
 
-  @Input() PerNueva!: boolean;
-  @Input() id!:number;
-  @Input() personasIdpersona!:String;
-  @Input() persona!:any
+  //@Input() PerNueva!: boolean;
+  //@Input() id!:number;
+  //@Input() personasIdpersona!:String;
+  @Input() persona!:Persona []
 
       //red!:Redes;
     formPer: FormGroup;
     idpersonas: any;
   
   constructor(public activeModal: NgbActiveModal, private datosDb : DatosServiceService, private fb: FormBuilder) { 
-      this.PerNueva = false;
+     // this.PerNueva = false;
       this.formPer = fb.group({
        
         idpersonas: [''],
@@ -37,28 +37,34 @@ export class ModalUserComponent implements OnInit {
     }
      
     ngOnInit(): void {
-      if(this.PerNueva === false){                        
+      //console.log(this.persona)
+      this.armarFormulario();
+      /* if(this.PerNueva === false){                        
         this.armarFormulario();     
-      }     
+      }      */
     }
  
   
     armarFormulario(){
-      //console.log(this.red)
-      this.formPer.setValue({     
-        nombre: this.persona[0].given_name,
-        apellido: this.persona[0].family_name,
+      console.log(this.persona)
+      this.formPer.setValue({    
+        idpersonas: this.persona[0].idpersonas, 
+        given_name: this.persona[0].given_name,
+        family_name: this.persona[0].family_name,
         nickname: this.persona[0].nickname,
-        foto: this.persona[0].picture,
+        picture: this.persona[0].picture,
         descripcion: this.persona[0].descripcion,
-        imagen_fonde: this.persona[0].imagen_fondo,
+        imagen_fondo: this.persona[0].imagen_fondo,
 
       })  
     }
   
     enviarDatos(){
+
+      this.armarModeloPer();
+      this.editarPer();
         
-      if(this.PerNueva === true){
+      /* if(this.PerNueva === true){
         //console.log("nada")
         this.persona = this.formPer.value  
         
@@ -66,7 +72,7 @@ export class ModalUserComponent implements OnInit {
       }else{
         this.armarModeloPer();
         this.editarPer();
-      }
+      } */
     }
   
     armarModeloPer(){    
@@ -108,15 +114,15 @@ export class ModalUserComponent implements OnInit {
     });
     }
   
-    crearPer() {
+    /* crearPer() {
       Swal.fire({
         title: '¿Desea hacer los cambios?',
         showDenyButton: true,
-        //showCancelButton: true,
+        showCancelButton: true,
         confirmButtonText: 'Agregar',
         denyButtonText: `Cancelar`,
       }).then((result) => {
-        /* Read more about isConfirmed, isDenied below */
+         Read more about isConfirmed, isDenied below 
         if (result.isConfirmed) {
           Swal.fire('¡Actualizado!', '', 'success');
           this.agregarPer();
@@ -125,16 +131,16 @@ export class ModalUserComponent implements OnInit {
           this.activeModal.close(); 
         }
       })
-    }
+    } */
   
-    agregarPer(){
+    /* agregarPer(){
       this.persona.idpersonas = this.idpersonas;
       this.persona.picture = ""
       //console.log(this.red)
       this.datosDb.save(this.persona, "persona").subscribe(() => {
         this.activeModal.close();     
     }); 
-    }
+    } */
   }
 
 
