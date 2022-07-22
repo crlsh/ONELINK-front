@@ -1,0 +1,42 @@
+<div class="modal-header">
+    <h4 class="modal-title">Editar Perfil</h4>    
+        <button type="button" class="rounded-circle btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">    
+    </button>
+</div>
+
+<div class="modal-body">
+    
+    <form [formGroup]="formPer" (ngSubmit)="enviarDatos()">
+      <div class="input-group flex-nowrap mt-2">
+        <span class="input-group-text">Nickname : </span>
+        <input type="text" class="form-control" placeholder= "Nickname" formControlName="nickname">
+      </div>
+      
+      <div class="input-group flex-nowrap mt-2">
+        <span class="input-group-text">Nombre : </span>
+        <input type="text" class="form-control" placeholder="Nombre" formControlName="given_name" >
+      </div>
+      <div class="input-group flex-nowrap mt-2">
+        <span class="input-group-text">Apellido : </span>
+        <input type="text" class="form-control" placeholder="Apellido" formControlName="family_name" >
+      </div>
+      <div class="input-group flex-nowrap mt-2">
+        <span class="input-group-text">Foto : </span>
+        <input type="text" class="form-control" placeholder="Foto" formControlName="picture" >
+      </div>
+      <div class="input-group flex-nowrap mt-2">
+        <span class="input-group-text">Descripcion : </span>
+        <input type="text" class="form-control" placeholder="Descripcion" formControlName="descripcion" >
+      </div>
+      <div class="input-group flex-nowrap mt-2">
+        <span class="input-group-text">Background : </span>
+        <input type="text" class="form-control" placeholder="Background" formControlName="imagen_fondo" >
+      </div>
+  <div class="modal-footer d-flex justify-content-end mt-2">
+
+        <button type="submit" class="btn btn-dark"  >Guardar</button>
+    
+   </div>
+
+  </form>    
+</div>

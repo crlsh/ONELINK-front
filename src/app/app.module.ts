@@ -35,6 +35,7 @@ import { UserRedesComponent } from './componentes/usuario-admin/user-redes/user-
 import { UserDatosComponent } from './componentes/usuario-admin/user-datos/user-datos.component';
 import { UserNuevoComponent } from './componentes/usuario-admin/user-nuevo/user-nuevo.component';
 import { UserNicknameComponent } from './componentes/usuario-admin/user-nickname/user-nickname.component';
+import { ModalUserComponent } from './componentes/modales/modal-user/modal-user.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,9 @@ import { UserNicknameComponent } from './componentes/usuario-admin/user-nickname
     ModalRedesComponent, 
     UserRedesComponent, 
     UserDatosComponent, 
-    UserNuevoComponent, UserNicknameComponent
+    UserNuevoComponent,
+    UserNicknameComponent,
+    ModalUserComponent
 
 
 

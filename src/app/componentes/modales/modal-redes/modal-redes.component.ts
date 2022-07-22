@@ -95,7 +95,7 @@ export class ModalRedesComponent implements OnInit {
 
   crearRed() {
     Swal.fire({
-      title: '¿Desea agregar el contacto?',
+      title: '¿Desea agregar Red',
       showDenyButton: true,
       //showCancelButton: true,
       confirmButtonText: 'Agregar',
@@ -106,7 +106,7 @@ export class ModalRedesComponent implements OnInit {
         Swal.fire('¡Agregado!', '', 'success');
         this.agregarRed();
       } else if (result.isDenied) {
-        Swal.fire('No se agregó el contacto', '', 'info')
+        Swal.fire('No se agregó la red', '', 'info')
         this.activeModal.close(); 
       }
     })
