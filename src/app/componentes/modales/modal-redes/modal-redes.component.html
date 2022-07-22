@@ -7,11 +7,28 @@
 <div class="modal-body">
     
     <form [formGroup]="formRed" (ngSubmit)="enviarDatos()">
-      <div class="input-group flex-nowrap mt-2">
+      <!-- <div class="input-group flex-nowrap mt-2">
         <span class="input-group-text">Titulo: </span>
         <input type="text" class="form-control" placeholder= "Titulo" formControlName="nombre_red">
-      </div>
+      </div> -->
       
+      <div class="d-grid">
+        
+        <select
+          class="custom-select mb-3"
+          (change)="changeRed($event)"
+          formControlName="nombre_red"
+        >
+          <option value="">Elegir red</option>
+          <option *ngFor="let red of Redes" [ngValue]="red">
+            {{ red }}
+          </option>
+        </select>
+   
+     
+      </div>
+
+
       <div class="input-group flex-nowrap mt-2">
         <span class="input-group-text">Url: </span>
         <input type="text" class="form-control" placeholder="Url" formControlName="link" >
@@ -23,5 +40,5 @@
     
    </div>
 
-  </form>    
-</div>
+    
+

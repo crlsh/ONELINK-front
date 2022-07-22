@@ -29,33 +29,37 @@ export class UserNicknameComponent implements OnInit {
   }
 
   guardarNickname(nickname: string){
+    this.armarPersona(nickname)
     Swal.fire({
-      title: '¿Desea agregar el contacto?',
+      title: '¿Desea guardar el usuario?',
       showDenyButton: true,
       //showCancelButton: true,
       confirmButtonText: 'Agregar',
       denyButtonText: `Cancelar`,
     }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
-      if (result.isConfirmed) {
-        this.crearUsuario(nickname);
-        Swal.fire('¡Agregado!', '', 'success');    
-         
+      /* Read more about isConfirmed, isDenied below */      
+      if (result.isConfirmed) {      
+        this.datosDb.save(this.persona, "persona").subscribe((respuesta) => {
+          if(respuesta){
+            Swal.fire('¡Agregado!', '', 'success');    
+            this.router.navigate(['admin'])     
+          } else {
+            Swal.fire('Ese usuario ya existe, por favor ingresa otro', '', 'success');        
+          }          
+      });  
       } else if (result.isDenied) {
-        Swal.fire('No se guardó el nickname', '', 'info')
-        //this.activeModal.close(); 
+        Swal.fire('No se guardó el usuario', '', 'info')        
       }
     })
   }
 
-  crearUsuario(nickname:string) {
-    //console.log(this.user)
-    this.armarPersona(nickname)
+  /* crearUsuario() {
+   
     this.datosDb.save(this.persona, "persona").subscribe(() => {
-      this.router.navigate(['admin']);
+      this.router.navigate(['admin'])   
   }); 
 
-  }
+  } */
 
   armarPersona(nickname:string) {
    // console.log("pasa por aca?")

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { DatosServiceService } from 'src/app/servicios/api/datos-service.service';
 import { Redes } from 'src/app/servicios/interfaces/redes';
@@ -19,20 +19,32 @@ export class ModalRedesComponent implements OnInit {
   @Input()  red!:any
   
   //red!:Redes;
+  isSubmitted = false;
   formRed: FormGroup;
+  Redes: any = ['Facebook', 'Instagram', 'Linkedin', 'Otra'];
+
+  changeRed(e: any) {
+    this.red.nombre_red?.setValue(e.target.value, {
+      onlySelf: true,
+    });
+  }
+  // Access formcontrols getter
+  get nombre_red() {
+    return this.formRed.get('nombre_red');
+  }
 
   constructor(public activeModal: NgbActiveModal, private datosDb : DatosServiceService, private fb: FormBuilder) {
     this.redNueva = false;
     this.formRed = fb.group({
      
-      nombre_red: [''],
+      nombre_red: ['', [Validators.required]],
       link: [''],
         
    })
   }
    
   ngOnInit(): void {
-    if(this.redNueva === false){                          //si la educacion no es nueva, deriva al metodo para solicitar los datos
+    if(this.redNueva === false){                          
       this.armarFormulario();     
     }     
   }

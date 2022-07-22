@@ -1,13 +1,26 @@
 <div style="text-align: center; border: 2px  rgb(28, 30, 167) dashed;">
-  
-  
+
+<!-- 
     <div class="d-grid gap-2 col-6 mx-auto">
         <button class="btn btn-primary" type="button">onelink </button>
-    </div>
+    </div> -->
+
+
     <div *ngFor="let red of redes" class="d-grid gap-2 col-6 mx-auto">
+
         <button class=" d-flex btn btn-primary my-2" type="button">
-            <div class=" mx-auto ">{{red.nombre_red}} </div>           
-            
-            
+
+            <div class=" mx-auto ">
+                <a href={{red.link}} target='_blank' rel="noopener noreferrer"
+                rel="tooltip" title="Siganme en {{red.nombre_red}}">
+                    <i [ngClass]="selectIcon(red.nombre_red)">
+                    </i>
+                    {{red.nombre_red}}
+                </a>
+            </div>
+
         </button>
-    </div>    
+
+    </div>
+
+  
