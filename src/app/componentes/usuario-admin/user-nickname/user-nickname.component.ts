@@ -21,6 +21,7 @@ export class UserNicknameComponent implements OnInit {
     picture: "",
     descripcion: "",
     imagen_fondo: "",
+    id: "",
   }
 
   constructor(private datosDb : DatosServiceService, private router: Router) { }

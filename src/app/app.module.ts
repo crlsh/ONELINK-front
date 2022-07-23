@@ -36,6 +36,7 @@ import { UserDatosComponent } from './componentes/usuario-admin/user-datos/user-
 import { UserNuevoComponent } from './componentes/usuario-admin/user-nuevo/user-nuevo.component';
 import { UserNicknameComponent } from './componentes/usuario-admin/user-nickname/user-nickname.component';
 import { ModalUserComponent } from './componentes/modales/modal-user/modal-user.component';
+import { BtnEliminarCuentaComponent } from './componentes/botones/btn-eliminar-cuenta/btn-eliminar-cuenta.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { ModalUserComponent } from './componentes/modales/modal-user/modal-user.
     UserDatosComponent, 
     UserNuevoComponent,
     UserNicknameComponent,
-    ModalUserComponent
+    ModalUserComponent,
+    BtnEliminarCuentaComponent
 
 
 
@@ -82,7 +84,7 @@ import { ModalUserComponent } from './componentes/modales/modal-user/modal-user.
       clientId: '1Sb8oQKWsajXO4IEFd6VxcJmL8QI46IG',
       //cacheLocation:'localstorage',
       httpInterceptor: {
-        allowedList: [`${env.dev.serverUrl}/api/redes/save`, `${env.dev.serverUrl}/api/redes/update/*`,`${env.dev.serverUrl}/api/redes/delete/*`,`${env.dev.serverUrl}/api/persona/save`, `${env.dev.serverUrl}/api/persona/update/*`],        
+        allowedList: [`${env.dev.serverUrl}/api/redes/save`, `${env.dev.serverUrl}/api/redes/update/*`,`${env.dev.serverUrl}/api/redes/delete/*`,`${env.dev.serverUrl}/api/persona/save`, `${env.dev.serverUrl}/api/persona/update/*`, `${env.dev.serverUrl}/api/persona/delete/*`],        
       },
     }),
   ],

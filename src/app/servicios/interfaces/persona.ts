@@ -6,5 +6,6 @@ export interface Persona {
     picture: string;
     descripcion: string;
     imagen_fondo: string;
+    id: any;
     
 }
