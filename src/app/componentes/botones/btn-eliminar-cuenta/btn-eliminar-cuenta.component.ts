@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { forkJoin, Observable } from 'rxjs';
 import { DatosServiceService } from 'src/app/servicios/api/datos-service.service';
 import { Persona } from 'src/app/servicios/interfaces/persona';
 import { Redes } from 'src/app/servicios/interfaces/redes';
@@ -33,35 +34,19 @@ export class BtnEliminarCuentaComponent implements OnInit {
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */      
       if (result.isConfirmed) {  
-        this.borrarTodasRedes();
+      
         this.datosDb.delete("persona", id).subscribe(()=> {
           Swal.fire('¡Su cuenta se ha eliminado!', '', 'success');    
           this.router.navigate(['']) 
-          /* if(respuesta){
-            Swal.fire('¡Su cuenta se ha eliminado!', '', 'success');    
-            this.router.navigate([''])     
-          } else {
-            Swal.fire('Ha ocurrido un error, por favor intente nuevamente', '', 'info');        
-          }           */
-      });  
+          
+      }); 
       } else if (result.isDenied) {
         Swal.fire('Se ha cancelado la operación', '', 'info')        
       }
     })
   }
 
-  borrarRedes(id: number) {
-    //console.log(id)
-    this.datosDb.delete("redes", id).subscribe((datos) => {
-      //this.ngOnInit()
-    })
-  }
-
-  borrarTodasRedes() {
-    console.log(this.redes)
-    this.redes.forEach(elem => { this.borrarRedes(elem.idredes) })
-
-  }
-
-
 }
+
+
+
