@@ -39,6 +39,7 @@ import { ModalUserComponent } from './componentes/modales/modal-user/modal-user.
 import { BtnEliminarCuentaComponent } from './componentes/botones/btn-eliminar-cuenta/btn-eliminar-cuenta.component';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { SideBarComponent } from './componentes/side-bar/side-bar.component';
 
 
 
@@ -71,7 +72,8 @@ import { ShareIconsModule } from 'ngx-sharebuttons/icons';
     UserNuevoComponent,
     UserNicknameComponent,
     ModalUserComponent,
-    BtnEliminarCuentaComponent
+    BtnEliminarCuentaComponent,
+    SideBarComponent
 
 
 

@@ -4,9 +4,13 @@
   
       <div class="container p-4 pb-0">
         <div class="d-flex justify-content-center align-items-center">
-  
-          <app-contacto></app-contacto>
-  
+          <div>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              Contactate con {{persona.given_name}} {{persona.family_name}}
+            </button>
+          
+            <app-contacto class="collapse" id="collapseExample"></app-contacto>
+          </div>
         </div>
   
       </div>

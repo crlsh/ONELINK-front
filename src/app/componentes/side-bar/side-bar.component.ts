@@ -2,13 +2,13 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Persona } from 'src/app/servicios/interfaces/persona';
 
 @Component({
-  selector: 'app-usuario-nav',
-  templateUrl: './usuario-nav.component.html',
-  styleUrls: ['./usuario-nav.component.scss']
+  selector: 'app-side-bar',
+  templateUrl: './side-bar.component.html',
+  styleUrls: ['./side-bar.component.scss']
 })
-export class UsuarioNavComponent implements OnInit {
+export class SideBarComponent implements OnInit {
 
-  @Input() persona!: Persona
+  @Input() persona!: Persona;
 
   constructor() { }
 

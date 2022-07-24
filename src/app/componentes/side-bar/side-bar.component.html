@@ -1,0 +1,36 @@
+
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Comparte este OneLink</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <li class="nav-item">
+            <h5>Copiar link</h5>
+            <div class="input-group input-group-lg">
+                <span class="input-group-text" id="basic-addon3">OneLink/</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #nickname placeholder="{{persona.nickname}}" disabled>
+                <share-buttons theme="circles-dark" [include]="['copy']" [showIcon]="true" [showText]="false"
+                url={{persona[0].nickname} description="OneLink, Un solo punto de contacto">
+                 </share-buttons>
+            </div>           
+        </li>
+        <li class="nav-item">
+            <share-buttons theme="circles-dark" [include]="['facebook', 'linkedin','reddit','telegram', 'twitter']"
+            [showIcon]="true" [showText]="false" url={{persona[0].nickname}
+            description="OneLink, Un solo punto de contacto" class="pt-5">
+  
+            </share-buttons>
+        </li>
+        <li class="nav-item dropdown">
+            <share-buttons theme="circles-dark" [include]="['email', 'sms', 'messenger','telegram', 'whatsapp']"
+            [showIcon]="true" [showText]="false" url={{persona[0].nickname}
+            description="OneLink, Un solo punto de contacto" class="pt-5">
+          </share-buttons>
+        </li>
+      </ul>
+    
+    </div>
+  
+
+    

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Persona } from 'src/app/servicios/interfaces/persona';
 
 @Component({
   selector: 'app-usuario-footer',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./usuario-footer.component.scss']
 })
 export class UsuarioFooterComponent implements OnInit {
+
+  @Input() persona!: Persona;
 
   constructor() { }
 
