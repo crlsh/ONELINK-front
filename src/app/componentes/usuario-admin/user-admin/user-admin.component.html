@@ -37,6 +37,10 @@
     <app-user-datos *ngIf="!usuarioNuevo" [persona]=persona ></app-user-datos>
     <app-user-redes *ngIf="!usuarioNuevo" [redes]="redes" [idpersonas]="persona[0].idpersonas"></app-user-redes>
     
+
+
+
+
     <app-btn-eliminar-cuenta [persona]="persona"  [redes]="redes" class="mb-5" ></app-btn-eliminar-cuenta>
     <!-- <div *ngIf="!usuarioNuevo else usuarioExiste">
         <app-user-datos  [persona]=persona ></app-user-datos>

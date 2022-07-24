@@ -37,6 +37,10 @@ import { UserNuevoComponent } from './componentes/usuario-admin/user-nuevo/user-
 import { UserNicknameComponent } from './componentes/usuario-admin/user-nickname/user-nickname.component';
 import { ModalUserComponent } from './componentes/modales/modal-user/modal-user.component';
 import { BtnEliminarCuentaComponent } from './componentes/botones/btn-eliminar-cuenta/btn-eliminar-cuenta.component';
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+
+
 
 @NgModule({
   declarations: [
@@ -77,7 +81,9 @@ import { BtnEliminarCuentaComponent } from './componentes/botones/btn-eliminar-c
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule,    
+    FormsModule,  
+    ShareButtonsModule,
+    ShareIconsModule,  
     AuthModule.forRoot({
       ...env.auth,
       domain: 'dev-w7feczar.us.auth0.com',
