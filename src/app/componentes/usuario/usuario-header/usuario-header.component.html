@@ -1,22 +1,13 @@
-<pre>
 
+<div class="mt-5" style="text-align: center">
 
-</pre>
-<div style="text-align: center">
+    <div style.background-image="url('{{persona.imagen_fondo}}')">
 
+    <img [src]="persona.picture" alt="Image">
+    
+    <p  class="mt-2">{{persona.given_name + ' ' + persona.family_name}} </p>
 
-
-    <div style.background-image="url('{{persona.imagen_fondo}}')" style="color:white">
-
-        <p>{{persona.given_name + ' ' + persona.family_name}} </p>
-
-        <img [src]="persona.picture" alt="Image" />
-
-        <p></p>
-
-        <p> {{persona.descripcion|| "Descripcion o comentario" }}
-        <p>
-
+    <p> {{persona.descripcion|| "Descripcion o comentario" }}</p>
 
     </div>
 </div>
