@@ -55,12 +55,12 @@
 
 
 
-
+ <div class="fixed-bottom">
+  <app-usuario-footer [persona]="persona[0]"></app-usuario-footer>
+</div>
 
   </div>
-  <div>
-    <app-usuario-footer [persona]="persona[0]"></app-usuario-footer>
-  </div>
+
 
   <div *ngIf="loading" class=" d-flex justify-content-center" id="espera">
     <app-carga></app-carga>
