@@ -98,6 +98,27 @@ export class UserRedesComponent implements OnInit {
   }
 
 
+  borrarTodasRedes() {
+
+    Swal.fire({
+      title: '¿Desea borrar TODAS las redes?',
+      text: "No se podrá revertir esta acción!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Borrar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.borrarTodaslasRedes();
+        Swal.fire(
+          '¡Borrado!',
+        );
+
+      }
+    })
+  }
+
   borrarRedes(id: number) {
     //console.log(id)
     this.datosDb.delete("redes", id).subscribe((datos) => {
@@ -105,8 +126,8 @@ export class UserRedesComponent implements OnInit {
     })
   }
 
-  borrarTodasRedes() {
-    console.log(this.redes)
+  borrarTodaslasRedes() {
+    //console.log(this.redes)
     this.redes.forEach(elem => { this.borrarRedes(elem.idredes) })
 
   }
