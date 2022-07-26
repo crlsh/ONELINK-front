@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AuthService } from '@auth0/auth0-angular';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DatosServiceService } from 'src/app/servicios/api/datos-service.service';
 import { Persona } from 'src/app/servicios/interfaces/persona';
@@ -13,18 +14,29 @@ import { ModalUserComponent } from '../../modales/modal-user/modal-user.componen
 export class UserDatosComponent implements OnInit {
 
 
-  @Input() persona!:Persona[];
-//  @Input() idpersonas!:string;
-
-
-  
- 
-  constructor(private datosDb : DatosServiceService, private modalService: NgbModal) { 
+  persona!:Persona[];
+  profileJson:any;
+  constructor(private datosDb : DatosServiceService, private modalService: NgbModal, public auth: AuthService) { 
     
   }
 
   ngOnInit(): void {
-    console.log(this.persona)
+    this.auth.user$
+    .subscribe((profile) => {
+      this.profileJson = profile,      
+      this.buscarUsuario(this.profileJson.email); //busca el usuario en la bd  
+   
+  });
+  }
+
+  buscarUsuario(user:string){
+    this.datosDb.search("persona", user)
+    .subscribe((datos) => {      
+      this.persona = datos;                        //guarda el usuario en persona. si no hay nada, persona queda vacio
+         
+    
+    });
+  
   }
 
   abrirModal(id:number){

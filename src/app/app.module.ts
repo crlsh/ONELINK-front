@@ -40,6 +40,8 @@ import { BtnEliminarCuentaComponent } from './componentes/botones/btn-eliminar-c
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { SideBarComponent } from './componentes/side-bar/side-bar.component';
+import { UserNavComponent } from './componentes/usuario-admin/user-nav/user-nav.component';
+import { UserSideBarComponent } from './componentes/usuario-admin/user-side-bar/user-side-bar.component';
 
 
 
@@ -73,7 +75,9 @@ import { SideBarComponent } from './componentes/side-bar/side-bar.component';
     UserNicknameComponent,
     ModalUserComponent,
     BtnEliminarCuentaComponent,
-    SideBarComponent
+    SideBarComponent,
+    UserNavComponent,
+    UserSideBarComponent
 
 
 

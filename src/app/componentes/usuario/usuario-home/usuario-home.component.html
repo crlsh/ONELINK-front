@@ -1,65 +1,15 @@
-<div *ngIf="!loading" class="container-fluid ">
+<body *ngIf="!loading" class="container-fluid ">
   <app-usuario-nav  [persona]="persona[0]"></app-usuario-nav>
   <app-usuario-header [persona]="persona[0]"></app-usuario-header>
   <app-usuario-body [idpersonas]="persona[0].idpersonas"></app-usuario-body>
 
+</body>
 
-
-<!-- 
-  <h4 style="text-align: center;"> Compartir este contacto </h4>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-
-        <h5>en redes sociales</h5>
-        <share-buttons theme="circles-dark" [include]="['facebook', 'linkedin','reddit','telegram', 'twitter']"
-          [showIcon]="true" [showText]="false" url={{persona[0].nickname}
-          description="OneLink, Un solo punto de contacto" class="pt-5">
-
-        </share-buttons>
-      </div>
-
-
-      <div class="col">
-        <h5>telefono o email</h5>
-        <share-buttons theme="circles-dark" [include]="['email', 'sms', 'messenger','telegram', 'whatsapp']"
-          [showIcon]="true" [showText]="false" url={{persona[0].nickname}
-          description="OneLink, Un solo punto de contacto" class="pt-5">
-        </share-buttons>
-      </div>
-
-
-      <div class="col">
-        <h5>Imprimir</h5>
-        <share-buttons theme="circles-dark" [include]="['print']" [showIcon]="true" [showText]="false"
-          url={{persona[0].nickname} description="OneLink, Un solo punto de contacto" class="pt-5">
-        </share-buttons>
-      </div>
-
-
-
-
-
-      <div class="col">
-        <h5>Copiar link</h5>
-
-        <share-buttons theme="circles-dark" [include]="['copy']" [showIcon]="true" [showText]="false"
-          url={{persona[0].nickname} description="OneLink, Un solo punto de contacto" class="pt-5">
-        </share-buttons>
-
-      </div>
-    </div>
- -->
-
-
-
-
-
- <div class="fixed-bottom">
+ <div class="mt-5">
   <app-usuario-footer [persona]="persona[0]"></app-usuario-footer>
 </div>
 
-  </div>
+
 
 
   <div *ngIf="loading" class=" d-flex justify-content-center" id="espera">

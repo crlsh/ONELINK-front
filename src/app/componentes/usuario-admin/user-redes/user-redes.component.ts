@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DatosServiceService } from 'src/app/servicios/api/datos-service.service';
+import { Persona } from 'src/app/servicios/interfaces/persona';
 
 import { Redes } from 'src/app/servicios/interfaces/redes';
 import Swal from 'sweetalert2';
@@ -16,9 +17,10 @@ export class UserRedesComponent implements OnInit {
 
   @Input() redes!: Redes[];
   @Input() idpersonas!: string;
-
+  @Input() persona!: Persona[];
 
   red!: Redes[];
+
 
 
   constructor(private datosDb: DatosServiceService, private modalService: NgbModal,) {

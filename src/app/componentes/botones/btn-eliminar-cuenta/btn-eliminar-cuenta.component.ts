@@ -13,7 +13,7 @@ import Swal from 'sweetalert2';
 })
 export class BtnEliminarCuentaComponent implements OnInit {
 
-  @Input() persona!: Persona [];
+  @Input() persona!: Persona ;
   @Input() redes!:Redes[];
 
   constructor(private router: Router, private datosDb : DatosServiceService) { }

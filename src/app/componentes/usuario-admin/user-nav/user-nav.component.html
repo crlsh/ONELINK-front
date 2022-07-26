@@ -1,0 +1,59 @@
+<nav class="navbar sticky-top navbar-light alert alert-info mx-4 rounded-pill">
+    
+    <div class="ms-3 d-flex align-items-center">        
+        <a class="navbar-brand" href="#">
+            <img src="https://i.ibb.co/YZPYZPW/OneLink.png" alt="">
+        </a>
+        
+            <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+        
+            <a class="nav-link" href="#" routerLink="/admin">Redes</a>
+
+            <a class="nav-link" href="#" routerLink="/perfil">Perfil</a>
+
+            <a class="nav-link" href="#" routerLink="/estilos">Estilos</a>
+
+            <a class="nav-link" target="_blank"routerLink="/{{persona[0].nickname}}" >Mi Link</a>
+        
+    </div>  
+    
+        
+        <img id="img-logo" type="button" class=" navbar-toggler img-fluid rounded-circle border border-0" [src]="persona[0].picture" alt="Image"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+  
+  
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            
+           <app-user-side-bar [persona]="persona[0]" [redes]="redes"></app-user-side-bar>
+
+        </div>
+   
+
+</nav>
+<!-- 
+<nav class="navbar navbar-expand-lg navbar-light alert alert-info mx-4 rounded-pill d-flex justify-content-between">
+    
+    <div class="ms-3 d-flex align-items-center">        
+        <a class="navbar-brand" href="#">
+            <img src="https://i.ibb.co/YZPYZPW/OneLink.png" alt="">
+        </a>
+        
+            <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+        
+            <a class="nav-link" href="#" routerLink="/admin">Redes</a>
+
+            <a class="nav-link" href="#" routerLink="/perfil">Perfil</a>
+
+            <a class="nav-link" href="#" routerLink="/estilos">Estilos</a>
+
+            <a class="nav-link" target="_blank"routerLink="/{{persona[0].nickname}}" >Mi Link</a>
+        
+    </div>  
+    <div class="d-flex align-self-center me-4">
+     
+            <img id="img-logo" type="button" class="img-fluid rounded-circle" [src]="persona[0].picture" alt="Image">
+      
+        
+    </div>
+
+</nav> -->
+

@@ -7,6 +7,7 @@ import { ErrorPageComponent } from './componentes/error-page/error-page.componen
 
 import { HomeComponent } from './componentes/pagina-principal/home/home.component';
 import { UserAdminComponent } from './componentes/usuario-admin/user-admin/user-admin.component';
+import { UserDatosComponent } from './componentes/usuario-admin/user-datos/user-datos.component';
 import { UserNuevoComponent } from './componentes/usuario-admin/user-nuevo/user-nuevo.component';
 import { UsuarioHomeComponent } from './componentes/usuario/usuario-home/usuario-home.component';
 
@@ -18,6 +19,7 @@ const routes: Routes = [
  {path: 'error', component:ErrorPageComponent}, 
  {path: 'admin', component:UserAdminComponent, canActivate: [AuthGuard]},
  {path: 'nuevo', component:UserNuevoComponent, canActivate: [AuthGuard]},
+ {path: 'perfil', component:UserDatosComponent, canActivate: [AuthGuard]},
  {path: ':user', component:UsuarioHomeComponent},
  {path: '**', component:ErrorPageComponent},
  ];

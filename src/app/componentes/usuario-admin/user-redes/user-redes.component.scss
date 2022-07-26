@@ -1,0 +1,27 @@
+body{   
+    min-height: 80vh;
+}
+input{
+    font-size: 20px;
+}
+
+.tarjeta {
+    /* background-color: #e7e7dd; */
+    //background-color: #f8f8c6;
+    height: 7.5rem;
+   
+}
+
+.tarjeta:hover {
+   // background-color: #f4fc84;
+    background-color: #4ecdf3;   
+}
+
+h4{
+    margin-bottom:0;
+}
+
+/* .cuerpo-redes{
+    transform: translate(0px, -100px);    
+    z-index: -10; 
+} */
