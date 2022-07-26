@@ -13,11 +13,11 @@ import Swal from 'sweetalert2';
 })
 export class ModalRedesComponent implements OnInit {
 
-  @Input()  redNueva!:boolean;
-  @Input()  id!:number;
-  @Input()  personasIdpersonas!:string; 
-  @Input()  red!:any
-  
+  @Input() redNueva!: boolean;
+  @Input() id!: number;
+  @Input() personasIdpersonas!: string;
+  @Input() red!: any
+
   //red!:Redes;
   isSubmitted = false;
   formRed: FormGroup;
@@ -33,50 +33,56 @@ export class ModalRedesComponent implements OnInit {
     return this.formRed.get('nombre_red');
   }
 
-  constructor(public activeModal: NgbActiveModal, private datosDb : DatosServiceService, private fb: FormBuilder) {
+  get link(){
+    return this.formRed.get('link');
+  }
+
+  constructor(public activeModal: NgbActiveModal, private datosDb: DatosServiceService, private fb: FormBuilder) {
     this.redNueva = false;
     this.formRed = fb.group({
-     
-      nombre_red: ['', [Validators.required]],
-      link: [''],
-        
-   })
-  }
-   
-  ngOnInit(): void {
-    if(this.redNueva === false){                          
-      this.armarFormulario();     
-    }     
+
+      nombre_red: [''],
+      link: ['', [Validators.required, Validators.pattern('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?')]],
+
+    })
   }
 
-  armarFormulario(){
+
+
+  ngOnInit(): void {
+    if (this.redNueva === false) {
+      this.armarFormulario();
+    }
+  }
+
+  armarFormulario() {
     //console.log(this.red)
-    this.formRed.setValue({     
+    this.formRed.setValue({
       nombre_red: this.red[0].nombre_red,
       link: this.red[0].link,
-    })  
+    })
   }
 
-  enviarDatos(){
-      
-    if(this.redNueva === true){
+  enviarDatos() {
+
+    if (this.redNueva === true) {
       //console.log("nada")
-      this.red = this.formRed.value  
-      
+      this.red = this.formRed.value
+
       this.crearRed();
-    }else{
+    } else {
       this.armarModeloRed();
       this.editarRed();
     }
   }
 
-  armarModeloRed(){    
+  armarModeloRed() {
     this.red[0].nombre_red = this.formRed.value.nombre_red;
     this.red[0].link = this.formRed.value.link;
-  }  
+  }
 
   editarRed() {
-  
+
     Swal.fire({
       title: '¿Desea guardar los cambios?',
       showDenyButton: true,
@@ -88,21 +94,21 @@ export class ModalRedesComponent implements OnInit {
       if (result.isConfirmed) {
         this.actualizarRed()
         Swal.fire('¡Guardados!', '', 'success')
-      
-      
-        
+
+
+
       } else if (result.isDenied) {
         Swal.fire('No se guardaron los cambios', '', 'info')
-        this.activeModal.close(); 
+        this.activeModal.close();
       }
     })
-    
+
   }
 
-  actualizarRed(){
+  actualizarRed() {
     this.datosDb.update(this.red[0], "redes", this.red[0].idredes).subscribe(() => {
-      this.activeModal.close();     
-  });
+      this.activeModal.close();
+    });
   }
 
   crearRed() {
@@ -119,17 +125,17 @@ export class ModalRedesComponent implements OnInit {
         this.agregarRed();
       } else if (result.isDenied) {
         Swal.fire('No se agregó la red', '', 'info')
-        this.activeModal.close(); 
+        this.activeModal.close();
       }
     })
   }
 
-  agregarRed(){
+  agregarRed() {
     this.red.personas_idpersonas = this.personasIdpersonas;
     this.red.icono = ""
     //console.log(this.red)
     this.datosDb.save(this.red, "redes").subscribe(() => {
-      this.activeModal.close();     
-  }); 
+      this.activeModal.close();
+    });
   }
 }
