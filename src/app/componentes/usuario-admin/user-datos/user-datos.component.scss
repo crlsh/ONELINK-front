@@ -1,6 +1,24 @@
+body{   
+    min-height: 75vh;
+}
+
 h5{
     margin-bottom:0;
 }
 .url{
     width: 25rem;
+}
+#portada{
+    max-width: 18rem;
+}
+.tarjeta{
+    z-index: 1;
+    background-color: aliceblue;
+}
+.boton{
+    border-radius: 40px;
+}
+
+input{
+    font-size: 20px;
 }

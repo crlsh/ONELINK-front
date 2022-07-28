@@ -6,68 +6,62 @@
 
 <ng-template #loaded>  
 
-<div class="container text-center">
+<body class="container text-center">
 
     <h1 class="mt-5 ms-5 text-start">Perfil:</h1>
     <!-- <h1 class="mt-5 text-center"> Hola {{persona[0].given_name}} {{persona[0].family_name}} </h1> -->
 
     <h2>Usuario:</h2>
-    <div class="d-flex justify-content-center">
+    <form class="d-flex justify-content-center">
         <div class="url input-group input-group-lg">
             <span class="input-group-text" id="basic-addon3">OneLink/</span>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #nickname placeholder="{{persona[0].nickname}} ">
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #nickname placeholder="{{persona[0].nickname}}" #Nickame>
         </div>
-        <button type="button" class="btn btn-success" > Guardar </button>
-    </div>
+        <button type="button" class="btn btn-success" (click)="guardarNickname(Nickame.value)" > Guardar </button>
+    </form>
     <div class="d-flex justify-content-center">
         <h3 class="ms-5 mt-3">Datos personales:</h3>
 
     </div>
-    <div class="mt-5" class="d-flex justify-content-center">
+    <div class="mt-5" class="d-flex justify-content-center ">
 
-        <!-- falta la etiqueta de cierre del <button> entonces toma todo como un boton (asi abre el modal). si agrego la etiqueta de cierre, se deforma todo. hay que arreglarlo -->
-            <button class="btn btn-outline-secondary" (click)="abrirModalVacio()"> 
-
-            <div class="d-flex tarjeta border border-primary rounded-pill mb-2 alert  ">
-
-           <!--      <div class="input-group mb-3">
-                    <h5>url :  </h5>
-                    <input type="text" id="disabledTextInput" class="form-control" placeholder="  {{persona[0].nickname}}">
-                </div> -->
-                <div class="ms-2">
-                    <div class="input-group mb-2">
-                        <h5 class="d-flex align-items-center">Nombre : </h5>
-                        <input type="text" id="disabledTextInput" class="form-control  bg-transparent border border-0" placeholder=" {{persona[0].given_name}}">
+            <div class="bg-info  border border-primary boton mb-2 alert position-relative  ">
+                <div class="d-flex tarjeta border border-primary rounded-pill mb-2 alert  ">           
+                    <div class="ms-2">
+                        <div class="input-group mb-2">
+                            <h5 class="d-flex align-items-center">Nombre : </h5>
+                            <input type="text" id="disabledTextInput" class="form-control  bg-transparent border border-0" placeholder=" {{persona[0].given_name}}" disabled>
+                        </div>
+                        <div class="input-group mb-2">
+                            <h5 class="d-flex align-items-center">Apellido :  </h5>
+                            <input type="text" id="disabledTextInput" class="form-control  bg-transparent border border-0" placeholder=" {{persona[0].family_name}} " disabled>
+                        </div>
                     </div>
-                    <div class="input-group mb-2">
-                        <h5 class="d-flex align-items-center">Apellido :  </h5>
-                        <input type="text" id="disabledTextInput" class="form-control  bg-transparent border border-0" placeholder=" {{persona[0].family_name}} ">
+                    <div>
+                        <img [src]="persona[0].picture"  alt="Logo" class="img-fluid rounded-circle border border-0">
                     </div>
                 </div>
-                <div>
-                    <img [src]="persona[0].picture"  alt="Logo" class="img-fluid rounded-circle border border-0">
+                <div class="input-group tarjeta border border-primary rounded-pill mb-2 alert  ">
+                    <h5 class="d-flex align-items-center">Descripción : </h5>
+                    <input type="text" id="disabledTextInput" class="form-control  bg-transparent border border-0" placeholder=" {{persona[0].descripcion}} " disabled>
                 </div>
-            </div>
-            <div class="input-group tarjeta border border-primary rounded-pill mb-2 alert  ">
-                <h5 class="d-flex align-items-center">Descripción : </h5>
-                <input type="text" id="disabledTextInput" class="form-control  bg-transparent border border-0" placeholder=" {{persona[0].descripcion}} ">
-            </div>
-            <div class="input-group tarjeta border border-primary rounded-pill mb-2 alert row">
-                <h5 class="d-flex align-items-center">Portada : </h5>
-               
-                <!-- <input type="text" id="disabledTextInput" class="form-control" placeholder="{{persona[0].imagen_fondo}} "> -->
-                <div>
-                    <img [src]="persona[0].imagen_fondo"  alt="Portada" class="img-fluid border border-0 rounded-pill">
+                <div class="input-group tarjeta border border-primary rounded-pill mb-2 alert ">
+                    <h5 class="d-flex align-items-center">Portada : </h5>
+                    <div>
+                        <img [src]="persona[0].imagen_fondo"  alt="vista previa de su portada" class="img-fluid border border-0 rounded-pill" id="portada">
+                    </div>
                 </div>
+             
+                <button id="btn-editar" class="btn btn-success rounded-circle position-absolute top-0 start-0 translate-middle" (click)="abrirModalVacio()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                        <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                    </svg>
+                </button>   
             </div>
-            <!-- <div class="input-group mb-3">
-                <h5>Logo : </h5>
-                <input type="text" id="disabledTextInput" class="form-control" placeholder="{{persona[0].picture }}">
-
-            </div> -->
-            </button>
+           
     </div>
-</div>
-<app-footer class="fixed-bottom"></app-footer>
+   
+</body>
+<app-footer class="sticky-bottom"></app-footer>
 
 </ng-template>

@@ -68,6 +68,33 @@ export class UserDatosComponent implements OnInit {
     
     })
   }
+
+  guardarNickname(nickname: string){
+    
+    Swal.fire({
+      title: '¿Desea cambiar el usuario?',
+      showDenyButton: true,
+      //showCancelButton: true,
+      confirmButtonText: 'Cambiar',
+      denyButtonText: `Cancelar`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */      
+      if (result.isConfirmed) {     
+        this.persona[0].nickname = nickname 
+        console.log(this.persona[0])
+        this.datosDb.update(this.persona[0], "persona", this.persona[0].idpersonas).subscribe((respuesta) => {
+          if(respuesta){
+            Swal.fire('¡Modificado!', '', 'success');                
+          } else {
+            Swal.fire('Ese usuario ya existe, por favor ingresa otro', '', 'info');        
+          }          
+      });  
+      } else if (result.isDenied) {
+        Swal.fire('No se guardaron los cambios', '', 'info')        
+      }
+    })
+  }
+
   /* 
   eliminarPer(id:number){
       
