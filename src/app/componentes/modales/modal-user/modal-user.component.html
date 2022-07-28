@@ -7,10 +7,10 @@
 <div class="modal-body">
     
     <form [formGroup]="formPer" (ngSubmit)="enviarDatos()">
-      <div class="input-group flex-nowrap mt-2">
+      <!-- <div class="input-group flex-nowrap mt-2">
         <span class="input-group-text">Nickname : </span>
         <input type="text" class="form-control" placeholder= "Nickname" formControlName="nickname">
-      </div>
+      </div> -->
       
       <div class="input-group flex-nowrap mt-2">
         <span class="input-group-text">Nombre : </span>
@@ -26,10 +26,10 @@
       </div>
       <div class="input-group flex-nowrap mt-2">
         <span class="input-group-text">Descripcion : </span>
-        <input type="text" class="form-control" placeholder="Descripcion" formControlName="descripcion" >
-      </div>
+        <textarea type="text" class="form-control" aria-label="With textarea" placeholder="Descripcion" formControlName="descripcion"></textarea>
+      </div>    
       <div class="input-group flex-nowrap mt-2">
-        <span class="input-group-text">Background : </span>
+        <span class="input-group-text">Portada : </span>
         <input type="text" class="form-control" placeholder="Background" formControlName="imagen_fondo" >
       </div>
   <div class="modal-footer d-flex justify-content-end mt-2">

@@ -79,11 +79,10 @@ export class ModalUserComponent implements OnInit {
   
     armarModeloPer(){    
       this.persona[0].given_name = this.formPer.value.given_name;
-      this.persona[0].family_name = this.formPer.value.family_name;
-      this.persona[0].nickname = this.formPer.value.nickname;
+      this.persona[0].family_name = this.formPer.value.family_name;      
       this.persona[0].picture = this.formPer.value.picture;
       this.persona[0].descripcion = this.formPer.value.descripcion;
-      this.persona[0].imagen_fondo = this.formPer.value.imagen_fonde;
+      this.persona[0].imagen_fondo = this.formPer.value.imagen_fondo;
     }  
   
     editarPer() {

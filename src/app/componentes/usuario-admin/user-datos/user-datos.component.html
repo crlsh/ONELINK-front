@@ -20,7 +20,7 @@
         <button type="button" class="btn btn-success" (click)="guardarNickname(Nickame.value)" > Guardar </button>
     </form>
     <div class="d-flex justify-content-center">
-        <h3 class="ms-5 mt-3">Datos personales:</h3>
+        <h3 class="mt-3">Datos personales:</h3>
 
     </div>
     <div class="mt-5" class="d-flex justify-content-center ">
@@ -43,10 +43,10 @@
                 </div>
                 <div class="input-group tarjeta border border-primary rounded-pill mb-2 alert  ">
                     <h5 class="d-flex align-items-center">Descripción : </h5>
-                    <input type="text" id="disabledTextInput" class="form-control  bg-transparent border border-0" placeholder=" {{persona[0].descripcion}} " disabled>
+                    <textarea type="text" id="disabledTextInput" class="form-control  bg-transparent border border-0" placeholder=" {{persona[0].descripcion}} " disabled></textarea>
                 </div>
                 <div class="input-group tarjeta border border-primary rounded-pill mb-2 alert ">
-                    <h5 class="d-flex align-items-center">Portada : </h5>
+                    <h5 class="d-flex align-items-center">Portada: </h5>
                     <div>
                         <img [src]="persona[0].imagen_fondo"  alt="vista previa de su portada" class="img-fluid border border-0 rounded-pill" id="portada">
                     </div>
