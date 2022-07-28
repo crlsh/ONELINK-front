@@ -4,59 +4,67 @@
     <app-carga></app-carga>
 </div>
 
-<ng-template #loaded>    
+<ng-template #loaded>  
 
+<div class="container text-center">
 
-<div class="container">
-
+    <h1 class="mt-5 ms-5 text-start">Perfil:</h1>
     <!-- <h1 class="mt-5 text-center"> Hola {{persona[0].given_name}} {{persona[0].family_name}} </h1> -->
-    <div class="d-flex mt-5">
+
+    <h2>Usuario:</h2>
+    <div class="d-flex justify-content-center">
         <div class="url input-group input-group-lg">
             <span class="input-group-text" id="basic-addon3">OneLink/</span>
             <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" #nickname placeholder="{{persona[0].nickname}} ">
         </div>
         <button type="button" class="btn btn-success" > Guardar </button>
     </div>
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-center">
         <h3 class="ms-5 mt-3">Datos personales:</h3>
 
     </div>
-    <div class="mt-5" class="d-flex align-self-center">
+    <div class="mt-5" class="d-flex justify-content-center">
 
         <!-- falta la etiqueta de cierre del <button> entonces toma todo como un boton (asi abre el modal). si agrego la etiqueta de cierre, se deforma todo. hay que arreglarlo -->
             <button class="btn btn-outline-secondary" (click)="abrirModalVacio()"> 
 
-            <div>
+            <div class="d-flex tarjeta border border-primary rounded-pill mb-2 alert  ">
 
-                <div class="input-group mb-3">
+           <!--      <div class="input-group mb-3">
                     <h5>url :  </h5>
                     <input type="text" id="disabledTextInput" class="form-control" placeholder="  {{persona[0].nickname}}">
+                </div> -->
+                <div class="ms-2">
+                    <div class="input-group mb-2">
+                        <h5 class="d-flex align-items-center">Nombre : </h5>
+                        <input type="text" id="disabledTextInput" class="form-control  bg-transparent border border-0" placeholder=" {{persona[0].given_name}}">
+                    </div>
+                    <div class="input-group mb-2">
+                        <h5 class="d-flex align-items-center">Apellido :  </h5>
+                        <input type="text" id="disabledTextInput" class="form-control  bg-transparent border border-0" placeholder=" {{persona[0].family_name}} ">
+                    </div>
                 </div>
-
-                <div class="input-group mb-3">
-                    <h5>Nombre : </h5>
-                    <input type="text" id="disabledTextInput" class="form-control" placeholder=" {{persona[0].given_name}}">
-                </div>
-                <div class="input-group mb-3">
-                    <h5>Apellido :  </h5>
-                    <input type="text" id="disabledTextInput" class="form-control" placeholder=" {{persona[0].family_name}} ">
+                <div>
+                    <img [src]="persona[0].picture"  alt="Logo" class="img-fluid rounded-circle border border-0">
                 </div>
             </div>
-            <div class="input-group mb-3">
-                <h5>Acerca De : </h5>
-                <input type="text" id="disabledTextInput" class="form-control" placeholder=" {{persona[0].descripcion}} ">
-
+            <div class="input-group tarjeta border border-primary rounded-pill mb-2 alert  ">
+                <h5 class="d-flex align-items-center">Descripción : </h5>
+                <input type="text" id="disabledTextInput" class="form-control  bg-transparent border border-0" placeholder=" {{persona[0].descripcion}} ">
             </div>
-            <div class="input-group mb-3">
-                <h5>Imagen de fondo : </h5>
-                <input type="text" id="disabledTextInput" class="form-control" placeholder="{{persona[0].imagen_fondo}} ">
-
+            <div class="input-group tarjeta border border-primary rounded-pill mb-2 alert row">
+                <h5 class="d-flex align-items-center">Portada : </h5>
+               
+                <!-- <input type="text" id="disabledTextInput" class="form-control" placeholder="{{persona[0].imagen_fondo}} "> -->
+                <div>
+                    <img [src]="persona[0].imagen_fondo"  alt="Portada" class="img-fluid border border-0 rounded-pill">
+                </div>
             </div>
-            <div class="input-group mb-3">
+            <!-- <div class="input-group mb-3">
                 <h5>Logo : </h5>
                 <input type="text" id="disabledTextInput" class="form-control" placeholder="{{persona[0].picture }}">
 
-            </div>
+            </div> -->
             </button>
     </div>
 </div>
