@@ -42,6 +42,7 @@ import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { SideBarComponent } from './componentes/side-bar/side-bar.component';
 import { UserNavComponent } from './componentes/usuario-admin/user-nav/user-nav.component';
 import { UserSideBarComponent } from './componentes/usuario-admin/user-side-bar/user-side-bar.component';
+import { UserEstilosComponent } from './componentes/usuario-admin/user-estilos/user-estilos.component';
 
 
 
@@ -77,7 +78,8 @@ import { UserSideBarComponent } from './componentes/usuario-admin/user-side-bar/
     BtnEliminarCuentaComponent,
     SideBarComponent,
     UserNavComponent,
-    UserSideBarComponent
+    UserSideBarComponent,
+    UserEstilosComponent
 
 
 

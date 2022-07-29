@@ -1,0 +1,21 @@
+<app-user-nav [persona]=persona></app-user-nav>
+
+<div class="container" *ngIf="auth.isLoading$ | async; else loaded">
+    <app-carga></app-carga>
+</div>
+
+
+<ng-template #loaded>
+
+<body class="mb-5"> 
+    
+
+    
+
+
+
+</body>
+
+<app-footer class="sticky-bottom"></app-footer>
+
+</ng-template>
