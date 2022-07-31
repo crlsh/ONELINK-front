@@ -1,0 +1,83 @@
+<br>
+<br>
+
+<nav class="navbar navbar-expand-lg navbar-light alert alert-info mx-4 rounded-pill d-flex justify-content-between">
+    
+    <div class="ms-3 d-flex align-items-center">        
+        <a class="navbar-brand" href="#">
+            <img src="https://i.ibb.co/YZPYZPW/OneLink.png" alt="">
+        </a>
+        
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+        
+            <a class="nav-link" href="#">Caracteristicas</a>
+
+            <a class="nav-link" href="#" routerLink="/precios">Precios</a>
+            
+            <a class="nav-link" href="#">Nosotros</a>
+        
+    </div>  
+    <div class="d-flex align-self-center me-4">
+     
+        <app-btn-authentication></app-btn-authentication>
+        <app-btn-signup *ngIf="(auth.isAuthenticated$ | async) === false"></app-btn-signup>
+        
+    </div>
+
+</nav>
+<br>
+<br>
+<br>
+
+    <div class="card-deck d-flex justify-content-between">
+       <br>
+        <div class="card1">
+          
+          <div class="card-body">
+            <h5 class="card-title">OneLink Free</h5>
+            <p class="card-text">Con Onlink Free podes guardar tus redes sociales en un solo lugar, con solo compartir tu usuario a tus conocidos podran acceder a tu vida social a un solo click. Podras guardar hasta un limite de 10 de tus redes, sin tener que aclarar cada una de ellas. Version gratuita.</p>
+          </div>
+          <div class="card-footer">
+            <app-btn-signup ></app-btn-signup>
+          </div>
+        </div>
+        
+        <div class="card2">
+          <div class="card-body" style="color: white" >
+            <h5 class="card-title">Onelink Plus</h5>
+            <p class="card-text">Con Onlink Plus podes guardar todas tus redes sociales como la version Free en un solo lugar, con solo compartir tu usuario a tus conocidos podran acceder a tu vida social a un solo click. Podras guardar hasta un limite de 25 de tus redes, version comercial.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Comprame</a>
+          </div>
+        </div>
+        
+        <div class="card3">
+          <div class="card-body" style="color: white">
+            <h5 class="card-title" >Onelink Prime</h5>
+            <p class="card-text">Con Onlink Prime podes guardar todas tus redes sociales sin limite en un solo lugar, con solo compartir tu usuario a tus clientes,  ellos podran acceder a tu redes a un solo click. Podras guardar redes sin limite. Ademas de poder contar con una atencion empresarial. </p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Comprame</a>
+          </div>
+        </div>
+      <br>
+    </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+<div class="footer">
+
+    <app-footer></app-footer>
+</div>

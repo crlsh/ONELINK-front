@@ -43,6 +43,7 @@ import { SideBarComponent } from './componentes/side-bar/side-bar.component';
 import { UserNavComponent } from './componentes/usuario-admin/user-nav/user-nav.component';
 import { UserSideBarComponent } from './componentes/usuario-admin/user-side-bar/user-side-bar.component';
 import { UserEstilosComponent } from './componentes/usuario-admin/user-estilos/user-estilos.component';
+import { PreciosComponent } from './componentes/usuario/precios/precios.component';
 
 
 
@@ -79,7 +80,8 @@ import { UserEstilosComponent } from './componentes/usuario-admin/user-estilos/u
     SideBarComponent,
     UserNavComponent,
     UserSideBarComponent,
-    UserEstilosComponent
+    UserEstilosComponent,
+    PreciosComponent
 
 
 
