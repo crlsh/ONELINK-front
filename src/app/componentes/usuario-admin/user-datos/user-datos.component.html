@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <div>
-                        <img [src]="persona[0].picture"  alt="Logo" class="img-fluid rounded-circle border border-0">
+                        <img *ngIf ="persona[0].picture" [src]="persona[0].picture"[src]="persona[0].picture"  alt="Logo" class="img-fluid rounded-circle border border-0">
                     </div>
                 </div>
                 <div class="input-group tarjeta border border-primary rounded-pill mb-2 alert  ">
