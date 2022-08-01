@@ -14,7 +14,9 @@ export class BtnSignupComponent implements OnInit {
   }
 
   loginWithRedirect(): void {
-    this.auth.loginWithRedirect({ screen_hint: 'signup' });
+    this.auth.loginWithRedirect({
+      appState: { target: '/admin' }
+    });
   }
 
 }

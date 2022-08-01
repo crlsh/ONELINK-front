@@ -12,5 +12,8 @@ export class BtnAuthenticationComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  loginWithRedirect(): void {
+    this.auth.loginWithRedirect({ screen_hint: 'signup' });
+  }
 
 }
