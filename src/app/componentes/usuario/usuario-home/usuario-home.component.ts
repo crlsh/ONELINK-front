@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
+import { OverlayContainer} from '@angular/cdk/overlay';
 import { ActivatedRoute, Router} from '@angular/router';
 import { DatosServiceService } from 'src/app/servicios/api/datos-service.service';
 import { Persona } from 'src/app/servicios/interfaces/persona';
+import { ThemeService } from 'src/app/servicios/theme/theme.service';
 
 @Component({
   selector: 'app-usuario-home',
@@ -13,8 +15,10 @@ export class UsuarioHomeComponent implements OnInit {
   persona!: Persona[];
   user!: string|null;
   loading: boolean;
+  estilo!:string;
+  @HostBinding('class') componentCssClass: any;
 
-  constructor(private activatedRouter: ActivatedRoute, private datosDb : DatosServiceService, private router: Router) { 
+  constructor(private activatedRouter: ActivatedRoute, private datosDb : DatosServiceService, private router: Router, public overlayContainer: OverlayContainer, private themeService: ThemeService) { 
     this.user = this.activatedRouter.snapshot.paramMap.get('user');
     //console.log(this.user);
     this.loading=true;
@@ -23,6 +27,7 @@ export class UsuarioHomeComponent implements OnInit {
   ngOnInit(): void {
    //this.cargarDatos()
    this.buscarUsuario()
+   this.currentTheme();
   }
 
  /*  cargarDatos(){
@@ -50,6 +55,17 @@ export class UsuarioHomeComponent implements OnInit {
       console.log("tiene datos");
       this.loading = false
     }
+  }
+
+  public currentTheme() {
+    this.estilo = this.themeService.current;
+    this.onSetTheme(this.estilo)
+  }
+
+  
+  public onSetTheme (e: string){
+    this.overlayContainer.getContainerElement().classList.add(e);
+    this.componentCssClass = e;
   }
   
 

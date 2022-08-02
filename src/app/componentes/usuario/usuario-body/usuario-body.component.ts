@@ -1,7 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, HostBinding } from '@angular/core';
+import { OverlayContainer} from '@angular/cdk/overlay';
 import { AuthService } from '@auth0/auth0-angular';
 import { DatosServiceService } from 'src/app/servicios/api/datos-service.service';
 import { Redes } from 'src/app/servicios/interfaces/redes';
+import { ThemeService } from 'src/app/servicios/theme/theme.service';
 
 @Component({
   selector: 'app-usuario-body',
@@ -11,7 +13,11 @@ import { Redes } from 'src/app/servicios/interfaces/redes';
 export class UsuarioBodyComponent implements OnInit {
 
   @Input() idpersonas!: any;
-  redes!: Redes[];
+  /* @Input() estilo!:string; */
+  redes!: Redes[]; 
+  @HostBinding('class') componentCssClass: any; 
+  cambioEstilo:boolean = false;
+  estilo!: string;
 
   selectIcon(nombre: String) {
     switch (nombre) {
@@ -31,11 +37,24 @@ export class UsuarioBodyComponent implements OnInit {
 
 
 
-  constructor(private datosDb: DatosServiceService, public auth: AuthService) { }
+  constructor(private datosDb: DatosServiceService, public auth: AuthService, public overlayContainer: OverlayContainer, private themeService: ThemeService) {
+
+   }
 
   ngOnInit(): void {
     console.log(this.idpersonas);
+    this.themeService.estadoEstilo().subscribe((estado) => {
+      this.cambioEstilo = estado;
+      if(this.cambioEstilo === true) {
+        this.estilo = this.themeService.current
+        console.log(this.estilo);
+        this.onSetTheme(this.estilo);
+      }
+    });
     this.buscarRedes();
+    
+    
+    
   }
 
   buscarRedes(): void {
@@ -47,8 +66,20 @@ export class UsuarioBodyComponent implements OnInit {
 
       });
 
+  }
 
+ /*  public currentTheme() {
+    this.estilo = this.themeService.current;
+    this.onSetTheme(this.estilo)
+  } */
 
+  
+  public onSetTheme (e: string){
+    console.log(this.estilo);
+    this.overlayContainer.getContainerElement().classList.add(e);
+    this.componentCssClass = e;
+    this.themeService.cambioEstiloFalso();
+    console.log(this.cambioEstilo);
   }
 
 }

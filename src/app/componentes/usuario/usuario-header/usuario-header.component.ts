@@ -10,6 +10,7 @@ import { Persona } from 'src/app/servicios/interfaces/persona';
 export class UsuarioHeaderComponent implements OnInit {
 
   @Input() persona!: Persona;
+  @Input() estilo!:string;
 
   constructor(public auth: AuthService) { }
 
