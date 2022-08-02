@@ -14,165 +14,165 @@
    // Vapor 5.0.1
 // Bootswatch
 
-$theme: "vapor" !default;;
+$theme: "vapor" !default;
 
 //
 // Color system
 //
 
-$white:    #fff !default;;
-$gray-100: #f8f9fa !default;;
-$gray-200: #e9ecef !default;;
-$gray-300: #dee2e6 !default;;
-$gray-400: #ced4da !default;;
-$gray-500: #adb5bd !default;;
-$gray-600: #6c757d !default;;
-$gray-700: #495057 !default;;
-$gray-800: #343a40 !default;;
-$gray-900: #170229 !default;;
-$black:    #000 !default;;
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #170229 !default;
+$black:    #000 !default;
 
-$blue:    #1ba2f6 !default;;
-$indigo:  #6610f2 !default;;
-$purple:  #6f42c1 !default;;
-$pink:    #ea39b8 !default;;
-$red:     #e44c55 !default;;
-$orange:  #f1b633 !default;;
-$yellow:  #ffc107 !default;;
-$green:   #3cf281 !default;;
-$teal:    #3f81a2 !default;;
-$cyan:    #32fbe2 !default;;
+$blue:    #1ba2f6 !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #ea39b8 !default;
+$red:     #e44c55 !default;
+$orange:  #f1b633 !default;
+$yellow:  #ffc107 !default;
+$green:   #3cf281 !default;
+$teal:    #3f81a2 !default;
+$cyan:    #32fbe2 !default;
 
-$primary:       $purple !default;;
-$secondary:     $pink !default;;
-$success:       $green !default;;
-$info:          $blue !default;;
-$warning:       $yellow !default;;
-$danger:        $red !default;;
-$light:         #44d9e8 !default;;
-$dark:          $gray-900 !default;;
+$primary:       $purple !default;
+$secondary:     $pink !default;
+$success:       $green !default;
+$info:          $blue !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         #44d9e8 !default;
+$dark:          $gray-900 !default;
 
-$min-contrast-ratio:   1.2 !default;;
+$min-contrast-ratio:   1.2 !default;
 
 // Options
 
-// $enable-rounded:              false !default;;
+// $enable-rounded:              false !default;
 
 // Body
 
-$body-bg:                   #1a0933 !default;;
-$body-color:                $cyan !default;;
+$body-bg:                   #1a0933 !default;
+$body-color:                $cyan !default;
 
 // Links
 
-$link-color:                              $body-color !default;;
+$link-color:                              $body-color !default;
 
 // Components
 
-$border-width:                0 !default;;
+$border-width:                0 !default;
 
-$border-radius:               .15rem !default;;
-$border-radius-sm:            .05rem !default;;
+$border-radius:               .15rem !default;
+$border-radius-sm:            .05rem !default;
 
-$component-active-bg:         $pink !default;;
+$component-active-bg:         $pink !default;
 
 // Fonts
 
 // stylelint-disable-next-line value-keyword-case
-$font-family-sans-serif:      Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;;
+$font-family-sans-serif:      Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
-$text-muted:                  rgba($body-color, .3) !default;;
+$text-muted:                  rgba($body-color, .3) !default;
 
-$blockquote-footer-color:     $text-muted !default;;
+$blockquote-footer-color:     $text-muted !default;
 
 // Tables
 
-$table-color:                 $white !default;;
+$table-color:                 $white !default;
 
-$table-bg-scale:              0 !default;;
+$table-bg-scale:              0 !default;
 
 // Forms
 
-$input-bg:                              lighten($body-bg, 10%) !default;;
-$input-disabled-bg:                     lighten($body-bg, 5%) !default;;
+$input-bg:                              lighten($body-bg, 10%) !default;
+$input-disabled-bg:                     lighten($body-bg, 5%) !default;
 
-$input-color:                           $white !default;;
+$input-color:                           $white !default;
 
-$input-placeholder-color:               rgba($white, .4) !default;;
+$input-placeholder-color:               rgba($white, .4) !default;
 
-$input-group-addon-bg:                  $input-disabled-bg !default;;
+$input-group-addon-bg:                  $input-disabled-bg !default;
 
-$form-range-track-bg:             $input-bg !default;;
+$form-range-track-bg:             $input-bg !default;
 
-$form-range-thumb-disabled-bg:             $purple !default;;
+$form-range-thumb-disabled-bg:             $purple !default;
 
 // Navs
 
-$nav-link-disabled-color:           $text-muted !default;;
+$nav-link-disabled-color:           $text-muted !default;
 
-$nav-tabs-link-active-color:        $component-active-bg !default;;
+$nav-tabs-link-active-color:        $component-active-bg !default;
 
 // Pagination
 
-$pagination-bg:                     transparent !default;;
+$pagination-bg:                     transparent !default;
 
-$pagination-focus-bg:               transparent !default;;
+$pagination-focus-bg:               transparent !default;
 
-$pagination-hover-bg:               transparent !default;;
+$pagination-hover-bg:               transparent !default;
 
-$pagination-disabled-color:         $text-muted !default;;
-$pagination-disabled-bg:            transparent !default;;
+$pagination-disabled-color:         $text-muted !default;
+$pagination-disabled-bg:            transparent !default;
 
 // Cards
 
-$card-border-width:                 2px !default;;
-$card-cap-color:                    $white !default;;
-$card-color:                        $white !default;;
+$card-border-width:                 2px !default;
+$card-cap-color:                    $white !default;
+$card-color:                        $white !default;
 
 // Tooltips
 
-$tooltip-bg:                        $dark !default;;
-$tooltip-opacity:                   1 !default;;
+$tooltip-bg:                        $dark !default;
+$tooltip-opacity:                   1 !default;
 
 // Popovers
 
-$popover-bg:                        $primary !default;;
+$popover-bg:                        $primary !default;
 
-$popover-header-color:              $white !default;;
+$popover-header-color:              $white !default;
 
-$popover-body-color:                $white !default;;
+$popover-body-color:                $white !default;
 
 // Toasts
 
-$toast-color:                       $white !default;;
-$toast-background-color:            $primary !default;;
+$toast-color:                       $white !default;
+$toast-background-color:            $primary !default;
 
-$toast-header-color:                $toast-color !default;;
-$toast-header-background-color:     $toast-background-color !default;;
+$toast-header-color:                $toast-color !default;
+$toast-header-background-color:     $toast-background-color !default;
 
 // Modals
 
-$modal-content-color:               $white !default;;
-$modal-content-bg:                  $primary !default;;
+$modal-content-color:               $white !default;
+$modal-content-bg:                  $primary !default;
 
 // Progress bars
 
-$progress-bg:                       $input-disabled-bg !default;;
+$progress-bg:                       $input-disabled-bg !default;
 
 // List group
 
-$list-group-color:                  $white !default;;
-$list-group-bg:                     $input-disabled-bg !default;;
-$list-group-hover-bg:               $pink !default;;
-$list-group-disabled-color:         $text-muted !default;;
-$list-group-action-color:           $body-color !default;;
-$list-group-action-hover-color:     $white !default;;
-$list-group-action-active-bg:       $list-group-hover-bg !default;;
+$list-group-color:                  $white !default;
+$list-group-bg:                     $input-disabled-bg !default;
+$list-group-hover-bg:               $pink !default;
+$list-group-disabled-color:         $text-muted !default;
+$list-group-action-color:           $body-color !default;
+$list-group-action-hover-color:     $white !default;
+$list-group-action-active-bg:       $list-group-hover-bg !default;
 
 // Breadcrumbs
 
-$breadcrumb-divider-color:          $text-muted !default;;
-$breadcrumb-active-color:           $component-active-bg !default;;
+$breadcrumb-divider-color:          $text-muted !default;
+$breadcrumb-active-color:           $component-active-bg !default;
 
 // Fix disappearing <hr>
 
@@ -184,311 +184,64 @@ hr:not([size]) {
    
 }
 
-/**
-* Generated theme by Material Theme Generator
-* https://materialtheme.arcsine.dev
-* Fork at: https://materialtheme.arcsine.dev/?c=YHBhbGV0dGU$YHByaW1hcnk$YF48IzRjYWY1MCIsIj9lcjwjYzllN2NiIiwiO2VyPCMzMzk2Mzd$LCIlPmBePCNmZjU3MjIiLCI~ZXI8I2ZmY2RiZCIsIjtlcjwjZmYzYzE0fiwid2Fybj5gXjwjNTEyZGE4IiwiP2VyPCNjYmMwZTUiLCI7ZXI8IzM3MWM4ZH4sIj9UZXh0PCMwMDAwMDAiLCI~PTwjZmFmYWZhIiwiO1RleHQ8I2ZmZmZmZiIsIjs9PCMyYzJjMmN$LCJmb250cz5bYEA8KC00fixgQDwoLTN$LGBAPCgtMn4sYEA8KC0xfixgQDxoZWFkbGluZX4sYEA8dGl0bGV$LGBAPHN1YiktMn4sYEA8c3ViKS0xfixgQDxib2R5LTJ$LGBAPGJvZHktMX4sYEA8YnV0dG9ufixgQDxjYXB0aW9ufixgQDxpbnB1dCIsInNpemU$bnVsbH1dLCJpY29uczxGaWxsZWQiLCI~bmVzcz50cnVlLCJ2ZXJzaW9uPjExfQ==
-*/
 
-@import '~@angular/material/theming';
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-
-// Fonts
-@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
-     
-$fontConfig: (
-  display-4: mat-typography-level(112px, 112px, 300, 'Roboto', -0.0134em),
-  display-3: mat-typography-level(56px, 56px, 400, 'Roboto', -0.0089em),
-  display-2: mat-typography-level(45px, 48px, 400, 'Roboto', 0.0000em),
-  display-1: mat-typography-level(34px, 40px, 400, 'Roboto', 0.0074em),
-  headline: mat-typography-level(24px, 32px, 400, 'Roboto', 0.0000em),
-  title: mat-typography-level(20px, 32px, 500, 'Roboto', 0.0075em),
-  subheading-2: mat-typography-level(16px, 28px, 400, 'Roboto', 0.0094em),
-  subheading-1: mat-typography-level(15px, 24px, 500, 'Roboto', 0.0067em),
-  body-2: mat-typography-level(14px, 24px, 500, 'Roboto', 0.0179em),
-  body-1: mat-typography-level(14px, 20px, 400, 'Roboto', 0.0179em),
-  button: mat-typography-level(14px, 14px, 500, 'Roboto', 0.0893em),
-  caption: mat-typography-level(12px, 20px, 400, 'Roboto', 0.0333em),
-  input: mat-typography-level(inherit, 1.125, 400, 'Roboto', 1.5px)
-);
-
-// Foreground Elements
-
-// Light Theme Text
-$dark-text: #000000;
-$dark-primary-text: rgba($dark-text, 0.87);
-$dark-accent-text: rgba($dark-primary-text, 0.54);
-$dark-disabled-text: rgba($dark-primary-text, 0.38);
-$dark-dividers: rgba($dark-primary-text, 0.12);
-$dark-focused: rgba($dark-primary-text, 0.12);
-
-$mat-light-theme-foreground: (
-  base:              black,
-  divider:           $dark-dividers,
-  dividers:          $dark-dividers,
-  disabled:          $dark-disabled-text,
-  disabled-button:   rgba($dark-text, 0.26),
-  disabled-text:     $dark-disabled-text,
-  elevation:         black,
-  secondary-text:    $dark-accent-text,
-  hint-text:         $dark-disabled-text,
-  accent-text:       $dark-accent-text,
-  icon:              $dark-accent-text,
-  icons:             $dark-accent-text,
-  text:              $dark-primary-text,
-  slider-min:        $dark-primary-text,
-  slider-off:        rgba($dark-text, 0.26),
-  slider-off-active: $dark-disabled-text,
-);
-
-// Dark Theme text
-$light-text: #ffffff;
-$light-primary-text: $light-text;
-$light-accent-text: rgba($light-primary-text, 0.7);
-$light-disabled-text: rgba($light-primary-text, 0.5);
-$light-dividers: rgba($light-primary-text, 0.12);
-$light-focused: rgba($light-primary-text, 0.12);
-
-$mat-dark-theme-foreground: (
-  base:              $light-text,
-  divider:           $light-dividers,
-  dividers:          $light-dividers,
-  disabled:          $light-disabled-text,
-  disabled-button:   rgba($light-text, 0.3),
-  disabled-text:     $light-disabled-text,
-  elevation:         black,
-  hint-text:         $light-disabled-text,
-  secondary-text:    $light-accent-text,
-  accent-text:       $light-accent-text,
-  icon:              $light-text,
-  icons:             $light-text,
-  text:              $light-text,
-  slider-min:        $light-text,
-  slider-off:        rgba($light-text, 0.3),
-  slider-off-active: rgba($light-text, 0.3),
-);
-
-// Background config
-// Light bg
-$light-background:    #fafafa;
-$light-bg-darker-5:   darken($light-background, 5%);
-$light-bg-darker-10:  darken($light-background, 10%);
-$light-bg-darker-20:  darken($light-background, 20%);
-$light-bg-darker-30:  darken($light-background, 30%);
-$light-bg-lighter-5:  lighten($light-background, 5%);
-$dark-bg-tooltip:     lighten(#2c2c2c, 20%);
-$dark-bg-alpha-4:     rgba(#2c2c2c, 0.04);
-$dark-bg-alpha-12:    rgba(#2c2c2c, 0.12);
-
-$mat-light-theme-background: (
-  background:               $light-background,
-  status-bar:               $light-bg-darker-20,
-  app-bar:                  $light-bg-darker-5,
-  hover:                    $dark-bg-alpha-4,
-  card:                     $light-bg-lighter-5,
-  dialog:                   $light-bg-lighter-5,
-  tooltip:                  $dark-bg-tooltip,
-  disabled-button:          $dark-bg-alpha-12,
-  raised-button:            $light-bg-lighter-5,
-  focused-button:           $dark-focused,
-  selected-button:          $light-bg-darker-20,
-  selected-disabled-button: $light-bg-darker-30,
-  disabled-button-toggle:   $light-bg-darker-10,
-  unselected-chip:          $light-bg-darker-10,
-  disabled-list-option:     $light-bg-darker-10,
-);
-
-// Dark bg
-$dark-background:     #2c2c2c;
-$dark-bg-lighter-5:   lighten($dark-background, 5%);
-$dark-bg-lighter-10:  lighten($dark-background, 10%);
-$dark-bg-lighter-20:  lighten($dark-background, 20%);
-$dark-bg-lighter-30:  lighten($dark-background, 30%);
-$light-bg-alpha-4:    rgba(#fafafa, 0.04);
-$light-bg-alpha-12:   rgba(#fafafa, 0.12);
-
-// Background palette for dark themes.
-$mat-dark-theme-background: (
-  background:               $dark-background,
-  status-bar:               $dark-bg-lighter-20,
-  app-bar:                  $dark-bg-lighter-5,
-  hover:                    $light-bg-alpha-4,
-  card:                     $dark-bg-lighter-5,
-  dialog:                   $dark-bg-lighter-5,
-  tooltip:                  $dark-bg-lighter-20,
-  disabled-button:          $light-bg-alpha-12,
-  raised-button:            $dark-bg-lighter-5,
-  focused-button:           $light-focused,
-  selected-button:          $dark-bg-lighter-20,
-  selected-disabled-button: $dark-bg-lighter-30,
-  disabled-button-toggle:   $dark-bg-lighter-10,
-  unselected-chip:          $dark-bg-lighter-20,
-  disabled-list-option:     $dark-bg-lighter-10,
-);
-
-// Compute font config
-@include mat-core($fontConfig);
-
-// Theme Config
-
-body {
-  --primary-color: #4caf50;
-  --primary-lighter-color: #c9e7cb;
-  --primary-darker-color: #339637;
-  --text-primary-color: #{$dark-primary-text};
-  --text-primary-lighter-color: #{$dark-primary-text};
-  --text-primary-darker-color: #{$light-primary-text};
-}   
-$mat-primary: (
-  main: #4caf50,
-  lighter: #c9e7cb,
-  darker: #339637,
-  200: #4caf50, // For slide toggle,
-  contrast : (
-    main: $dark-primary-text,
-    lighter: $dark-primary-text,
-    darker: $light-primary-text,
-  )
-);
-$theme-primary: mat-palette($mat-primary, main, lighter, darker);
-
-
-body {
-  --accent-color: #ff5722;
-  --accent-lighter-color: #ffcdbd;
-  --accent-darker-color: #ff3c14;
-  --text-accent-color: #{$dark-primary-text};
-  --text-accent-lighter-color: #{$dark-primary-text};
-  --text-accent-darker-color: #{$light-primary-text};
-}   
-$mat-accent: (
-  main: #ff5722,
-  lighter: #ffcdbd,
-  darker: #ff3c14,
-  200: #ff5722, // For slide toggle,
-  contrast : (
-    main: $dark-primary-text,
-    lighter: $dark-primary-text,
-    darker: $light-primary-text,
-  )
-);
-$theme-accent: mat-palette($mat-accent, main, lighter, darker);
-
-
-body {
-  --warn-color: #512da8;
-  --warn-lighter-color: #cbc0e5;
-  --warn-darker-color: #371c8d;
-  --text-warn-color: #{$light-primary-text};
-  --text-warn-lighter-color: #{$dark-primary-text};
-  --text-warn-darker-color: #{$light-primary-text};
-}   
-$mat-warn: (
-  main: #512da8,
-  lighter: #cbc0e5,
-  darker: #371c8d,
-  200: #512da8, // For slide toggle,
-  contrast : (
-    main: $light-primary-text,
-    lighter: $dark-primary-text,
-    darker: $light-primary-text,
-  )
-);
-$theme-warn: mat-palette($mat-warn, main, lighter, darker);
-;
-
-$theme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
-$altTheme: mat-dark-theme($theme-primary, $theme-accent, $theme-warn);
-
-// Theme Init
-@include angular-material-theme($theme);
-
-.theme-alternate {
-  @include angular-material-theme($altTheme);
-}
-
-// Specific component overrides, pieces that are not in line with the general theming
-
-// Handle buttons appropriately, with respect to line-height
-.mat-raised-button, .mat-stroked-button, .mat-flat-button {
-  padding: 0 1.15em;
-  margin: 0 .65em;
-  min-width: 3em;
-  line-height: 36.4px
-}
-
-.mat-standard-chip {
-  padding: .5em .85em;
-  min-height: 2.5em;
-}
-
-.material-icons {
-  font-size: 24px;
-  font-family: 'Material Icons', 'Material Icons';  
-  .mat-badge-content {
-    font-family: 'Roboto';
-  }
-}
 .united-theme{
   // United 5.0.1
 // Bootswatch
 
-$theme: "united" !default;;
+$theme: "united" !default;
 
 //
 // Color system
 //
 
-$white:    #fff !default;;
-$gray-100: #f8f9fa !default;;
-$gray-200: #e9ecef !default;;
-$gray-300: #dee2e6 !default;;
-$gray-400: #ced4da !default;;
-$gray-500: #aea79f !default;;
-$gray-600: #868e96 !default;;
-$gray-700: #495057 !default;;
-$gray-800: #333 !default;;
-$gray-900: #212529 !default;;
-$black:    #000 !default;;
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #aea79f !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #333 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
 
-$blue:    #007bff !default;;
-$indigo:  #6610f2 !default;;
-$purple:  #772953 !default;;
-$pink:    #e83e8c !default;;
-$red:     #df382c !default;;
-$orange:  #e95420 !default;;
-$yellow:  #efb73e !default;;
-$green:   #38b44a !default;;
-$teal:    #20c997 !default;;
-$cyan:    #17a2b8 !default;;
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #772953 !default;
+$pink:    #e83e8c !default;
+$red:     #df382c !default;
+$orange:  #e95420 !default;
+$yellow:  #efb73e !default;
+$green:   #38b44a !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
 
-$primary:       $orange !default;;
-$secondary:     $gray-500 !default;;
-$success:       $green !default;;
-$info:          $cyan !default;;
-$warning:       $yellow !default;;
-$danger:        $red !default;;
-$light:         $gray-200 !default;;
-$dark:          $purple !default;;
+$primary:       $orange !default;
+$secondary:     $gray-500 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-200 !default;
+$dark:          $purple !default;
 
-$min-contrast-ratio:   1.8 !default;;
+$min-contrast-ratio:   1.8 !default;
 
 // Body
 
-$body-color:                $gray-800 !default;;
+$body-color:                $gray-800 !default;
 
 // Fonts
 
 // stylelint-disable-next-line value-keyword-case
-$font-family-sans-serif:      Ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;;
+$font-family-sans-serif:      Ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
 // Tables
 
-$table-dark-bg:               $dark !default;;
-$table-dark-border-color:     darken($dark, 5%) !default;;
+$table-dark-bg:               $dark !default;
+$table-dark-border-color:     darken($dark, 5%) !default;
 
 @import '~bootstrap/scss/bootstrap';
 }
@@ -496,17 +249,17 @@ $table-dark-border-color:     darken($dark, 5%) !default;;
 .solar-theme{
   // Solar 5.0.1
 // Bootswatch
-$theme: "solar" !default;;
+$theme: "solar" !default;
 
 //
 // Color system
 //
 // stylelint-disable
-$white:    #fff !default;;
-$gray-100: #fdf6e3 !default;;
-$gray-200: #eee8d5 !default;;
-$gray-300: #dee2e6 !default;;
-$gray-400: #ced4da !default;;
+$white:    #fff !default;
+$gray-100: #fdf6e3 !default;
+$gray-200: #eee8d5 !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #839496 !default;
 $gray-700: #495057 !default;
@@ -664,4 +417,181 @@ $btn-close-color:                       $body-color !default;
 $pre-color:                         inherit !default;
 
 @import '~bootstrap/scss/bootstrap';
+}
+
+.dark-theme{
+  // Darkly 5.2.0
+  // Bootswatch
+  
+  //$theme: "darkly" !default;
+  
+  //
+  // Color system
+  //
+  
+  $white:    #fff !default;
+  $gray-100: #f8f9fa !default;
+  $gray-200: #ebebeb !default;
+  $gray-300: #dee2e6 !default;
+  $gray-400: #ced4da !default;
+  $gray-500: #adb5bd !default;
+  $gray-600: #888 !default;
+  $gray-700: #444 !default;
+  $gray-800: #303030 !default;
+  $gray-900: #222 !default;
+  $black:    #000 !default;
+  
+  $blue:    #375a7f !default;
+  $indigo:  #6610f2 !default;
+  $purple:  #6f42c1 !default;
+  $pink:    #e83e8c !default;
+  $red:     #e74c3c !default;
+  $orange:  #fd7e14 !default;
+  $yellow:  #f39c12 !default;
+  $green:   #00bc8c !default;
+  $teal:    #20c997 !default;
+  $cyan:    #3498db !default;
+  
+  $primary:       $blue !default;
+  $secondary:     $gray-700 !default;
+  $success:       $green !default;
+  $info:          $cyan !default;
+  $warning:       $yellow !default;
+  $danger:        $red !default;
+  $light:         $gray-500 !default;
+  $dark:          $gray-800 !default;
+  
+  $min-contrast-ratio:   1.9 !default;
+  
+  // Body
+  
+  $body-bg:                   $gray-900 !default;
+  $body-color:                $white !default;
+  
+  // Links
+  
+  $link-color:                $success !default;
+  
+  // Fonts
+  
+  // stylelint-disable-next-line value-keyword-case
+  $font-family-sans-serif:      Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+  $h1-font-size:                3rem !default;
+  $h2-font-size:                2.5rem !default;
+  $h3-font-size:                2rem !default;
+  $text-muted:                  $gray-600 !default;
+  
+  // Tables
+  
+  $table-border-color:          $gray-700 !default;
+  
+  $table-bg-scale:              0 !default;
+  
+  // Forms
+  
+  $input-bg:                          $white !default;
+  $input-color:                       $gray-800 !default;
+  $input-border-color:                $body-bg !default;
+  $input-group-addon-color:           $gray-500 !default;
+  $input-group-addon-bg:              $gray-700 !default;
+  
+  $form-check-input-bg:                     $white !default;
+  $form-check-input-border:                 none !default;
+  
+  $form-file-button-color:          $white !default;
+  
+  // Dropdowns
+  
+  $dropdown-bg:                       $gray-900 !default;
+  $dropdown-border-color:             $gray-700 !default;
+  $dropdown-divider-bg:               $gray-700 !default;
+  $dropdown-link-color:               $white !default;
+  $dropdown-link-hover-color:         $white !default;
+  $dropdown-link-hover-bg:            $primary !default;
+  
+  // Navs
+  
+  $nav-link-padding-x:                2rem !default;
+  $nav-link-disabled-color:           $gray-500 !default;
+  $nav-tabs-border-color:             $gray-700 !default;
+  $nav-tabs-link-hover-border-color:  $nav-tabs-border-color $nav-tabs-border-color transparent !default;
+  $nav-tabs-link-active-color:        $white !default;
+  $nav-tabs-link-active-border-color: $nav-tabs-border-color $nav-tabs-border-color transparent !default;
+  
+  // Navbar
+  
+  $navbar-padding-y:                  1rem !default;
+  $navbar-dark-color:                rgba($white, .6) !default;
+  $navbar-dark-hover-color:          $white !default;
+  $navbar-light-color:                rgba($gray-900, .7) !default;
+  $navbar-light-hover-color:          $gray-900 !default;
+  $navbar-light-active-color:         $gray-900 !default;
+  $navbar-light-toggler-border-color: rgba($gray-900, .1) !default;
+  
+  // Pagination
+  
+  $pagination-color:                  $white !default;
+  $pagination-bg:                     $success !default;
+  $pagination-border-width:           0 !default;
+  $pagination-border-color:           transparent !default;
+  $pagination-hover-color:            $white !default;
+  $pagination-hover-bg:               lighten($success, 10%) !default;
+  $pagination-hover-border-color:     transparent !default;
+  $pagination-active-bg:              $pagination-hover-bg !default;
+  $pagination-active-border-color:    transparent !default;
+  $pagination-disabled-color:         $white !default;
+  $pagination-disabled-bg:            darken($success, 15%) !default;
+  $pagination-disabled-border-color:  transparent !default;
+  
+  // Cards
+  
+  $card-cap-bg:                       $gray-700 !default;
+  $card-bg:                           $gray-800 !default;
+  
+  // Popovers
+  
+  $popover-bg:                        $gray-800 !default;
+  $popover-header-bg:                 $gray-700 !default;
+  
+  // Toasts
+  
+  $toast-background-color:            $gray-700 !default;
+  $toast-header-background-color:     $gray-800 !default;
+  
+  // Modals
+  
+  $modal-content-bg:                  $gray-800 !default;
+  $modal-content-border-color:        $gray-700 !default;
+  $modal-header-border-color:         $gray-700 !default;
+  
+  // Progress bars
+  
+  $progress-bg:                       $gray-700 !default;
+  
+  // List group
+  
+  $list-group-color:                  $body-color !default;
+  $list-group-bg:                     $gray-800 !default;
+  $list-group-border-color:           $gray-700 !default;
+  $list-group-hover-bg:               $gray-700 !default;
+  $list-group-action-hover-color:     $list-group-color !default;
+  $list-group-action-active-bg:       $gray-900 !default;
+  
+  // Breadcrumbs
+  
+  $breadcrumb-padding-y:              .375rem !default;
+  $breadcrumb-padding-x:              .75rem !default;
+  $breadcrumb-bg:                     $gray-700 !default;
+  $breadcrumb-border-radius:          .25rem !default;
+  
+  // Close
+  
+  $btn-close-color:            $white !default;
+  $btn-close-opacity:          .4 !default;
+  $btn-close-hover-opacity:    1 !default;
+  
+  // Code
+  
+  $pre-color:                         inherit !default;
+  
 }
