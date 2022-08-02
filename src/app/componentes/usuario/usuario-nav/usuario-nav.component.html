@@ -1,12 +1,22 @@
 <nav class="navbar sticky-top navbar-light alert alert-info mx-4 rounded-pill">
 
-    <div class="container-fluid ">
-      <a class="navbar-brand" routerLink="/">
+    <div class="ms-3 d-flex align-items-center">
+      <a class="navbar-brand" href="#">
         <img class = "img-fluid" src="https://i.ibb.co/YZPYZPW/OneLink.png" alt="">
-    </a>  
+       </a> 
+       <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+       
+       <a class="nav-link" href="#" routerLink="/caracteristicas">Caracteristicas</a>
+
+        <a class="nav-link" href="#" routerLink="/precios">Precios</a>
+        
+        <a class="nav-link" href="#" routerLink="/nosotros">Nosotros</a>
+    
+      </div> 
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
             <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+          
           </svg>
         </button>
    
@@ -14,7 +24,7 @@
           
           <app-side-bar [persona]="persona"></app-side-bar>
         </div>
-    </div>
+    
   </nav>
 
   
