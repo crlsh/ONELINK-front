@@ -10,6 +10,8 @@ import { UserAdminComponent } from './componentes/usuario-admin/user-admin/user-
 import { UserDatosComponent } from './componentes/usuario-admin/user-datos/user-datos.component';
 import { UserEstilosComponent } from './componentes/usuario-admin/user-estilos/user-estilos.component';
 import { UserNuevoComponent } from './componentes/usuario-admin/user-nuevo/user-nuevo.component';
+import { CaracteristicasComponent } from './componentes/usuario/caracteristicas/caracteristicas.component';
+import { NosotrosComponent } from './componentes/usuario/nosotros/nosotros.component';
 import { PreciosComponent } from './componentes/usuario/precios/precios.component';
 import { UsuarioHomeComponent } from './componentes/usuario/usuario-home/usuario-home.component';
 
@@ -20,6 +22,8 @@ const routes: Routes = [
  {path: '', component:HomeComponent}, 
  {path: 'error', component:ErrorPageComponent}, 
  {path: 'precios', component:PreciosComponent},
+ {path: 'caracteristicas', component:CaracteristicasComponent},
+ {path: 'nosotros', component:NosotrosComponent},
  {path: 'admin', component:UserAdminComponent, canActivate: [AuthGuard]},
  {path: 'nuevo', component:UserNuevoComponent, canActivate: [AuthGuard]},
  {path: 'perfil', component:UserDatosComponent, canActivate: [AuthGuard]},
