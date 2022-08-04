@@ -14,6 +14,8 @@
     <div class="container">
         <div class="row">
             <div class="col-8">
+                <button id="modoOscuro" class="btn btn-secondary" (click)="modoOscuroSwitch()">Select Modo Oscuro</button>
+                <hr>
                 <button id="default" class="btn btn-secondary" (click)="onSetTheme('default-theme')">Select default</button>
                 <hr>
                 <button id="solar" class="btn btn-secondary" (click)="onSetTheme('solar-theme')">Select Solar</button>
@@ -22,7 +24,9 @@
                 <hr>
                 <button id="vapor" class="btn btn-secondary" (click)="onSetTheme('vapor-theme')">Select Vapor</button>
                 <hr>
-                <button id="dark" class="btn btn-secondary" (click)="onSetTheme('dark-theme')">Select Dark</button>
+                <button id="dark" class="btn btn-secondary" (click)="onSetTheme('darkly-theme')">Select Darkly</button>
+                <hr>
+                <button id="dark" class="btn btn-secondary" (click)="onSetTheme('slate-theme')">Select Slate</button>
 
             </div>
 

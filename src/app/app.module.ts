@@ -43,9 +43,9 @@ import { SideBarComponent } from './componentes/side-bar/side-bar.component';
 import { UserNavComponent } from './componentes/usuario-admin/user-nav/user-nav.component';
 import { UserSideBarComponent } from './componentes/usuario-admin/user-side-bar/user-side-bar.component';
 import { UserEstilosComponent } from './componentes/usuario-admin/user-estilos/user-estilos.component';
-import { PreciosComponent } from './componentes/usuario/precios/precios.component';
-import { NosotrosComponent } from './componentes/usuario/nosotros/nosotros.component';
-import { CaracteristicasComponent } from './componentes/usuario/caracteristicas/caracteristicas.component';
+import { PreciosComponent } from './componentes/pagina-principal/precios/precios.component';
+import { NosotrosComponent } from './componentes/pagina-principal/nosotros/nosotros.component';
+import { CaracteristicasComponent } from './componentes/pagina-principal/caracteristicas/caracteristicas.component';
 
 
 

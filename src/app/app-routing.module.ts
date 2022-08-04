@@ -10,9 +10,9 @@ import { UserAdminComponent } from './componentes/usuario-admin/user-admin/user-
 import { UserDatosComponent } from './componentes/usuario-admin/user-datos/user-datos.component';
 import { UserEstilosComponent } from './componentes/usuario-admin/user-estilos/user-estilos.component';
 import { UserNuevoComponent } from './componentes/usuario-admin/user-nuevo/user-nuevo.component';
-import { CaracteristicasComponent } from './componentes/usuario/caracteristicas/caracteristicas.component';
-import { NosotrosComponent } from './componentes/usuario/nosotros/nosotros.component';
-import { PreciosComponent } from './componentes/usuario/precios/precios.component';
+import { CaracteristicasComponent } from './componentes/pagina-principal/caracteristicas/caracteristicas.component';
+import { NosotrosComponent } from './componentes/pagina-principal/nosotros/nosotros.component';
+import { PreciosComponent } from './componentes/pagina-principal/precios/precios.component';
 import { UsuarioHomeComponent } from './componentes/usuario/usuario-home/usuario-home.component';
 
 

@@ -1,20 +1,25 @@
-<body class="mb-5"  style="background: inherit" >
-    <div *ngFor="let red of redes" class="d-grid gap-2 col-6 mx-auto">
+<main>
+    <body class="containermb-5">
+        <div *ngFor="let red of redes" class="d-grid gap-2 col-6 mx-auto">
 
-        <button class=" d-flex btn btn-primary my-2" type="button">
+            <button class=" d-flex btn btn-primary my-2" type="button">
 
-            <div class=" mx-auto ">
-                <a href={{red.link}} target='_blank' rel="noopener noreferrer"
-                rel="tooltip" title="Siganme en {{red.nombre_red}}">
-                    <i [ngClass]="selectIcon(red.nombre_red)">
-                    </i>
-                    {{red.nombre_red}}
-                </a>
-            </div>
+                <div class=" mx-auto ">
+                    <a href={{red.link}} target='_blank' rel="noopener noreferrer"
+                    rel="tooltip" title="Siganme en {{red.nombre_red}}">
+                        <i [ngClass]="selectIcon(red.nombre_red)">
+                        </i>
+                        {{red.nombre_red}}
+                    </a>
+                </div>
 
-        </button>
+            </button>
 
-    </div>
-</body>
+            
 
+        </div>
+
+        
+    </body>
+</main>
   

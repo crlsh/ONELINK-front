@@ -40,8 +40,21 @@ export class UserEstilosComponent implements OnInit {
      this.themeService.current = e;
      this.themeService.cambioEstilo();
      this.ngOnInit();
-   }        
-         
+   }     
+   
+   modoOscuroSwitch(){
+    let estadoModoOscuro = this.themeService.estadoModoOscuro();
+    console.log(estadoModoOscuro)
+      if(!estadoModoOscuro){
+        this.themeService.modoOscuroOn()
+        console.log(estadoModoOscuro)
+      }else{
+        this.themeService.modoOscuroOff();
+        console.log(estadoModoOscuro)
+      }
+   }
+    
+  
     
 
 }

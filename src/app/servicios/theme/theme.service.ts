@@ -8,6 +8,7 @@ import { Observable} from 'rxjs';
 export class ThemeService {
 
   private estilo$ = new BehaviorSubject<boolean>(false);
+  private modoOscuro$ = new BehaviorSubject<boolean>(false);
 
   public static default = 'default';
 
@@ -43,5 +44,18 @@ export class ThemeService {
   
   estadoEstilo() {
     return this.estilo$.asObservable();
+  }
+
+  modoOscuroOn(){
+    this.modoOscuro$.next(true);
+    console.log(this.modoOscuro$)
+  }
+
+  modoOscuroOff(){
+    this.modoOscuro$.next(false);
+    console.log(this.modoOscuro$)
+  }
+  estadoModoOscuro() {
+    return this.modoOscuro$.asObservable();
   }
 }
