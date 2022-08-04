@@ -14,6 +14,7 @@ export class UserEstilosComponent implements OnInit {
   persona!:Persona[];
   profileJson:any;
   estilo!:string;
+  modoOscuro:boolean = false;
 
   constructor(private datosDb : DatosServiceService, public auth: AuthService, private themeService:ThemeService) { }
 
@@ -24,6 +25,7 @@ export class UserEstilosComponent implements OnInit {
       this.buscarUsuario(this.profileJson.email); //busca el usuario en la bd  
    
   });
+  this.themeService.estadoModoOscuro().subscribe((modoOscuro) => (this.modoOscuro = modoOscuro));
   }
 
   buscarUsuario(user:string){
@@ -43,14 +45,13 @@ export class UserEstilosComponent implements OnInit {
    }     
    
    modoOscuroSwitch(){
-    let estadoModoOscuro = this.themeService.estadoModoOscuro();
-    console.log(estadoModoOscuro)
-      if(!estadoModoOscuro){
+        
+      if(this.modoOscuro === false){
         this.themeService.modoOscuroOn()
-        console.log(estadoModoOscuro)
+        console.log(this.modoOscuro)
       }else{
         this.themeService.modoOscuroOff();
-        console.log(estadoModoOscuro)
+        console.log(this.modoOscuro)
       }
    }
     

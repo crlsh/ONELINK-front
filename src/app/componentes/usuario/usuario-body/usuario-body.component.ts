@@ -18,6 +18,7 @@ export class UsuarioBodyComponent implements OnInit {
   @HostBinding('class') componentCssClass: any; 
   cambioEstilo:boolean = false;
   estilo!: string;
+  modoOscuro!:boolean;
 
   selectIcon(nombre: String) {
     switch (nombre) {
@@ -52,7 +53,8 @@ export class UsuarioBodyComponent implements OnInit {
       }
     });
     this.buscarRedes();
-    
+    this.themeService.estadoModoOscuro().subscribe((modoOscuro) => (this.modoOscuro = modoOscuro));
+    this.setearBg();
     
     
   }
@@ -80,6 +82,12 @@ export class UsuarioBodyComponent implements OnInit {
     this.componentCssClass = e;
     this.themeService.cambioEstiloFalso();
     console.log(this.cambioEstilo);
+  }
+
+  setearBg(){
+    if(this.modoOscuro){
+      
+    }
   }
 
 }

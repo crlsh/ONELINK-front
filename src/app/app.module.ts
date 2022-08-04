@@ -46,6 +46,7 @@ import { UserEstilosComponent } from './componentes/usuario-admin/user-estilos/u
 import { PreciosComponent } from './componentes/pagina-principal/precios/precios.component';
 import { NosotrosComponent } from './componentes/pagina-principal/nosotros/nosotros.component';
 import { CaracteristicasComponent } from './componentes/pagina-principal/caracteristicas/caracteristicas.component';
+import { UsuarioCuerpoPrincipalComponent } from './componentes/usuario/usuario-cuerpo-principal/usuario-cuerpo-principal.component';
 
 
 
@@ -85,7 +86,8 @@ import { CaracteristicasComponent } from './componentes/pagina-principal/caracte
     UserEstilosComponent,
     PreciosComponent,
     NosotrosComponent,
-    CaracteristicasComponent
+    CaracteristicasComponent,
+    UsuarioCuerpoPrincipalComponent
 
 
 

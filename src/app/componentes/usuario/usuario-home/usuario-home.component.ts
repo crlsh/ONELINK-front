@@ -15,8 +15,10 @@ export class UsuarioHomeComponent implements OnInit {
   persona!: Persona[];
   user!: string|null;
   loading: boolean;
-  estilo!:string;
-  @HostBinding('class') componentCssClass: any;
+  @HostBinding('class') componentCssClass: any; 
+  cambioEstilo:boolean = false;
+  estilo!: string;
+  modoOscuro!:boolean;
 
   constructor(private activatedRouter: ActivatedRoute, private datosDb : DatosServiceService, private router: Router, public overlayContainer: OverlayContainer, private themeService: ThemeService) { 
     this.user = this.activatedRouter.snapshot.paramMap.get('user');
@@ -27,7 +29,11 @@ export class UsuarioHomeComponent implements OnInit {
   ngOnInit(): void {
    //this.cargarDatos()
    this.buscarUsuario()
-   this.currentTheme();
+   //this.onSetTheme();
+   this.themeService.estadoModoOscuro().subscribe((modoOscuro) => (this.modoOscuro = modoOscuro));
+   if (localStorage.getItem('modoOscuro')) {
+      this.themeService.modoOscuroOn();
+   } 
   }
 
  /*  cargarDatos(){
@@ -57,15 +63,13 @@ export class UsuarioHomeComponent implements OnInit {
     }
   }
 
-  public currentTheme() {
-    this.estilo = this.themeService.current;
-    this.onSetTheme(this.estilo)
-  }
-
-  
+ 
   public onSetTheme (e: string){
+    console.log(this.estilo);
     this.overlayContainer.getContainerElement().classList.add(e);
     this.componentCssClass = e;
+    this.themeService.cambioEstiloFalso();
+    console.log(this.cambioEstilo);
   }
   
 

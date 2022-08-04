@@ -1,27 +1,29 @@
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
-import { AuthService } from '@auth0/auth0-angular';
 import { Persona } from 'src/app/servicios/interfaces/persona';
 import { ThemeService } from 'src/app/servicios/theme/theme.service';
 
 @Component({
-  selector: 'app-usuario-header',
-  templateUrl: './usuario-header.component.html',
-  styleUrls: ['./usuario-header.component.scss']
+  selector: 'app-usuario-cuerpo-principal',
+  templateUrl: './usuario-cuerpo-principal.component.html',
+  styleUrls: ['./usuario-cuerpo-principal.component.scss']
 })
-export class UsuarioHeaderComponent implements OnInit {
+export class UsuarioCuerpoPrincipalComponent implements OnInit {
 
-  @Input() persona!: Persona;  
+  @Input() persona!: Persona;
+
+  @HostBinding('class') componentCssClass: any; 
   cambioEstilo:boolean = false;
   estilo!: string;
   modoOscuro!:boolean;
-  @HostBinding('class') componentCssClass: any; 
 
-  constructor(public auth: AuthService, public overlayContainer: OverlayContainer, private themeService: ThemeService) { }
+  constructor( public overlayContainer: OverlayContainer, private themeService: ThemeService) { }
 
   ngOnInit(): void {
     this.themeService.estadoModoOscuro().subscribe((modoOscuro) => (this.modoOscuro = modoOscuro));
-   // this.setearBg();
+    if (localStorage.getItem('modoOscuro')) {
+     	this.themeService.modoOscuroOn();
+    } 
   }
 
   public onSetTheme (e: string){
@@ -31,5 +33,6 @@ export class UsuarioHeaderComponent implements OnInit {
     this.themeService.cambioEstiloFalso();
     console.log(this.cambioEstilo);
   }
+
 
 }

@@ -35,11 +35,11 @@ export class ThemeService {
 
   
   cambioEstilo(){
-    this.estilo$.next(true);
+    this.estilo$.next(true);    
   }
   
   cambioEstiloFalso(){
-    this.estilo$.next(false);
+    this.estilo$.next(false);    
   }
   
   estadoEstilo() {
@@ -48,12 +48,12 @@ export class ThemeService {
 
   modoOscuroOn(){
     this.modoOscuro$.next(true);
-    console.log(this.modoOscuro$)
+    localStorage.setItem('modoOscuro', "true");
   }
 
   modoOscuroOff(){
     this.modoOscuro$.next(false);
-    console.log(this.modoOscuro$)
+    localStorage.removeItem('modoOscuro');
   }
   estadoModoOscuro() {
     return this.modoOscuro$.asObservable();
