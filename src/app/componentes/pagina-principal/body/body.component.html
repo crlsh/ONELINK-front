@@ -1,17 +1,16 @@
 <body class="my-5 mx-5">
-    <div class="d-flex">
-        <div class="izquierda w-50">
-            <h1 class="fw-bold fst-italic mt-5"> Un solo link para todas tus redes</h1>
-            <h3 class="my-5 me-5"> la forma mas sencilla de compartir tus redes sociales</h3> 
-            <div class="d-grid gap-2 col-6 mx-auto border border-5 rounded-pill p-5">
-                <h3 class="text-center">¡Empeza ahora!</h3>
-                <button class="btn btn-primary" type="button">Button</button>
-            </div>
+    <div class="row d-lg-flex">
+        <div class="izquierda col-12 col-lg-6">
+            <h1 class="fw-bold fst-italic mt-lg-5 text-center text-lg-start"> Un solo link para todas tus redes</h1>
+            <h3 class="my-lg-5 my-3 me-lg-5 text-center text-lg-start"> La forma mas sencilla de compartir tus redes sociales</h3> 
+            <div class="d-grid gap-2 col-6 mx-auto border border-5 rounded-pill p-lg-5 text-center" id="empezar">
+                <h3 class="text-center align-self-center mt-3 mb-3">¡Empezá ahora!</h3>
+                <button class="btn btn-warning mb-2 mx-auto rounded-pill fs-3 " type="button"(click)="loginWithRedirect()">Registrate</button>
+            </div>            
         </div>
-        <div class="derecha w-50 d-flex justify-content-center">
-            <div>
-                <video autoplay loop muted poster="\assets\Under the Sea.png" src="\assets\Under the Sea.webm"></video>
-     
+        <div class="derecha col-12 col-lg-6 mt-3 d-flex justify-content-center">
+            <div class="d-flex justify-content-center">
+                <video autoplay loop muted poster="\assets\Under the Sea.png" src="\assets\Under the Sea.webm"></video>     
             </div>
         </div>
     </div>
