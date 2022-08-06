@@ -1,24 +1,66 @@
-<nav class="navbar navbar-expand-lg navbar-light alert alert-info mx-4 rounded-pill d-flex justify-content-between">
+<nav class="navbar sticky-top navbar-light alert alert-info mx-4 rounded-pill">
     
-    <div class="ms-3 d-flex align-items-center">        
+    
+    <div class="ms-3 d-flex align-items-center" >        
         <a class="navbar-brand" href="#">
             <img src="https://i.ibb.co/YZPYZPW/OneLink.png" alt="">
         </a>
+        <div *ngIf="!pantallasPequenias" class="ms-3 d-flex align-items-center">
+            <a class="nav-link active px-2" aria-current="page" href="#">Home</a>
         
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-        
-            <a class="nav-link" href="#" routerLink="/caracteristicas">Caracteristicas</a>
+            <a class="nav-link px-2" href="#" routerLink="/caracteristicas">Caracteristicas</a>
 
-            <a class="nav-link" href="#" routerLink="/precios">Precios</a>
+            <a class="nav-link px-2" href="#" routerLink="/precios">Precios</a>
             
-            <a class="nav-link" href="#" routerLink="/nosotros">Nosotros</a>
-        
+            <a class="nav-link px-2" href="#" routerLink="/nosotros">Nosotros</a>
+        </div>
     </div>  
-    <div class="d-flex align-self-center me-4">
-     
-        <app-btn-authentication></app-btn-authentication>
-        <app-btn-signup *ngIf="(auth.isAuthenticated$ | async) === false"></app-btn-signup>
-        
-    </div>
+  
+        <div *ngIf="(auth.isAuthenticated$ | async)" >
+
+            <img id="img-logo" type="button" class=" navbar-toggler img-fluid rounded-circle border border-0 text-end" [src]="user.picture" 
+            alt="Menu"  
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+  
+  
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                
+                <app-side-bar-home></app-side-bar-home>
+
+            </div>
+
+        </div>
+        <div *ngIf="(auth.isAuthenticated$ | async) === false" >
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                
+                <app-side-bar-home></app-side-bar-home>
+
+            </div>
+
+        </div>
+        <!-- <app-btn-authentication></app-btn-authentication>
+        <app-btn-signup *ngIf="(auth.isAuthenticated$ | async) === false"></app-btn-signup> -->
+       <!--  <img id="img-logo" type="button" class=" navbar-toggler img-fluid rounded-circle border border-0" [src]="user.picture" alt="Menu"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+  
+  
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            
+           <app-side-bar-home></app-side-bar-home>
+
+        </div> -->
+        <!-- <img id="img-logo" type="button" class=" navbar-toggler img-fluid rounded-circle border border-0 text-end" [src]="user.picture" alt="Menu"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+  
+  
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            
+          <app-side-bar-home></app-side-bar-home>
+
+        </div> -->
+       
 
 </nav>

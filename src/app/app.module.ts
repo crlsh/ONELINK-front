@@ -47,6 +47,7 @@ import { PreciosComponent } from './componentes/pagina-principal/precios/precios
 import { NosotrosComponent } from './componentes/pagina-principal/nosotros/nosotros.component';
 import { CaracteristicasComponent } from './componentes/pagina-principal/caracteristicas/caracteristicas.component';
 import { UsuarioCuerpoPrincipalComponent } from './componentes/usuario/usuario-cuerpo-principal/usuario-cuerpo-principal.component';
+import { SideBarHomeComponent } from './componentes/pagina-principal/side-bar-home/side-bar-home.component';
 
 
 
@@ -87,7 +88,8 @@ import { UsuarioCuerpoPrincipalComponent } from './componentes/usuario/usuario-c
     PreciosComponent,
     NosotrosComponent,
     CaracteristicasComponent,
-    UsuarioCuerpoPrincipalComponent
+    UsuarioCuerpoPrincipalComponent,
+    SideBarHomeComponent
 
 
 
@@ -104,7 +106,7 @@ import { UsuarioCuerpoPrincipalComponent } from './componentes/usuario/usuario-c
       ...env.auth,
       domain: 'dev-w7feczar.us.auth0.com',
       clientId: '1Sb8oQKWsajXO4IEFd6VxcJmL8QI46IG',
-      //cacheLocation:'localstorage',
+      cacheLocation:'localstorage',
       httpInterceptor: {
         allowedList: [`${env.dev.serverUrl}/api/redes/save`, `${env.dev.serverUrl}/api/redes/update/*`,`${env.dev.serverUrl}/api/redes/delete/*`,`${env.dev.serverUrl}/api/persona/save`, `${env.dev.serverUrl}/api/persona/update/*`, `${env.dev.serverUrl}/api/persona/delete/*`],        
       },

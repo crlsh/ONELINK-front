@@ -1,0 +1,53 @@
+<body>
+    <ul *ngIf="(auth.isAuthenticated$ | async) === false">
+        <li class="mt-2">
+            <app-btn-login></app-btn-login>
+        </li>
+        <li class="mt-2">
+            <app-btn-signup></app-btn-signup>
+        </li>
+        <li class="mt-2">
+            <a class="nav-link active px-2" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="mt-2">
+            <a class="nav-link px-2" href="#" routerLink="/caracteristicas">Caracteristicas</a>
+        </li>
+        <li class="mt-2">
+            <a class="nav-link px-2" href="#" routerLink="/precios">Precios</a>
+        </li>
+        <li class="mt-2">
+            <a class="nav-link px-2" href="#" routerLink="/nosotros">Nosotros</a>
+        </li>
+    
+    </ul>
+
+    <ul *ngIf="(auth.isAuthenticated$ | async)">        
+        <li class="mt-2">
+            <button class="btn btn-primary">
+                Mi Perfil
+            </button>
+        </li>
+        <li class="mt-2">
+            <button class="btn btn-primary">
+                Mi Link
+            </button>
+        </li>
+        <li class="mt-2">
+            <app-btn-logout></app-btn-logout>
+        </li>
+        <li class="mt-2">
+            <a class="nav-link active px-2" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="mt-2">
+            <a class="nav-link px-2" href="#" routerLink="/caracteristicas">Caracteristicas</a>
+        </li>
+        <li class="mt-2">
+            <a class="nav-link px-2" href="#" routerLink="/precios">Precios</a>
+        </li>
+        <li class="mt-2">
+            <a class="nav-link px-2" href="#" routerLink="/nosotros">Nosotros</a>
+        </li>
+    </ul>
+
+</body>
+
