@@ -14,25 +14,32 @@ export class UsuarioCuerpoPrincipalComponent implements OnInit {
 
   @HostBinding('class') componentCssClass: any; 
   cambioEstilo:boolean = false;
-  estilo!: string;
-  modoOscuro!:boolean;
+  estilo!: string| null;
+  modoOscuro!:boolean;  
 
   constructor( public overlayContainer: OverlayContainer, private themeService: ThemeService) { }
 
   ngOnInit(): void {
     this.themeService.estadoModoOscuro().subscribe((modoOscuro) => (this.modoOscuro = modoOscuro));
     if (localStorage.getItem('modoOscuro')) {
-     	this.themeService.modoOscuroOn();
-    } 
+     	this.themeService.modoOscuroOn();      
+    }   
+    if (localStorage.getItem('theme')) {
+      this.estilo = localStorage.getItem('theme');
+      console.log(this.estilo);
+      this.onSetTheme(this.estilo);
+   }  
+    //this.onSetTheme()
   }
 
-  public onSetTheme (e: string){
+  public onSetTheme (e: any){
     console.log(this.estilo);
     this.overlayContainer.getContainerElement().classList.add(e);
     this.componentCssClass = e;
     this.themeService.cambioEstiloFalso();
     console.log(this.cambioEstilo);
   }
+
 
 
 }

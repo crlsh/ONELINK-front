@@ -12,18 +12,16 @@ import { ThemeService } from 'src/app/servicios/theme/theme.service';
 export class UserEstilosComponent implements OnInit {
 
   persona!:Persona[];
-  profileJson:any;
-  estilo!:string;
+  profileJson:any;  
   modoOscuro:boolean = false;
+  
 
   constructor(private datosDb : DatosServiceService, public auth: AuthService, private themeService:ThemeService) { }
 
   ngOnInit(): void {
-    this.auth.user$
-    .subscribe((profile) => {
+    this.auth.user$.subscribe((profile) => {
       this.profileJson = profile,      
       this.buscarUsuario(this.profileJson.email); //busca el usuario en la bd  
-   
   });
   this.themeService.estadoModoOscuro().subscribe((modoOscuro) => (this.modoOscuro = modoOscuro));
   }
@@ -35,13 +33,9 @@ export class UserEstilosComponent implements OnInit {
     });
   }
 
-  public onSetTheme (e: string){
-    // this.overlayContainer.getContainerElement().classList.add(e);
-     //this.componentCssClass = e;
-     //this.estilo = e;
+  public onSetTheme (e: string){    
      this.themeService.current = e;
-     this.themeService.cambioEstilo();
-     this.ngOnInit();
+     this.themeService.cambioEstilo();    
    }     
    
    modoOscuroSwitch(){
@@ -54,8 +48,5 @@ export class UserEstilosComponent implements OnInit {
         console.log(this.modoOscuro)
       }
    }
-    
-  
-    
 
 }

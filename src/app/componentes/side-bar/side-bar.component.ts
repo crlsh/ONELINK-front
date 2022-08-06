@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { OverlayContainer } from '@angular/cdk/overlay';
+import { Component, HostBinding, Input, OnInit } from '@angular/core';
 import { Persona } from 'src/app/servicios/interfaces/persona';
+import { ThemeService } from 'src/app/servicios/theme/theme.service';
 
 @Component({
   selector: 'app-side-bar',
@@ -9,11 +11,18 @@ import { Persona } from 'src/app/servicios/interfaces/persona';
 export class SideBarComponent implements OnInit {
 
   @Input() persona!: Persona;
+  @HostBinding('class') componentCssClass: any; 
+  cambioEstilo:boolean = false;
+  estilo!: string;
+  modoOscuro!:boolean;
 
-  constructor() { }
+  constructor(public overlayContainer: OverlayContainer, private themeService: ThemeService) { }
 
   ngOnInit(): void {
-    console.log(this.persona)
+    //console.log(this.persona);
+    this.themeService.estadoModoOscuro().subscribe((modoOscuro) => (this.modoOscuro = modoOscuro));
   }
+
+  
 
 }

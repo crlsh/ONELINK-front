@@ -34,7 +34,8 @@
               "node_modules/ngx-sharebuttons/themes/modern.scss",
               "src/styles.scss",
               "src/custom-theme.scss",
-              "src/slate.scss"
+              "src/slate.scss",
+              "src/lux-theme.scss"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js"

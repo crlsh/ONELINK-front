@@ -13,13 +13,40 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-8">                
-                <div class="d-flex form-switch form-check ms-0 ps-0 ">
-                    <label class="order-0 form-check-label" for="flexSwitchCheckDefault">Modo Oscuro</label>
-                    <input class="ms-3 order-1 form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" (click)="modoOscuroSwitch()">                   
+            <div class="col-8">         
+                <!-- <div>
+                    <h1>Background</h1>
+                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked #white>
+                    <label class="btn btn-outline-light me-2 border border-1" for="option1" (click)="selectBackground(1)">White</label>
+
+                    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                    <label class="btn btn-secondary me-2" id="cyan" for="option2" (click)="selectBackground(2)">Cyan</label>
+
+                    <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                    <label class="btn btn-secondary me-2" id="pink" for="option3" (click)="selectBackground(3)">Pink</label>
+
+                    <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+                    <label class="btn btn-secondary me-2" id="teal" for="option4" (click)="selectBackground(4)">Teal</label>
+
+                    <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off">
+                    <label class="btn btn btn-dark me-2" id="indigo" for="option5" (click)="selectBackground(5)">Black</label>                  
+                  
+                </div>  -->
+                <div class="d-flex justify-content-between">
+                <div class="d-flex form-switch form-check ms-0 ps-0 border rounded-pill border-dark ">
+                    <h2 class="ms-3"><label class="order-0 form-check-label" for="flexSwitchCheckDefault">Modo Oscuro</label></h2>
+                    <input class="ms-3 order-1 form-check-input align-self-center" type="checkbox" role="switch" id="flexSwitchCheckDefault" (click)="modoOscuroSwitch()">                   
+                </div> 
+                <button class="btn btn-outline-secondary rounded-circle" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cloud-arrow-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M7.646 5.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2z"/>
+                        <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"/>
+                      </svg>
+                </button>
                 </div>
+                <h1>Theme</h1>
                 <hr>  
-                <button id="default" class="btn btn-secondary" (click)="onSetTheme('default-theme')">Select default</button>
+                <button id="default" class="btn btn-primary" (click)="onSetTheme('default-theme')">Select default</button>
                 <hr>
                 <button id="solar" class="btn btn-secondary" (click)="onSetTheme('solar-theme')">Select Solar</button>
                 <hr>
@@ -27,9 +54,11 @@
                 <hr>
                 <button id="vapor" class="btn btn-secondary" (click)="onSetTheme('vapor-theme')">Select Vapor</button>
                 <hr>
-                <button id="dark" class="btn btn-secondary" (click)="onSetTheme('darkly-theme')">Select Darkly</button>
+                <button id="darkly" class="btn btn-secondary" (click)="onSetTheme('darkly-theme')">Select Darkly</button>
                 <hr>
-                <button id="dark" class="btn btn-secondary" (click)="onSetTheme('slate-theme')">Select Slate</button>
+                <button id="slate" class="btn btn-secondary" (click)="onSetTheme('slate-theme')">Select Slate</button>
+                <hr>
+                <button id="lux" class="btn btn-secondary" (click)="onSetTheme('lux-theme')">Select Lux</button>
 
             </div>
 

@@ -16,12 +16,14 @@ export class UsuarioHeaderComponent implements OnInit {
   estilo!: string;
   modoOscuro!:boolean;
   @HostBinding('class') componentCssClass: any; 
+  bgColor!: string | null;
 
   constructor(public auth: AuthService, public overlayContainer: OverlayContainer, private themeService: ThemeService) { }
 
   ngOnInit(): void {
     this.themeService.estadoModoOscuro().subscribe((modoOscuro) => (this.modoOscuro = modoOscuro));
    // this.setearBg();
+   this.setearBg();
   }
 
   public onSetTheme (e: string){
@@ -30,6 +32,11 @@ export class UsuarioHeaderComponent implements OnInit {
     this.componentCssClass = e;
     this.themeService.cambioEstiloFalso();
     console.log(this.cambioEstilo);
+  }
+
+  setearBg(){
+    this.bgColor = localStorage.getItem('bgColor');
+    console.log(this.bgColor);
   }
 
 }

@@ -8,9 +8,10 @@ import { Observable} from 'rxjs';
 export class ThemeService {
 
   private estilo$ = new BehaviorSubject<boolean>(false);
-  private modoOscuro$ = new BehaviorSubject<boolean>(false);
-
+  private modoOscuro$ = new BehaviorSubject<boolean>(false);  
   public static default = 'default';
+
+ 
 
   public get current(): string {
   	return localStorage.getItem('theme') ?? ThemeService.default;
@@ -19,7 +20,7 @@ export class ThemeService {
   public set current(value: string) {
   	localStorage.setItem('theme', value);
   	//this.style.href = `${value}.css`;
-  }
+  }  
 
   /* private readonly style: HTMLLinkElement; */
 
@@ -58,4 +59,5 @@ export class ThemeService {
   estadoModoOscuro() {
     return this.modoOscuro$.asObservable();
   }
+
 }

@@ -19,6 +19,7 @@ export class UsuarioBodyComponent implements OnInit {
   cambioEstilo:boolean = false;
   estilo!: string;
   modoOscuro!:boolean;
+ 
 
   selectIcon(nombre: String) {
     switch (nombre) {
@@ -54,8 +55,6 @@ export class UsuarioBodyComponent implements OnInit {
     });
     this.buscarRedes();
     this.themeService.estadoModoOscuro().subscribe((modoOscuro) => (this.modoOscuro = modoOscuro));
-    this.setearBg();
-    
     
   }
 
@@ -69,25 +68,12 @@ export class UsuarioBodyComponent implements OnInit {
       });
 
   }
-
- /*  public currentTheme() {
-    this.estilo = this.themeService.current;
-    this.onSetTheme(this.estilo)
-  } */
-
-  
   public onSetTheme (e: string){
     console.log(this.estilo);
     this.overlayContainer.getContainerElement().classList.add(e);
     this.componentCssClass = e;
     this.themeService.cambioEstiloFalso();
     console.log(this.cambioEstilo);
-  }
-
-  setearBg(){
-    if(this.modoOscuro){
-      
-    }
   }
 
 }
