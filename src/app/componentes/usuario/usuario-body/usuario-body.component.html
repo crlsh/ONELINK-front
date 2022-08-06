@@ -1,11 +1,11 @@
 
     <!-- <div [class]="bgColor" > -->
-        <div class="mt-5" style="background-color: inherit" >
+        <div class="" style="background-color: inherit" >
         <div *ngFor="let red of redes" class="d-grid gap-2 col-6 mx-auto">
 
-            <button class=" d-flex btn btn-primary my-2" type="button">
+            <button class=" d-flex btn btn-primary my-2 border rounded-pill " type="button">
 
-                <div class=" mx-auto ">
+                <div class=" mx-auto fs-5">
                     <a href={{red.link}} target='_blank' rel="noopener noreferrer"
                     rel="tooltip" title="Siganme en {{red.nombre_red}}">
                         <i [ngClass]="selectIcon(red.nombre_red)">
