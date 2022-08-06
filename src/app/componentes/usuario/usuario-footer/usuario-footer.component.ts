@@ -32,7 +32,11 @@ export class UsuarioFooterComponent implements OnInit {
     if (localStorage.getItem('modoOscuro')) {
      	this.themeService.modoOscuroOn();      
     }   
-    //this.selectColor();
+    if (localStorage.getItem('theme')) {
+      this.estilo = this.themeService.current
+      console.log(this.estilo);
+      this.onSetTheme(this.estilo);  
+   }   
   }
 
   public onSetTheme (e: string){
