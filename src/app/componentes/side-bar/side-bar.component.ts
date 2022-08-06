@@ -1,5 +1,6 @@
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
+import { DatosServiceService } from 'src/app/servicios/api/datos-service.service';
 import { Persona } from 'src/app/servicios/interfaces/persona';
 import { ThemeService } from 'src/app/servicios/theme/theme.service';
 
@@ -16,7 +17,7 @@ export class SideBarComponent implements OnInit {
   estilo!: string;
   modoOscuro!:boolean;
 
-  constructor(public overlayContainer: OverlayContainer, private themeService: ThemeService) { }
+  constructor(public overlayContainer: OverlayContainer, private themeService: ThemeService, private datosDb : DatosServiceService) { }
 
   ngOnInit(): void {
     //console.log(this.persona);
