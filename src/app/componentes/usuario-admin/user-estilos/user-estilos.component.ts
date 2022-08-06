@@ -3,6 +3,7 @@ import { DatosServiceService } from 'src/app/servicios/api/datos-service.service
 import { Persona } from 'src/app/servicios/interfaces/persona';
 import { AuthService } from '@auth0/auth0-angular';
 import { ThemeService } from 'src/app/servicios/theme/theme.service';
+import { BreakpointObserver } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-user-estilos',
@@ -14,9 +15,10 @@ export class UserEstilosComponent implements OnInit {
   persona!:Persona[];
   profileJson:any;  
   modoOscuro:boolean = false;
+  pantallasPequenias!:boolean;
   
 
-  constructor(private datosDb : DatosServiceService, public auth: AuthService, private themeService:ThemeService) { }
+  constructor(private datosDb : DatosServiceService, public auth: AuthService, private themeService:ThemeService, private responsive: BreakpointObserver) { }
 
   ngOnInit(): void {
     this.auth.user$.subscribe((profile) => {
@@ -24,6 +26,16 @@ export class UserEstilosComponent implements OnInit {
       this.buscarUsuario(this.profileJson.email); //busca el usuario en la bd  
   });
   this.themeService.estadoModoOscuro().subscribe((modoOscuro) => (this.modoOscuro = modoOscuro));
+
+  this.responsive.observe('(max-width: 768px)')                               //comprueba si la pantalla es pequeña y modifica el valor de la variable
+  .subscribe(result => {
+
+    this.pantallasPequenias = false; 
+
+    if (result.matches) {
+      this.pantallasPequenias = true;     
+    } 
+  })
   }
 
   buscarUsuario(user:string){
