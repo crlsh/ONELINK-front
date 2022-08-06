@@ -5,6 +5,8 @@
             <img src="https://i.ibb.co/YZPYZPW/OneLink.png" alt="">
         </a>
         
+        <div *ngIf="!pantallasPequenias" class="d-flex align-items-center">
+
             <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
         
             <a class="nav-link" href="#" routerLink="/admin">Redes</a>
@@ -14,6 +16,8 @@
             <a class="nav-link" href="#" routerLink="/estilos">Estilos</a>
 
             <a class="nav-link" target="_blank"routerLink="/{{persona[0].nickname}}" >Mi Link</a>
+        
+        </div>
         
     </div>  
     

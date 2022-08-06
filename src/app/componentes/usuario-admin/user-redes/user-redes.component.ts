@@ -1,3 +1,4 @@
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, Input, OnInit } from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -18,12 +19,10 @@ export class UserRedesComponent implements OnInit {
   @Input() redes!: Redes[];
   @Input() idpersonas!: string;
   @Input() persona!: Persona[];
-
+  pantallasPequenias!:boolean;
   red!: Redes[];
 
-
-
-  constructor(private datosDb: DatosServiceService, private modalService: NgbModal,) {
+  constructor(private datosDb: DatosServiceService, private modalService: NgbModal, private responsive: BreakpointObserver) {
 
   }
 
@@ -42,6 +41,16 @@ export class UserRedesComponent implements OnInit {
         //console.log(this.redes);    
 
       });
+
+      this.responsive.observe('(max-width: 992px)')                               //comprueba si la pantalla es pequeña y modifica el valor de la variable
+      .subscribe(result => {
+    
+        this.pantallasPequenias = false; 
+    
+        if (result.matches) {
+          this.pantallasPequenias = true;     
+        } 
+      })
 
   }
 

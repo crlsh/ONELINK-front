@@ -28,6 +28,19 @@ h3{
 	/* top: 0;
 	right: 0; */
 	max-width: 175px;
-	border-left: 1px solid rgba(0, 0, 0, 0.2);
-	
+	border-left: 1px solid rgba(0, 0, 0, 0.2);    	
+}
+
+@media screen and (max-width: 850px) {
+   
+    #img-logo{
+        width: 4rem;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    a img{
+        width: 12rem;
+    }
 }
