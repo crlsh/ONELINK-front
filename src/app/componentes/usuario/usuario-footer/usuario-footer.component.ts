@@ -13,7 +13,8 @@ export class UsuarioFooterComponent implements OnInit {
   @Input() persona!: Persona;
   @HostBinding('class') componentCssClass: any; 
   cambioEstilo:boolean = false;
-  estilo!: string;
+  estilo!: string | null;
+  modoOscuro!:boolean;  
 
   constructor(public overlayContainer: OverlayContainer, private themeService: ThemeService) { }
 
@@ -26,6 +27,12 @@ export class UsuarioFooterComponent implements OnInit {
         this.onSetTheme(this.estilo);
       }
     });
+
+    this.themeService.estadoModoOscuro().subscribe((modoOscuro) => (this.modoOscuro = modoOscuro));
+    if (localStorage.getItem('modoOscuro')) {
+     	this.themeService.modoOscuroOn();      
+    }   
+    //this.selectColor();
   }
 
   public onSetTheme (e: string){
@@ -35,5 +42,14 @@ export class UsuarioFooterComponent implements OnInit {
     this.themeService.cambioEstiloFalso();
     console.log(this.cambioEstilo);
   }
+
+ /*  selectColor(){
+    if(localStorage.getItem('modoOscuro')){
+        this.estilo = "oscuro"
+    } else {      
+        this.estilo = localStorage.getItem('theme')     
+        console.log(this.estilo) ;
+    }
+  } */
 
 }

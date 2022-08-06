@@ -23,7 +23,7 @@ export class UsuarioHeaderComponent implements OnInit {
   ngOnInit(): void {
     this.themeService.estadoModoOscuro().subscribe((modoOscuro) => (this.modoOscuro = modoOscuro));
    // this.setearBg();
-   this.setearBg();
+  
   }
 
   public onSetTheme (e: string){
@@ -34,9 +34,6 @@ export class UsuarioHeaderComponent implements OnInit {
     console.log(this.cambioEstilo);
   }
 
-  setearBg(){
-    this.bgColor = localStorage.getItem('bgColor');
-    console.log(this.bgColor);
-  }
+ 
 
 }
