@@ -33,7 +33,7 @@
         <div *ngIf="(auth.isAuthenticated$ | async) === false" >
             
             <div *ngIf="!pantallasPequenias">
-                <app-btn-authentication></app-btn-authentication>
+                <app-btn-authentication class="me-2"></app-btn-authentication>
                 <app-btn-signup *ngIf="(auth.isAuthenticated$ | async) === false"></app-btn-signup>
             </div>
             
