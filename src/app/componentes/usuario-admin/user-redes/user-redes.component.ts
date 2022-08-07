@@ -42,7 +42,7 @@ export class UserRedesComponent implements OnInit {
 
       });
 
-      this.responsive.observe('(max-width: 992px)')                               //comprueba si la pantalla es pequeña y modifica el valor de la variable
+      this.responsive.observe('(max-width: 991px)')                               //comprueba si la pantalla es pequeña y modifica el valor de la variable
       .subscribe(result => {
     
         this.pantallasPequenias = false; 
