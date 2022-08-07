@@ -4,6 +4,7 @@ import { Persona } from 'src/app/servicios/interfaces/persona';
 import { AuthService } from '@auth0/auth0-angular';
 import { ThemeService } from 'src/app/servicios/theme/theme.service';
 import { BreakpointObserver } from '@angular/cdk/layout';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-user-estilos',
@@ -16,6 +17,8 @@ export class UserEstilosComponent implements OnInit {
   profileJson:any;  
   modoOscuro:boolean = false;
   pantallasPequenias!:boolean;
+  background!:string;
+  
   
 
   constructor(private datosDb : DatosServiceService, public auth: AuthService, private themeService:ThemeService, private responsive: BreakpointObserver) { }
@@ -46,19 +49,49 @@ export class UserEstilosComponent implements OnInit {
   }
 
   public onSetTheme (e: string){    
-     this.themeService.current = e;
+    // this.themeService.current = e;
+     this.persona[0].theme = e;
      this.themeService.cambioEstilo();    
    }     
    
-   modoOscuroSwitch(){
+   modoOscuroSwitch(e: string){
         
-      if(this.modoOscuro === false){
+    /*   if(this.modoOscuro === false){
         this.themeService.modoOscuroOn()
-        console.log(this.modoOscuro)
+       console.log(this.modoOscuro)
       }else{
         this.themeService.modoOscuroOff();
-        console.log(this.modoOscuro)
-      }
+       console.log(this.modoOscuro)
+      } */
+      this.persona[0].background = e;
+      this.background = e;
+      
    }
+
+   guardarTheme(){
+    Swal.fire({
+      title: '¿Desea guardar este estilo?',
+      showDenyButton: true,
+      //showCancelButton: true,
+      confirmButtonText: 'Guardar',
+      denyButtonText: `Cancelar`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */      
+      if (result.isConfirmed) {     
+        //this.persona[0].nickname = nickname 
+        console.log(this.persona[0])
+        this.datosDb.update(this.persona[0], "persona", this.persona[0].idpersonas).subscribe((respuesta) => {
+          if(respuesta){
+            Swal.fire('¡Modificado!', '', 'success');                
+          } else {
+            Swal.fire('ha habido un problema, por favor intente nuevamente', '', 'info');        
+          }          
+      });  
+      } else if (result.isDenied) {
+        Swal.fire('No se guardaron los cambios', '', 'info')        
+      }
+    })
+   }
+  
 
 }

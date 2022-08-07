@@ -22,6 +22,8 @@ export class UserNicknameComponent implements OnInit {
     descripcion: "",
     imagen_fondo: "",
     id: "",
+    background: "",
+    theme: "",
   }
 
   constructor(private datosDb : DatosServiceService, private router: Router) { }
@@ -71,6 +73,8 @@ export class UserNicknameComponent implements OnInit {
     this.persona.picture = this.user.picture;
     this.persona.imagen_fondo = "";
     this.persona.descripcion = "";
+    this.persona.background = "";
+    this.persona.theme = "";
    // console.log(this.persona)
     
   }

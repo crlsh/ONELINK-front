@@ -33,7 +33,9 @@ export class ModalUserComponent implements OnInit {
         picture: [''],
         descripcion: [''],
         imagen_fondo: [''],
-        id: [''] 
+        id: [''] ,
+        background: [''],
+        theme: ['']
      })
     }
      
@@ -57,6 +59,8 @@ export class ModalUserComponent implements OnInit {
         descripcion: this.persona[0].descripcion,
         imagen_fondo: this.persona[0].imagen_fondo,
         id: this.persona[0].id,
+        background: this.persona[0].background,
+        theme: this.persona[0].theme,
 
       })  
     }

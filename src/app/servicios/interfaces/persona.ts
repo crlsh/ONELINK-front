@@ -7,5 +7,7 @@ export interface Persona {
     descripcion: string;
     imagen_fondo: string;
     id: any;
+    background: string;
+    theme: string;
     
 }

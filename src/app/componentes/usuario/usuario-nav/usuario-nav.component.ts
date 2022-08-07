@@ -13,7 +13,7 @@ export class UsuarioNavComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.persona)
+   // console.log(this.persona)
   }
 
 }
