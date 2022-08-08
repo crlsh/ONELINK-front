@@ -1,14 +1,14 @@
 
-<div class="mt-5" [ngClass]="{'oscuro': modoOscuro}" style="background-color: inherit; text-align: center" >
+<div class="mt-5" style="background-color: inherit; text-align: center" >
     <!-- <div class="mt-5" [class]="bgColor" > -->
     <div style.background-image="url('{{persona.imagen_fondo}}')" id="portada">
     <!-- <img [src]="persona.imagen_fondo" alt="Portada" id="portada"> -->
 
     <img [src]="persona.picture" alt="Image" class=" img-fluid rounded-circle border border-0">
     
-    <p  class="mt-2 fs-3">{{persona.given_name + ' ' + persona.family_name}} </p>
+    <p  class="mt-2 fs-3 text" [ngClass]="{'modo-oscuro':modoOscuro}">{{persona.given_name + ' ' + persona.family_name}} </p>
 
-    <p class="fs-4"> {{persona.descripcion|| "Descripcion o comentario" }}</p>
+    <p class="fs-4" [ngClass]="{'modo-oscuro':modoOscuro}"> {{persona.descripcion|| "Descripcion o comentario" }}</p>
 
     </div>
 </div>

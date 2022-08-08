@@ -19,6 +19,8 @@ export class UsuarioHomeComponent implements OnInit {
   cambioEstilo:boolean = false;
   estilo!: string;
   modoOscuro!:boolean;
+  background!:string; 
+  
   
 
   constructor(private activatedRouter: ActivatedRoute, private datosDb : DatosServiceService, private router: Router, public overlayContainer: OverlayContainer, private themeService: ThemeService) { 
@@ -31,11 +33,11 @@ export class UsuarioHomeComponent implements OnInit {
    //this.cargarDatos()
    this.buscarUsuario()
    //this.onSetTheme();
-   this.themeService.estadoModoOscuro().subscribe((modoOscuro) => (this.modoOscuro = modoOscuro));
+  /*  this.themeService.estadoModoOscuro().subscribe((modoOscuro) => (this.modoOscuro = modoOscuro));
    if (localStorage.getItem('modoOscuro')) {
       this.themeService.modoOscuroOn();
-   } 
-
+   }  */
+   
 
   }
 
@@ -64,6 +66,8 @@ export class UsuarioHomeComponent implements OnInit {
       console.log("tiene datos");
       this.loading = false
     }
+    this.background = this.persona[0].background;
+   console.log(this.background);
   }
 /* 
  

@@ -17,12 +17,14 @@ export class UsuarioHeaderComponent implements OnInit {
   modoOscuro!:boolean;
   @HostBinding('class') componentCssClass: any; 
   bgColor!: string | null;
+  background:string = "oscuro"
 
   constructor(public auth: AuthService, public overlayContainer: OverlayContainer, private themeService: ThemeService) { }
 
   ngOnInit(): void {
     this.themeService.estadoModoOscuro().subscribe((modoOscuro) => (this.modoOscuro = modoOscuro));
-   // this.setearBg();
+   // this.setearBg();   
+   this.colorTexto();
   
   }
 
@@ -32,6 +34,16 @@ export class UsuarioHeaderComponent implements OnInit {
     this.componentCssClass = e;
     this.themeService.cambioEstiloFalso();
    // console.log(this.cambioEstilo);
+  }
+
+  colorTexto(){
+    //console.log("11111111111111111111111111111111")
+    if(this.persona.background === this.background ){
+        this.modoOscuro=true;
+        console.log(this.modoOscuro)
+    }else{
+      this.modoOscuro=false;
+    }
   }
 
  

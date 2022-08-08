@@ -21,7 +21,14 @@ export class UsuarioCuerpoPrincipalComponent implements OnInit {
   constructor( public overlayContainer: OverlayContainer, private themeService: ThemeService) { }
 
   ngOnInit(): void {
-    this.themeService.estadoModoOscuro().subscribe((modoOscuro) => (this.modoOscuro = modoOscuro));
+    this.themeService.estadoEstilo().subscribe((estado)=> 
+    {this.cambioEstilo = estado
+    if(this.cambioEstilo){
+      this.themeService.cambioEstiloFalso();
+      this.ngOnInit()
+    }
+    })
+    //this.themeService.estadoModoOscuro().subscribe((modoOscuro) => (this.modoOscuro = modoOscuro));
     /* if (localStorage.getItem('modoOscuro')) {
      	this.themeService.modoOscuroOn();      
     }    */

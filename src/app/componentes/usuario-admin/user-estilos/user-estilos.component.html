@@ -13,7 +13,7 @@
     
     <div class="container">
         <div class="row">
-            <div  class="col-12 col-md-6 col-lg-8">         
+            <div  class="col-12 col-lg-8">         
                 <div class="row">
                     <div class="d-flex justify-content-between mb-2">
                         <h1>Background</h1>
@@ -26,7 +26,7 @@
                             Guardar estilos
                         </button>                    
                     </div>    
-                    <div class="col-6 ">
+                    <div class="col-6 mt-2 ">
                         <div class="d-flex form-switch form-check ms-0 ps-0 border rounded-pill border-dark justify-content-between ">
                             <h2 class="ms-3"><label class="order-0 form-check-label" for="exampleRadios1">Default</label></h2>
                             <input class="ms-3 order-1 form-check-input align-self-center me-2" type="radio"  name="exampleRadios" id="exampleRadios1" value="option1" (click)="modoOscuroSwitch('default')">                   
@@ -40,7 +40,7 @@
                             <input class="ms-3 order-1 form-check-input align-self-center me-2" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" (click)="modoOscuroSwitch('grade-grey')">                   
                         </div> 
                     </div>
-                    <div  class="col-6 ">
+                    <div  class="col-6 mt-2 ">
                         <div class="d-flex form-switch form-check ms-0 ps-0 border rounded-pill border-dark justify-content-between ">
                             <h2 class="ms-3"><label class="order-0 form-check-label" for="exampleRadios2">Flare</label></h2>
                             <input class="ms-3 order-1 form-check-input align-self-center me-2" type="radio" name="exampleRadios" id="exampleRadios4" value="option4" (click)="modoOscuroSwitch('flare')">                   
@@ -108,7 +108,7 @@
                 </div>
             </div>
 
-            <div class="container col-12 col-md-6 col-lg-4 movil border border-5 rounded-5 position-relative flex-wrap mt-2" [class]="background">
+            <div class="container col-12 col-lg-4 movil border border-5 rounded-5 position-relative flex-wrap mt-2" [class]="background">
              
                 <app-usuario-cuerpo-principal class="pt-5 mt-5" [persona]="persona[0]" ></app-usuario-cuerpo-principal>  
                 <app-usuario-footer class="position-absolute bottom-0 start-50 translate-middle-x w-100" [persona]="persona[0]"></app-usuario-footer>

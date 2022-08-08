@@ -16,12 +16,14 @@ export class SideBarComponent implements OnInit {
   cambioEstilo:boolean = false;
   estilo!: string;
   modoOscuro!:boolean;
+  background!: string;
 
   constructor(public overlayContainer: OverlayContainer, private themeService: ThemeService, private datosDb : DatosServiceService) { }
 
   ngOnInit(): void {
     //console.log(this.persona);
-    this.themeService.estadoModoOscuro().subscribe((modoOscuro) => (this.modoOscuro = modoOscuro));
+    //this.themeService.estadoModoOscuro().subscribe((modoOscuro) => (this.modoOscuro = modoOscuro));
+    this.background = this.persona.background;
   }
 
   

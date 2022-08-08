@@ -83,6 +83,21 @@ background: linear-gradient(to top, #19547b, #ffd89b); /* W3C, IE 10+/ Edge, Fir
     background-color:cyan
 }
 
+@media screen and (max-width: 768px) {
+    .form-switch{
+        width:16rem;
+    } 
+}
+
+@media screen and (max-width: 576px) {
+    .form-switch{
+        max-width:15rem;        
+    }  
+
+    /* h2{
+        font-size: 0.8rem;
+    } */
+}
 
 
 
