@@ -21,7 +21,7 @@ export class ModalRedesComponent implements OnInit {
   //red!:Redes;
   isSubmitted = false;
   formRed: FormGroup;
-  Redes: any = ['Facebook', 'Instagram', 'Linkedin', 'Otra'];
+  Redes: any = ['Facebook', 'Instagram', 'Linkedin', 'TikTok','Twitter','Facebook Messenger','YouTube','GitHub','SnapChat','WeChat', 'Telegram','Pinterest','QQ','Reddit','Otra'];
 
   changeRed(e: any) {
     this.red.nombre_red?.setValue(e.target.value, {

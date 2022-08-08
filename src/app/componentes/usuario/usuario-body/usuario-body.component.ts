@@ -26,9 +26,18 @@ export class UsuarioBodyComponent implements OnInit {
       case 'Facebook': { return 'fa fa-facebook' }; break;
       case 'Instagram': { return 'fa fa-instagram' }; break;
       case 'Linkedin': { return 'fa fa-linkedin' }; break;
-      case 'Github': { return 'fa fa-github' }; break;
+      case 'GitHub': { return 'fa fa-github' }; break;
       case 'Twitter': { return 'fa fa-twitter' }; break;
       case 'Pinterest': { return 'fa fa-pinterest' }; break;
+      case 'Facebook Messenger': { return 'fa fa-facebook-messenger' }; break;
+      case 'YouTube': { return 'fa fa-youtube' }; break;
+      case 'WeChat': { return 'fa fa-weixin' }; break;
+      case 'TikTok': { return 'fa fa-tiktok' }; break;
+      case 'QQ': { return 'fa fa-qq' }; break;
+      case 'Reddit': { return 'fa fa-reddit' }; break;
+      case 'Telegram': { return 'fa fa-telegram' }; break;
+      case 'SnapChat': { return 'fa fa-snapchat' }; break;
+
       default: {
         return 'fa fa-user'
         break;
