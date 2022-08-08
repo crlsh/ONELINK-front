@@ -18,6 +18,7 @@ export class UsuarioHeaderComponent implements OnInit {
   @HostBinding('class') componentCssClass: any; 
   bgColor!: string | null;
   background:string = "oscuro"
+  background2:string = "witching-hour"
 
   constructor(public auth: AuthService, public overlayContainer: OverlayContainer, private themeService: ThemeService) { }
 
@@ -38,7 +39,7 @@ export class UsuarioHeaderComponent implements OnInit {
 
   colorTexto(){
     //console.log("11111111111111111111111111111111")
-    if(this.persona.background === this.background ){
+    if(this.persona.background === this.background || this.persona.background === this.background2){
         this.modoOscuro=true;
         console.log(this.modoOscuro)
     }else{

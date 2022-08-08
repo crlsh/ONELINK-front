@@ -20,13 +20,21 @@ button:hover{
 }
 
 @media screen and (max-width: 576px) {
-    img{
-        width: 12rem;
+    a img{
+        width: 11.5rem;
+    }
+    #img-logo{
+        width: 3rem;
+        padding: 0;
     }
 }
 
-@media screen and (max-width: 390px) {
-    img{
+@media screen and (max-width: 350px) {
+    a img{
         width: 10rem;
+    }
+    #img-logo{
+        width:2rem;
+        padding: 0;
     }
 }
