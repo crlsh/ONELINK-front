@@ -48,6 +48,7 @@ import { NosotrosComponent } from './componentes/pagina-principal/nosotros/nosot
 import { CaracteristicasComponent } from './componentes/pagina-principal/caracteristicas/caracteristicas.component';
 import { UsuarioCuerpoPrincipalComponent } from './componentes/usuario/usuario-cuerpo-principal/usuario-cuerpo-principal.component';
 import { SideBarHomeComponent } from './componentes/pagina-principal/side-bar-home/side-bar-home.component';
+import { BtnSidebarHomeComponent } from './componentes/botones/btn-sidebar-home/btn-sidebar-home.component';
 
 
 
@@ -89,7 +90,8 @@ import { SideBarHomeComponent } from './componentes/pagina-principal/side-bar-ho
     NosotrosComponent,
     CaracteristicasComponent,
     UsuarioCuerpoPrincipalComponent,
-    SideBarHomeComponent
+    SideBarHomeComponent,
+    BtnSidebarHomeComponent
 
 
 

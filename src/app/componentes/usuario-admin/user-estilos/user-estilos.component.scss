@@ -48,53 +48,42 @@ background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-
 background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   }
-/* 
-#cyan{
-    background-color:#0dcaf0;
+
+.witching-hour{
+    background: #c31432;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+.grade-grey{
+  background: #bdc3c7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-#pink{    
-    background-color:#dd88b2,
+.flare{
+    background: #f12711;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}   
+
+.jupiter{
+    background: #ffd89b;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #19547b, #ffd89b);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #19547b, #ffd89b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.default{
+    background: white;
 }
 
-#teal{   
-    background-color: #20c997;
+.form-switch:hover{
+    background-color:cyan
 }
 
-.bgBack{
-    background-color:#222;
-}
 
-.bgCyan{
-    background-color:#0dcaf0;
-}
-
-.bgYellow{     
-    background-color:#fcd86b;
-}
-
-.bgPink{    
-    background-color:#dd88b2,
-}
-
-.bgIndigo{    
-    background-color:#6610f2;
-}
-
-.bgBlue{    
-    background-color: #0d6efd;
-}
-
-.bgTeal{   
-    background-color: #20c997;
-}
-
-.bgOrange{
-    background-color: #fd7e14;
-}  
- */
-
-                    
 
 
                     

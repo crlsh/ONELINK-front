@@ -1,53 +1,41 @@
-<body>
+<body >
+    <div class="d-flex justify-content-center">
+        <button type="button" class="btn-close mt-3 border border-3 border-secondary p-2 rounded-circle" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
     <ul *ngIf="(auth.isAuthenticated$ | async) === false">
-        <li class="mt-2">
-            <app-btn-login></app-btn-login>
+        
+        <li class="mb-3">
+            <app-btn-sidebar-home></app-btn-sidebar-home>
+        </li>  
+        <hr>  
+        <li class="mt-3">
+            <div class="d-flex justify-content-center">
+                <app-btn-login></app-btn-login>
+            </div>
         </li>
-        <li class="mt-2">
-            <app-btn-signup></app-btn-signup>
+        <li class="mt-3">
+            <div class="d-flex justify-content-center">
+                <app-btn-signup></app-btn-signup>
+            </div>
         </li>
-        <li class="mt-2">
-            <button class="btn btn-outline-dark border border-1">
-                <a class="nav-link active px-2" aria-current="page" href="#">Home</a>
-            </button>
-        </li>
-        <li class="mt-2">
-            <a class="nav-link px-2" href="#" routerLink="/caracteristicas">Caracteristicas</a>
-        </li>
-        <li class="mt-2">
-            <a class="nav-link px-2" href="#" routerLink="/precios">Precios</a>
-        </li>
-        <li class="mt-2">
-            <a class="nav-link px-2" href="#" routerLink="/nosotros">Nosotros</a>
-        </li>
-    
     </ul>
 
     <ul *ngIf="(auth.isAuthenticated$ | async)">        
-        <li class="mt-2">
-            <button class="btn btn-primary">
-                Mi Perfil
-            </button>
+        <li class="mb-3">
+            <app-btn-sidebar-home></app-btn-sidebar-home>
         </li>
-        <li class="mt-2">
-            <button class="btn btn-primary">
-                Mi Link
-            </button>
-        </li>
-        <li class="mt-2">
-            <app-btn-logout></app-btn-logout>
-        </li>
-        <li class="mt-2">
-            <a class="nav-link active px-2" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="mt-2">
-            <a class="nav-link px-2" href="#" routerLink="/caracteristicas">Caracteristicas</a>
-        </li>
-        <li class="mt-2">
-            <a class="nav-link px-2" href="#" routerLink="/precios">Precios</a>
-        </li>
-        <li class="mt-2">
-            <a class="nav-link px-2" href="#" routerLink="/nosotros">Nosotros</a>
+        <hr>   
+        <li class="mt-3">
+            <div class="d-flex justify-content-center">
+                <button id="miPerfil" class="btn btn-primary rounded-pill text-center" routerLink="/admin">
+                    Mi Perfil
+                </button>
+            </div>
+        </li>     
+        <li class="mt-3">
+            <div class="d-flex justify-content-center">
+               <app-btn-logout></app-btn-logout>
+            </div>
         </li>
     </ul>
 

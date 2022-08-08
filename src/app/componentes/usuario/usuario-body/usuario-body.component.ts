@@ -4,6 +4,7 @@ import { AuthService } from '@auth0/auth0-angular';
 import { DatosServiceService } from 'src/app/servicios/api/datos-service.service';
 import { Redes } from 'src/app/servicios/interfaces/redes';
 import { ThemeService } from 'src/app/servicios/theme/theme.service';
+import { Persona } from 'src/app/servicios/interfaces/persona';
 
 @Component({
   selector: 'app-usuario-body',
@@ -13,7 +14,7 @@ import { ThemeService } from 'src/app/servicios/theme/theme.service';
 export class UsuarioBodyComponent implements OnInit {
 
   @Input() idpersonas!: any;
-  /* @Input() estilo!:string; */
+  @Input() persona!: Persona;
   redes!: Redes[]; 
   @HostBinding('class') componentCssClass: any; 
   cambioEstilo:boolean = false;
@@ -53,36 +54,38 @@ export class UsuarioBodyComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    console.log(this.idpersonas);
+    //console.log(this.idpersonas);
     this.themeService.estadoEstilo().subscribe((estado) => {
       this.cambioEstilo = estado;
       if(this.cambioEstilo === true) {
-        this.estilo = this.themeService.current
-        console.log(this.estilo);
+        //this.estilo = this.themeService.UsuarioCuerpoPrincipalComponent
+       // console.log(this.estilo);
+       this.estilo = this.persona.theme
         this.onSetTheme(this.estilo);
       }
     });
     this.buscarRedes();
     this.themeService.estadoModoOscuro().subscribe((modoOscuro) => (this.modoOscuro = modoOscuro));
-    
+    this.estilo = this.persona.theme
+    this.onSetTheme(this.estilo)
   }
 
   buscarRedes(): void {
     this.datosDb.search("redes", this.idpersonas)
       .subscribe((datos) => {
-        console.log(datos)
+       // console.log(datos)
         this.redes = datos;
-        console.log(this.redes);
+       // console.log(this.redes);
 
       });
 
   }
   public onSetTheme (e: string){
-    console.log(this.estilo);
+   // console.log(this.estilo);
     this.overlayContainer.getContainerElement().classList.add(e);
     this.componentCssClass = e;
     this.themeService.cambioEstiloFalso();
-    console.log(this.cambioEstilo);
+   // console.log(this.cambioEstilo);
   }
 
 }

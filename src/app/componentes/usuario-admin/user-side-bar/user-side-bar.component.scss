@@ -1,4 +1,12 @@
-.offcanvas-body{
-    height: 62vh;
+body{
+    min-height: 100vh;
     margin-bottom: 130px !important;
+}
+
+.offcanvas-body{
+    min-height: 68vh;
+}
+
+.offcanvas-body button{
+    width:8rem;
 }

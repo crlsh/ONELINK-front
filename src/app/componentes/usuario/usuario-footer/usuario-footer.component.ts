@@ -22,8 +22,9 @@ export class UsuarioFooterComponent implements OnInit {
     this.themeService.estadoEstilo().subscribe((estado) => {
       this.cambioEstilo = estado;
       if(this.cambioEstilo === true) {
-        this.estilo = this.themeService.current
-        console.log(this.estilo);
+        //this.estilo = this.themeService.current
+      //  console.log(this.estilo);
+      this.estilo = this.persona.theme
         this.onSetTheme(this.estilo);
       }
     });
@@ -32,19 +33,19 @@ export class UsuarioFooterComponent implements OnInit {
     if (localStorage.getItem('modoOscuro')) {
      	this.themeService.modoOscuroOn();      
     }   
-    if (localStorage.getItem('theme')) {
+   /*  if (localStorage.getItem('theme')) {
       this.estilo = this.themeService.current
-      console.log(this.estilo);
+     // console.log(this.estilo);
       this.onSetTheme(this.estilo);  
-   }   
+   }   */ 
+   this.estilo = this.persona.theme
+    this.onSetTheme(this.estilo)
   }
 
-  public onSetTheme (e: string){
-    console.log(this.estilo);
+  public onSetTheme (e: string){   
     this.overlayContainer.getContainerElement().classList.add(e);
     this.componentCssClass = e;
-    this.themeService.cambioEstiloFalso();
-    console.log(this.cambioEstilo);
+    this.themeService.cambioEstiloFalso();   
   }
 
  /*  selectColor(){

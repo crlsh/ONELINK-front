@@ -27,11 +27,11 @@ export class UsuarioHeaderComponent implements OnInit {
   }
 
   public onSetTheme (e: string){
-    console.log(this.estilo);
+    //console.log(this.estilo);
     this.overlayContainer.getContainerElement().classList.add(e);
     this.componentCssClass = e;
     this.themeService.cambioEstiloFalso();
-    console.log(this.cambioEstilo);
+   // console.log(this.cambioEstilo);
   }
 
  
