@@ -31,9 +31,9 @@ export class UsuarioBodyComponent implements OnInit {
       case 'Twitter': { return 'fa fa-twitter' }; break;
       case 'Pinterest': { return 'fa fa-pinterest' }; break;
       case 'Facebook Messenger': { return 'fa fa-facebook-messenger' }; break;
+      case 'TikTok': { return 'fa fa-tiktok' }; break;
       case 'YouTube': { return 'fa fa-youtube' }; break;
       case 'WeChat': { return 'fa fa-weixin' }; break;
-      case 'TikTok': { return 'fa fa-tiktok' }; break;
       case 'QQ': { return 'fa fa-qq' }; break;
       case 'Reddit': { return 'fa fa-reddit' }; break;
       case 'Telegram': { return 'fa fa-telegram' }; break;
