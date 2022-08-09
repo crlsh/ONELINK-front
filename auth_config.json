@@ -2,8 +2,8 @@
     "domain": "dev-w7feczar.us.auth0.com",
     "clientId": "1Sb8oQKWsajXO4IEFd6VxcJmL8QI46IG",
     "audience": "http://API-PruebaV2.0",
-    "serverUrl": "http://localhost:8080",
-    "apiUri": "http://localhost:8080",
+    "serverUrl": "https://onelink-app.herokuapp.com",
+    "apiUri": "https://onelink-app.herokuapp.com",
     "appUri": "http://localhost:4200",
     "errorPath": "/error"
   }
