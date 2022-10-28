@@ -31,7 +31,7 @@ Base de datos : My Sql
 Cada usuario puede generar su propia url
 
 ## link al frontend
-https://github.com/PuebladaFactory/ONELINK-front
+https://github.com/crlsh/ONELINK-front
 ## link a la api
 https://github.com/crlsh/onelink-back
 ## link a la Base de datos
