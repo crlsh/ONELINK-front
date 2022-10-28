@@ -23,11 +23,6 @@ Cada usuario puede generar su propia url
 
 # OneLink
 
-<img src="https://i.ibb.co/x69PgHF/image.png" width=50% height=50%>
-![]([https://ibb.co/w4G3Qsc](https://i.ibb.co/x69PgHF/image.png) | width=100)
-
-
-![logo](logo.jpg)
-
+<img src="https://i.ibb.co/x69PgHF/image.png" width=30% height=30%>
 
 
