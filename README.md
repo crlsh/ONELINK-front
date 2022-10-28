@@ -23,7 +23,7 @@ Cada usuario puede generar su propia url
 
 # OneLink
 
-![](https://ibb.co/w4G3Qsc | width=100)
+![]([https://ibb.co/w4G3Qsc](https://i.ibb.co/x69PgHF/image.png) | width=100)
 
 
 ![logo](logo.jpg)
