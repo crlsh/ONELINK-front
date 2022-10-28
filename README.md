@@ -23,9 +23,7 @@ Cada usuario puede generar su propia url
 
 # OneLink
 
-- All your content.
-- One link.
-- Send your audience everywhere. All your social links, and more.
+![](https://ibb.co/w4G3Qsc | width=100)
 
 
 ![logo](logo.jpg)
