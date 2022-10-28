@@ -19,13 +19,6 @@ Seleccion de estilos
 
 <img src="https://i.ibb.co/r7r5BZT/image.png" width=30% height=30%>
 
-
-# link a la api
-https://github.com/crlsh/onelink-back
-
-# link a la Base de datos
-https://github.com/crlsh/onelink-base
-
 # Datos del proyecto
 
 App para compartir en un solo link todos los contactos de una empresa, persona o negocio
@@ -36,4 +29,12 @@ autenticacion : Auth
 CRUD con Rest APi: java - Springboot
 Base de datos : My Sql
 Cada usuario puede generar su propia url
+
+# link a la api
+https://github.com/crlsh/onelink-back
+
+# link a la Base de datos
+https://github.com/crlsh/onelink-base
+
+
 
