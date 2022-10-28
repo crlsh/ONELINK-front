@@ -27,6 +27,9 @@ Cada usuario puede generar su propia url
 
 <img src="https://i.ibb.co/c2HtLxb/image.png" width=30% height=30%>
 
+Seleccion de estilos
+
+<img src="https://i.ibb.co/r7r5BZT/image.png" width=30% height=30%>
 
 
 
