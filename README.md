@@ -2,10 +2,9 @@
 # OneLink
 
  Una direccion unica para todas las formas de contactarte, en dos simples pasos:
-- 1 cargas todos tus datos de contacto (telefono, mail, redes sociales, etc)
-- 2 a traves de una sola direccion personalizada:, 
-          -- Compartir esa informacion de manera sencilla (enviar por redes sociales, qr, etc) 
-          -- te pueden dejar mensajes ahi mismo.
+- 1 - cargas todos tus datos de contacto (telefono, mail, redes sociales, etc)
+- 2 - a traves de una sola direccion personalizada:, te pueden dejar mensajes ahi mismo.o podes compartir esa informacion de manera sencilla  ( a traves de redes redes sociales, mail, qr, etc) 
+         
 
 # Proyecto colaborativo en https://github.com/PuebladaFactory 
 con ex alumnos de Argentina Programa
