@@ -20,7 +20,7 @@ https://pf-onelink.web.app/
 
 <img src="https://i.ibb.co/r7r5BZT/image.png" width=30% height=30%>
 
-## Compaartir enlace - form de contacto
+## Compartir enlace - form de contacto
 
 <img src="https://i.ibb.co/J3jNskN/image.png" width=30% height=30%>
 
