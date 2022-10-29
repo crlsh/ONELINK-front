@@ -7,10 +7,6 @@ con ex alumnos de Argentina Programa
 # Link a la app online
 https://pf-onelink.web.app/
 
-
-
-# Capturas
-
 <img src="https://i.ibb.co/x69PgHF/image.png" width=30% height=30%>
 
 <img src="https://i.ibb.co/c2HtLxb/image.png" width=30% height=30%>
