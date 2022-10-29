@@ -9,7 +9,7 @@ https://pf-onelink.web.app/
 
 ## Alta de usuarios - login
 
-<img src="https://i.ibb.co/x69PgHF/image.png" width=30% height=30%>  |  <img src="https://i.ibb.co/c2HtLxb/image.png" width=30% height=30%>
+<img src="https://i.ibb.co/x69PgHF/image.png" width=30% height=30%>  |  <img src="https://i.ibb.co/c2HtLxb/image.png" width=40% height=40%>
 
 ## Seleccion de estilos
 
